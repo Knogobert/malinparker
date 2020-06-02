@@ -41,3 +41,5 @@ Thanks to [Henry Desroches' nuxt-netlify-cms-starter](https://github.com/xdesro/
 
 Deployed easily with the same boilerplate via:
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter)
+
+(Don’t forget to set the env var `GIT_LFS_ENABLED` to `true` on your netlify site for LFS to work)
