@@ -3,13 +3,13 @@
 ### Todo
 
 - [ ] Setup netlify-cms  
-- [ ] Setup git-lfs for netlify-lm  
 
 ### In Progress
 
-- [ ] Setup Tailwind & PurgeCSS  
+- [ ] Setup git-lfs for netlify-lm  
 
 ### Done ✓
 
+- [x] Setup Tailwind & PurgeCSS  
 - [x] Setup SCSS in Nuxt  
 

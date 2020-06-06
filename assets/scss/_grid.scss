@@ -1,8 +1,4 @@
 .container {
-  margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @apply my-0 mx-auto flex justify-center items-center text-center;
 }

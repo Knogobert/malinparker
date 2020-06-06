@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div v-if="blogPosts">
     <ul v-for="(blogPost, index) in blogPosts" :key="index">
-      <nuxt-link :to="`blog/${blogPost.slug}`">{{blogPost.title}}</nuxt-link>
-      <p>{{blogPost.description}}</p>
+      <nuxt-link :to="`blog/${blogPost.slug}`">{{ blogPost.title }}</nuxt-link>
+      <p>{{ blogPost.description }}</p>
     </ul>
   </div>
 </template>

@@ -2,8 +2,7 @@
   <div>
     <!-- <logo /> -->
     <h1 class="title">Malin Parker</h1>
-    <h2 class="subtitle">Truly fantastic. Sometimes I astound even myself.</h2>
-    <nuxt-link to="/blog">Blog</nuxt-link>
+    <h2 class="subtitle">Portfolio</h2>
   </div>
 </template>
 

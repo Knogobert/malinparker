@@ -1,6 +1,6 @@
 <template>
-  <article>
-    <h1>{{blogPost.title}}</h1>
+  <article v-if="blogPost">
+    <h1>{{ blogPost.title }}</h1>
     <div v-html="$md.render(blogPost.body)" />
   </article>
 </template>

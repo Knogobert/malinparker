@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default {
   mode: 'universal',
   /*
@@ -34,7 +36,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/main.scss'],
+  css: ['@/assets/scss/tailwind.scss', '@/assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -46,7 +48,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
   markdownit: {
     injected: true
   },
@@ -54,9 +56,18 @@ export default {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
+      }
+    },
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  purgeCSS: {
+    mode: 'postcss'
   }
 }
