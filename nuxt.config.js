@@ -1,4 +1,5 @@
 import path from 'path'
+import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 export default {
   mode: 'universal',
@@ -36,7 +37,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/tailwind.scss', '@/assets/scss/main.scss'],
+  css: ['@/assets/css/tailwind.css', '@/assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -44,7 +45,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg'],
   /*
    ** Nuxt.js modules
    */
@@ -67,7 +68,19 @@ export default {
      */
     extend(config, ctx) {}
   },
+  /*
+   ** Custom additions configuration
+   */
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    exposeConfig: false // enables `import { theme } from '~tailwind.config'`
+  },
   purgeCSS: {
     mode: 'postcss'
+  },
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
+    componentName: 'ColorScheme'
   }
 }

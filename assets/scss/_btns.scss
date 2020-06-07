@@ -10,7 +10,9 @@
       @apply bg-blue-700;
     }
   }
-  &--disabled {
+  &--disabled,
+  &[disabled='true'],
+  :disabled {
     @apply text-gray-400 cursor-not-allowed;
   }
 }

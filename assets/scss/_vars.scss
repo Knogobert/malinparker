@@ -1,0 +1,27 @@
+/**
+  * SCSS Variables
+  */
+// $transition-duration-standard: 200ms;
+
+/**
+  * CSS Variables
+  */
+:root {
+  --color: #ebf4f1;
+  --color-primary: #41b38a;
+  --color-secondary: #fdf9f3;
+  --bg: #091a28;
+  --bg-secondary: #071521;
+  --border-color: #0d2538;
+  --border-color-secondary: #2d4253;
+}
+
+.light-mode {
+  --color: #243746;
+  --color-primary: #158876; // #35495e
+  --color-secondary: #0e2233; // #526488
+  --bg: #f3f5f4;
+  --bg-secondary: #fff;
+  --border-color: #ddd;
+  --border-color-secondary: #c9ccd0; //#ccc
+}

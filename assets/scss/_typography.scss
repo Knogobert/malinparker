@@ -1,15 +1,15 @@
 a {
-  color: #526488;
-  @apply font-bold;
+  color: var(--color-secondary);
+  @apply font-bold transition-colors duration-200 ease-in-out;
 }
 
 .title {
-  color: #35495e;
-  @apply block font-bold text-5xl tracking-wide;
+  color: var(--color-primary);
+  @apply block font-bold text-5xl tracking-wide transition-colors duration-200 ease-in-out;
 }
 
 .subtitle {
-  color: #526488;
+  color: var(--color-secondary);
   word-spacing: 0.15em;
-  @apply block font-light text-3xl tracking-wide pb-4;
+  @apply block font-light text-3xl tracking-wide pb-4 transition-colors duration-200 ease-in-out;
 }
