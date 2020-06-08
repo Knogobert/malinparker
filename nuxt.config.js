@@ -40,7 +40,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#f2f2f2' },
+  loading: { color: '#f3f5f4' },
   /*
    ** Global CSS
    */
@@ -84,7 +84,7 @@ export default {
   },
   purgeCSS: {
     mode: 'postcss',
-    whitelist: ['dark-mode']
+    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon']
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference

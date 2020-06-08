@@ -55,7 +55,7 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue', 'plugins/**/*.js', 'nuxt.config.js'],
     options: {
-      whitelist: ['btn', 'icon']
+      // Set whitelist in nuxt.config.js -> purgeCSS.whitelist: ['dark-mode', 'light-mode', 'btn', 'icon']
     }
   }
 }

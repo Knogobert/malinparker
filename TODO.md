@@ -3,14 +3,15 @@
 ### Todo
 
 - [ ] Setup git-lfs for netlify-lm  
-- [ ] Setup netlify-cms  
 
 ### In Progress
 
-- [ ] Setup PWA  
+- [ ] Setup netlify-cms  
 
 ### Done ✓
 
+- [x] Fix PurgeCSS whitelist  
+- [x] Setup PWA  
 - [x] Setup dark mode  
 - [x] Setup Tailwind & PurgeCSS  
 - [x] Setup SCSS in Nuxt  
