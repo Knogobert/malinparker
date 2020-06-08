@@ -1,13 +1,21 @@
 import path from 'path'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
+const SITE_NAME = 'Malin Parker'
+
 export default {
   mode: 'universal',
+  env: {
+    url:
+      process.env.NODE_ENV === 'production'
+        ? process.env.URL || 'http://createADotEnvFileAndSetURL'
+        : 'http://localhost:3000'
+  },
   /*
    ** Headers of the page
    */
   head: {
-    title: 'Malin Parker',
+    title: SITE_NAME,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,8 +24,7 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || ''
       }
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    ]
   },
   generate: {
     routes: function() {
@@ -45,7 +52,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
   /*
    ** Nuxt.js modules
    */
@@ -76,11 +83,19 @@ export default {
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
   purgeCSS: {
-    mode: 'postcss'
+    mode: 'postcss',
+    whitelist: ['dark-mode']
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
     componentName: 'ColorScheme'
+  },
+  pwa: {
+    manifest: { name: SITE_NAME },
+    meta: {
+      ogHost: process.env.URL,
+      ogImage: '/ogp.jpg'
+    }
   }
 }
