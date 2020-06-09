@@ -1,5 +1,6 @@
+import fs from 'fs'
 import path from 'path'
-import { COLOR_MODE_FALLBACK } from './utils/globals.js'
+import { CUSTOM_POSTS, COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 const SITE_NAME = 'Malin Parker'
 
@@ -28,14 +29,14 @@ export default {
   },
   generate: {
     routes: function() {
-      const fs = require('fs')
-      return fs.readdirSync('./assets/content/blog').map(file => {
-        return {
-          route: `/blog/${file.slice(2, -5)}`,
-          // route: `/blog/${path.parse(file).name}`, // Return the slug // TODO: Use this route instead?
-          payload: require(`./assets/content/blog/${file}`)
-        }
-      })
+      return CUSTOM_POSTS.map((slug) =>
+        fs.readdirSync(`./assets/content/${slug}`).map((file) => {
+          return {
+            route: `/${slug}/${path.parse(file).name}`,
+            payload: require(`./assets/content/${slug}/${file}`)
+          }
+        })
+      )
     }
   },
   /*
@@ -85,7 +86,7 @@ export default {
   },
   purgeCSS: {
     mode: 'postcss',
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon']
+    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'article', 'articles']
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
