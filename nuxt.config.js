@@ -32,6 +32,7 @@ export default {
       return fs.readdirSync('./assets/content/blog').map(file => {
         return {
           route: `/blog/${file.slice(2, -5)}`,
+          // route: `/blog/${path.parse(file).name}`, // Return the slug // TODO: Use this route instead?
           payload: require(`./assets/content/blog/${file}`)
         }
       })
