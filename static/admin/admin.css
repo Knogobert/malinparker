@@ -1,0 +1,7 @@
+.frame-content {
+  margin: 1rem;
+}
+
+.frame-content > div > div + div {
+  margin-top: 1rem;
+}
