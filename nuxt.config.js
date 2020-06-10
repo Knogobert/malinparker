@@ -1,8 +1,12 @@
-import fs from 'fs'
+import glob from 'glob'
 import path from 'path'
-import { CUSTOM_POSTS, COLOR_MODE_FALLBACK } from './utils/globals.js'
+import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 const SITE_NAME = 'Malin Parker'
+
+var dynamicRoutes = getDynamicPaths({
+  '/page': 'page/*.json'
+})
 
 export default {
   mode: 'universal',
@@ -28,16 +32,7 @@ export default {
     ]
   },
   generate: {
-    routes: function() {
-      return CUSTOM_POSTS.map((slug) =>
-        fs.readdirSync(`./assets/content/${slug}`).map((file) => {
-          return {
-            route: `/${slug}/${path.parse(file).name}`,
-            payload: require(`./assets/content/${slug}/${file}`)
-          }
-        })
-      )
-    }
+    routes: dynamicRoutes
   },
   /*
    ** Customize the progress-bar color
@@ -100,4 +95,18 @@ export default {
       ogImage: '/ogp.jpg'
     }
   }
+}
+
+/**
+ * Create an array of URLs from a list of files
+ * @param {*} urlFilepathTable
+ */
+function getDynamicPaths(urlFilepathTable) {
+  console.log('dynamicRoutes urlFilepathTable: ', urlFilepathTable)
+  return [].concat(
+    ...Object.keys(urlFilepathTable).map((url) => {
+      var filepathGlob = urlFilepathTable[url]
+      return glob.sync(filepathGlob, { cwd: 'content' }).map((filepath) => `${url}/${path.basename(filepath, '.json')}`)
+    })
+  )
 }
