@@ -4,10 +4,14 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 const SITE_NAME = 'Malin Parker'
 
-var dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/*.json',
-  '/projects': 'projects/*.json'
-})
+const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
+const dynamicRoutes = getDynamicPaths(
+  {
+    blog: 'blog/*.json',
+    projects: 'projects/*.json'
+  },
+  dynamicContentPath
+)
 
 export default {
   mode: 'universal',
@@ -34,7 +38,8 @@ export default {
   },
   generate: {
     routes: dynamicRoutes,
-    fallback: true
+    fallback: true,
+    subFolders: false
   },
   /*
    ** Customize the progress-bar color
@@ -101,24 +106,28 @@ export default {
 
 /**
  * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
+ * @param {*} urlFilepathTable - example below
+ * {
+ *   blog: 'blog/*.json',
+ *   projects: 'projects/*.json'
+ * }
+ *
+ * @return {Array} - Will return those files into urls for SSR generated .html's like
+ * [
+ *   /blog/2019-08-27-incidunt-laborum-e ,
+ *   /projects/story-test-story-1
+ * ]
  */
-function getDynamicPaths(urlFilepathTable) {
-  console.log('dynamicRoutes urlFilepathTable: ', urlFilepathTable)
+function getDynamicPaths(urlFilepathTable, cwdPath) {
+  console.log('Going to generate dynamicRoutes for these collection types: ', urlFilepathTable)
   const dynamicPaths = [].concat(
     ...Object.keys(urlFilepathTable).map((url) => {
-      var filepathGlob = urlFilepathTable[url]
-      return glob.sync(filepathGlob, { cwd: 'content' }).map((filepath) => {
-        console.log('filepath:', filepath)
-        debugger
-        console.log('url/path.basename(filepath, .json):', `${url}/${path.basename(filepath, '.json')}`)
-        return `${url}/${path.basename(filepath, '.json')}`
+      const filepathGlob = urlFilepathTable[url]
+      return glob.sync(filepathGlob, { cwd: cwdPath }).map((filepath) => {
+        return `/${url}/${path.basename(filepath, '.json')}`
       })
     })
   )
-  console.log('dynamicPaths:', dynamicPaths)
+  console.log('Found these dynamicPaths that will be SSR generated:', dynamicPaths)
   return dynamicPaths
 }
-// return new Promise((resolve) => {
-//   resolve(data.map((el) => `projects/${el.id}`))
-// })
