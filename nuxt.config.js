@@ -5,7 +5,8 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 const SITE_NAME = 'Malin Parker'
 
 var dynamicRoutes = getDynamicPaths({
-  '/page': 'page/*.json'
+  '/blog': 'pages/blog/*.json',
+  '/projects': 'pages/projects/*.json'
 })
 
 export default {
