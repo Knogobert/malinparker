@@ -3,5 +3,6 @@
   "project_type": "story",
   "title": "Test story 1",
   "description": "Short descriptive text",
-  "body": "Longer **markdown**-*enabled* content text."
+  "body": "Longer **markdown**-*enabled* content text.",
+  "cover": "/img/svenpa-1000x1000.jpg"
 }
