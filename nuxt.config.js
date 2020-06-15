@@ -5,8 +5,8 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 const SITE_NAME = 'Malin Parker'
 
 var dynamicRoutes = getDynamicPaths({
-  '/blog': 'pages/blog/*.json',
-  '/projects': 'pages/projects/*.json'
+  '/blog': 'blog/*.json',
+  '/projects': 'projects/*.json'
 })
 
 export default {
@@ -33,7 +33,8 @@ export default {
     ]
   },
   generate: {
-    routes: dynamicRoutes
+    routes: dynamicRoutes,
+    fallback: true
   },
   /*
    ** Customize the progress-bar color
@@ -104,10 +105,20 @@ export default {
  */
 function getDynamicPaths(urlFilepathTable) {
   console.log('dynamicRoutes urlFilepathTable: ', urlFilepathTable)
-  return [].concat(
+  const dynamicPaths = [].concat(
     ...Object.keys(urlFilepathTable).map((url) => {
       var filepathGlob = urlFilepathTable[url]
-      return glob.sync(filepathGlob, { cwd: 'content' }).map((filepath) => `${url}/${path.basename(filepath, '.json')}`)
+      return glob.sync(filepathGlob, { cwd: 'content' }).map((filepath) => {
+        console.log('filepath:', filepath)
+        debugger
+        console.log('url/path.basename(filepath, .json):', `${url}/${path.basename(filepath, '.json')}`)
+        return `${url}/${path.basename(filepath, '.json')}`
+      })
     })
   )
+  console.log('dynamicPaths:', dynamicPaths)
+  return dynamicPaths
 }
+// return new Promise((resolve) => {
+//   resolve(data.map((el) => `projects/${el.id}`))
+// })

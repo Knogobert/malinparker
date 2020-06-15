@@ -9,10 +9,12 @@
 
 ### In Progress
 
-- [ ] Setup git-lfs for netlify-lm  
 
 ### Done ✓
 
+- [x] Add custom error page  
+- [x] Fix dynamicRoutes SSR for collection types  
+- [x] Setup git-lfs for netlify-lm  
 - [x] Setup admin.css creation for netlify-cms  
 - [x] Setup netlify-cms and Project collection type  
 - [x] Fix PurgeCSS whitelist  
