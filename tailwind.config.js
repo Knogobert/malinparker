@@ -13,31 +13,37 @@ module.exports = {
       fontFamily: {
         sans: [...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono]
-      }
-      /*
+      },
       colors: {
         primary: {
-          lightest: '#FFF5E6',
-          lighter: '#F5C799',
-          light: '#DE8C5A',
-          default: '#b84e2b',
-          dark: '#A63B17',
-          darker: '#8F2A08',
-          darkest: '#731C00'
+          100: '#ECEFF5',
+          200: '#CBD2E1',
+          300: '#ABB6CD',
+          400: '#8C9AB7',
+          500: '#6F7FA0',
+          default: '#526488',
+          600: '#3E4F70',
+          700: '#2C3A57',
+          800: '#1C263B',
+          900: '#0D131E'
         },
-        secondary: {
-          light: '#fffffa',
-          default: '#fffff0',
-          medium: '#fcfced',
-          dark: '#F2F2E2',
-          darker: '#E6E6D5',
-          darkest: '#D9D9C7',
-          contrast: '#CCCCBA',
-          black: '#40402f'
-        },
-        tertiary: '#005657',
+        accent: {
+          100: '#F9E9EA',
+          200: '#EEC3C6',
+          300: '#E09FA4',
+          400: '#CF7D83', // '#D8737C',
+          500: '#BD5D65',
+          default: '#A84048',
+          600: '#8D2D34',
+          700: '#6E1D23',
+          800: '#4D1015',
+          900: '#280709'
+        }
       },
-      */
+      opacity: {
+        '10': '0.1',
+        '20': '0.2'
+      }
     },
     boxShadow: {
       ...defaultTheme.boxShadow,

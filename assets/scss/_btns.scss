@@ -1,18 +1,27 @@
 .btn {
-  @apply text-center rounded py-2 px-4 border border-white text-blue-500;
+  @apply text-center rounded py-2 px-4 border border-white text-accent;
   &:hover {
-    @apply border-gray-200 bg-gray-200;
+    @apply border-gray-200 bg-accent-600 text-white;
   }
 
   &--active {
-    @apply text-white bg-blue-500 border-blue-500;
+    @apply text-white bg-accent border-accent;
     &:hover {
-      @apply bg-blue-700;
+      @apply bg-primary-600;
     }
   }
   &--disabled,
   &[disabled='true'],
   :disabled {
     @apply text-gray-400 cursor-not-allowed;
+  }
+}
+
+.light-mode {
+  .btn {
+    @apply border-white text-accent;
+    &:hover {
+      @apply border-gray-200 bg-accent-600 text-white;
+    }
   }
 }
