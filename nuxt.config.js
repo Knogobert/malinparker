@@ -1,8 +1,7 @@
 import glob from 'glob'
 import path from 'path'
+import * as SITE_INFO from './assets/content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
-
-const SITE_NAME = 'Malin Parker'
 
 const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
 const dynamicRoutes = getDynamicPaths(
@@ -25,14 +24,14 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: SITE_NAME,
+    title: SITE_INFO.sitename || process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
       }
     ]
   },
@@ -101,8 +100,9 @@ export default {
     }
   },
   pwa: {
-    manifest: { name: SITE_NAME },
+    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '' },
     meta: {
+      name: SITE_INFO.sitename || process.env.npm_package_name || '',
       ogHost: process.env.URL,
       ogImage: '/ogp.jpg'
     }

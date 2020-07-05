@@ -1,6 +1,7 @@
 site_url: https://malinparker.netlify.app/
 logo_url: https://malinparker.netlify.app/icon.png
 
+publish_mode: editorial_workflow
 backend:
   name: git-gateway
   branch: master
@@ -10,6 +11,19 @@ public_folder: /img
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
+  - label: 'Site settings'
+    name: 'site'
+    files:
+      - label: 'Info'
+        name: 'info'
+        file: 'assets/content/site/info.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: Site Name, name: sitename, widget: string }
+          - { label: Site Description, name: sitedescription, widget: string }
+          - { label: Site email, name: siteemail, widget: string, required: false }
   - name: 'blog'
     label: 'Blog'
     # identifier_field: name
@@ -17,8 +31,8 @@ collections:
     create: true
     format: 'json'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: true
+    # editor:
+    #   preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }

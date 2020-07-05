@@ -4,14 +4,14 @@
 
 - [ ] Add folder collection type for pages  
 - [ ] Add category relation to Project collection type  
-- [ ] Add Google fonts via [Subfont package](https://www.npmjs.com/package/subfont) or [Netlify plugin](https://github.com/munter/netlify-plugin-subfont#readme)  
 
 ### In Progress
 
-- [ ] Add file collection type for Site Settings  
+- [ ] Add Google fonts via [Subfont package](https://www.npmjs.com/package/subfont) or [Netlify plugin](https://github.com/munter/netlify-plugin-subfont#readme)  
 
 ### Done ✓
 
+- [x] Add file collection type for Site Settings  
 - [x] Update colors and color variables  
 - [x] Fix dynamicRoutes SSR for collection types  
 - [x] Add custom error page  
