@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main text-center flex flex-col items-center justify-center">
     <!-- <logo /> -->
     <h1 class="title">Malin Parker</h1>
     <h2 class="subtitle">Portfolio</h2>

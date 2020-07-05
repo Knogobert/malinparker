@@ -87,7 +87,8 @@ export default {
   },
   purgeCSS: {
     mode: 'postcss',
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'article', 'articles']
+    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
+    whitelistPatterns: [/^article/, /image$/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
