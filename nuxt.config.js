@@ -93,7 +93,12 @@ export default {
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
-    componentName: 'ColorScheme'
+    componentName: 'ColorScheme',
+    cookie: {
+      options: {
+        sameSite: 'lax'
+      }
+    }
   },
   pwa: {
     manifest: { name: SITE_NAME },

@@ -1,7 +1,9 @@
 <template>
   <div class="fixed bottom-0 left-0 m-3">
-    <ColorScheme placeholder="..." tag="span">
-      <component :is="`icon-${color}`" @click="changeColorMode" title="Toggle background color" />
+    <ColorScheme placeholder="…" tag="div">
+      <div>
+        <component :is="`icon-${color}`" @click="changeColorMode" title="Toggle background color" />
+      </div>
     </ColorScheme>
   </div>
 </template>
@@ -20,7 +22,9 @@ export default {
     IconDark
   },
   computed: {
+    colorMode() { return JSON.stringify(this.$colorMode.unknown) },
     color() {
+      if (this.$colorMode.unknown) return COLOR_MODE_FALLBACK
       return this.$colorMode && this.$colorMode.preference != null && this.$colorMode.preference !== 'null'
         ? this.$colorMode.preference
         : COLOR_MODE_FALLBACK
