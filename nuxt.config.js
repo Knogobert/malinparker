@@ -14,11 +14,13 @@ const dynamicRoutes = getDynamicPaths(
 
 export default {
   mode: 'universal',
+  // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
       process.env.NODE_ENV === 'production'
         ? process.env.URL || 'http://createADotEnvFileAndSetURL'
-        : 'http://localhost:3000'
+        : 'http://localhost:3000',
+    lang: SITE_INFO.sitelang || 'en-US'
   },
   /*
    ** Headers of the page
@@ -101,9 +103,10 @@ export default {
     }
   },
   pwa: {
-    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '' },
+    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
     meta: {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
+      lang: process.env.lang,
       ogHost: process.env.URL,
       ogImage: '/ogp.jpg'
     }
