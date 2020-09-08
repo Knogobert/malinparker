@@ -1,10 +1,6 @@
 <template>
   <div class="fixed bottom-0 left-0 m-3">
-    <ColorScheme placeholder="…" tag="div">
-      <div>
-        <component :is="`icon-${color}`" @click="changeColorMode" title="Toggle background color" />
-      </div>
-    </ColorScheme>
+    <component :is="`icon-${color}`" @click="changeColorMode" title="Toggle background color" />
   </div>
 </template>
 
@@ -21,17 +17,30 @@ export default {
     IconLight,
     IconDark
   },
-  computed: {
-    colorMode() { return JSON.stringify(this.$colorMode.unknown) },
-    color() {
-      if (this.$colorMode.unknown) return COLOR_MODE_FALLBACK
-      return this.$colorMode && this.$colorMode.preference != null && this.$colorMode.preference !== 'null'
-        ? this.$colorMode.preference
-        : COLOR_MODE_FALLBACK
+  data() {
+    return {
+      color: COLOR_MODE_FALLBACK
+    }
+  },
+  watch: {
+    '$colorMode.value': {
+      immediate: true,
+      handler(val) {
+        if (!this.$colorMode.unknown) {
+          this.color =
+            this.$colorMode && this.$colorMode.preference != null && this.$colorMode.preference !== 'null'
+              ? this.$colorMode.preference
+              : COLOR_MODE_FALLBACK
+        } else {
+          this.color = COLOR_MODE_FALLBACK
+        }
+      }
     }
   },
   methods: {
     changeColorMode() {
+      if (this.$colorMode.unknown) return (this.$colorMode.preference = COLOR_MODE_FALLBACK)
+
       switch (this.$colorMode.preference) {
         case 'light':
           return (this.$colorMode.preference = 'dark')

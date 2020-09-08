@@ -9,28 +9,28 @@ The online portfolio for Malin Parker.
 1. 📦 Install dependencies.
 
 ```bash
-yarn install
+npm install
 ```
 
 2. 🏗 Run the project for local dev. This will start a hot-reloading server at `localhost:3000`.
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 3. 🌌 Build the app for server-side rendered deployment. See more about **Universal SSR** in the [Nuxt.js docs](https://nuxtjs.org/guide#server-rendered-universal-ssr-).
 
 ```bash
-yarn build
+npm run build
 
 # And to serve that deployment...
-yarn start
+npm run start
 ```
 
 4. ⚡️ Generate a fully pre-rendered static site. See more [in the docs](https://nuxtjs.org/guide#static-generated-pre-rendering-).
 
 ```bash
-yarn generate
+npm run generate
 ```
 
 > This project was bootstrapped with `create-nuxt-app`. There are more detailed explanations of how everything works in the [Nuxt.js docs](https://nuxtjs.org).
@@ -43,3 +43,11 @@ Deployed easily with the same boilerplate via:
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter)
 
 (Don’t forget to set the env var `GIT_LFS_ENABLED` to `true` on your netlify site for LFS to work)
+
+---
+
+## Troubleshooting
+
+1. > This repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting .git/hooks/pre-push.
+
+- Install git-lfs, run `git lfs install` in project root
