@@ -4,7 +4,6 @@
 
 - [ ] Add folder collection type for pages
 - [ ] Add category relation to Project collection type
-- [ ] Fix dark mode bug where a set cookie (chosen mode) produces an error on load online
 
 ### In Progress
 
@@ -12,6 +11,7 @@
 
 ### Done ✓
 
+- [x] Fix dark mode bug where a set cookie (chosen mode) produces an error on load online
 - [x] Add file collection type for Site Settings
 - [x] Update colors and color variables
 - [x] Fix dynamicRoutes SSR for collection types
