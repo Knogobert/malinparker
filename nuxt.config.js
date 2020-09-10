@@ -35,7 +35,8 @@ export default {
         name: 'description',
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
       }
-    ]
+    ],
+    link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hfo8vko.css' }]
   },
   generate: {
     routes: dynamicRoutes,

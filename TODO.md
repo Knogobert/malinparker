@@ -7,10 +7,11 @@
 
 ### In Progress
 
-- [ ] Add Google fonts via [Subfont package](https://www.npmjs.com/package/subfont) or [Netlify plugin](https://github.com/munter/netlify-plugin-subfont#readme)
+- [ ] Add collection type for menu settings
 
 ### Done ✓
 
+- [x] Add Google fonts via [Subfont package](https://www.npmjs.com/package/subfont) or [Netlify plugin](https://github.com/munter/netlify-plugin-subfont#readme)
 - [x] Fix dark mode bug where a set cookie (chosen mode) produces an error on load online
 - [x] Add file collection type for Site Settings
 - [x] Update colors and color variables
