@@ -1,8 +1,8 @@
 <template>
   <div class="main text-center flex flex-col items-center justify-center">
     <!-- <logo /> -->
-    <h1 class="title">Malin Parker</h1>
-    <h2 class="subtitle">Portfolio</h2>
+    <h1 class="title">Malin Katrine</h1>
+    <h2 class="subtitle mt-6">Kontakta mig på hello@malinkatrine.com</h2>
   </div>
 </template>
 

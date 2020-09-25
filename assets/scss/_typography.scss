@@ -4,13 +4,13 @@ a {
 }
 
 .title {
-  color: var(--color-primary);
+  color: var(--color-primary-400);
   @apply block font-bold text-5xl tracking-wide transition-colors duration-200 ease-in-out;
 }
 
 .subtitle {
   color: var(--text-secondary);
-  word-spacing: 0.15em;
+  // word-spacing: 0.05em;
   @apply block font-light text-3xl tracking-wide pb-4 transition-colors duration-200 ease-in-out;
 }
 
