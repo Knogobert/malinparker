@@ -11,8 +11,8 @@ module.exports = {
     darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
-        sans: ['Roboto Mono', ...defaultTheme.fontFamily.sans],
-        mono: [...defaultTheme.fontFamily.mono]
+        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
+        serif: ['Bugakii', ...defaultTheme.fontFamily.serif]
       },
       colors: {
         'primary': {

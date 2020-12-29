@@ -75,7 +75,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
+  modules: ['@nuxtjs/markdownit', '@nuxt/image', 'nuxt-purgecss'],
   markdownit: {
     injected: true
   },
