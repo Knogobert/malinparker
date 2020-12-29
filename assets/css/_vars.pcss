@@ -1,0 +1,62 @@
+/**
+  * SCSS Variables
+  *
+  'primary': {
+    '100': '#E7CCCB',
+    '200': '#D7ABA8',
+    '300': '#C78985',
+    '400': '#B76762',
+    default: '#9D4E48',
+    '600': '#7A3D38',
+    '700': '#572B28',
+    '800': '#341A18',
+    '900': '#110908'
+  },
+  * );
+  *
+*/
+
+/**
+  * CSS Variables
+  */
+:root {
+  --color-primary-100: theme('colors.primary.100'); /* #E7CCCB */
+  --color-primary-200: theme('colors.primary.200'); /* #D7ABA8 */
+  --color-primary-300: theme('colors.primary.300'); /* #C78985 */
+  --color-primary-400: theme('colors.primary.400'); /* #B76762 */
+  --color-primary: theme('colors.primary.default'); /* #9D4E48 */
+  --color-primary-600: theme('colors.primary.600'); /* #7A3D38 */
+  --color-primary-700: theme('colors.primary.700'); /* #572B28 */
+  --color-primary-800: theme('colors.primary.800'); /* #341A18 */
+  --color-primary-900: theme('colors.primary.900'); /* #110908 */
+
+  --text: var(--color-primary-200);
+  --text-secondary: var(--color-primary-100);
+
+  --bg: var(--color-primary-900);
+  --bg-secondary: var(--color-primary-800);
+
+  --border-color: var(--color-primary-700);
+  --border-color-secondary: var(--color-primary-600);
+}
+
+.light-mode {
+  --color-primary-100: theme('colors.primary.100'); /* #E7CCCB */
+  --color-primary-200: theme('colors.primary.200'); /* #D7ABA8 */
+  --color-primary-300: theme('colors.primary.300'); /* #C78985 */
+  --color-primary-400: theme('colors.primary.400'); /* #B76762 */
+  --color-primary: theme('colors.primary.default'); /* #9D4E48 */
+  --color-primary-600: theme('colors.primary.600'); /* #7A3D38 */
+  --color-primary-700: theme('colors.primary.700'); /* #572B28 */
+  --color-primary-800: theme('colors.primary.800'); /* #341A18 */
+  --color-primary-900: theme('colors.primary.900'); /* #110908 */
+
+  --text: var(--color-primary-900);
+  --text-secondary: var(--color-primary-800);
+
+  --bg: var(--color-primary-100);
+  --bg-secondary: var(--color-primary-200);
+
+  --border-color: var(--color-primary-400);
+  --border-color-secondary: var(--color-primary);
+}

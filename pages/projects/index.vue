@@ -15,7 +15,7 @@
       >
         <h3 class="article-title">{{ projectPost.title }}</h3>
         <div class="mt-4 mb-2">
-          <h2 class="inline py-1 px-2 mr-1 bg-accent text-white font-medium rounded-sm dark:bg-accent">{{ projectPost.project_type }}</h2>
+          <h2 class="inline py-1 px-2 mr-1 bg-primary text-white font-medium rounded-sm dark:bg-primary">{{ projectPost.project_type }}</h2>
           <p class="inline">{{ projectPost.description }}</p>
         </div>
       </nuxt-link>

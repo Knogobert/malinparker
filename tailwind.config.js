@@ -11,44 +11,27 @@ module.exports = {
     darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
-        sans: ['Europa', ...defaultTheme.fontFamily.sans],
+        sans: ['Roboto Mono', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono]
       },
       colors: {
-        primary: {
-          100: '#ECEFF5',
-          200: '#CBD2E1',
-          300: '#ABB6CD',
-          400: '#8C9AB7',
-          500: '#6F7FA0',
-          default: '#526488',
-          600: '#3E4F70',
-          700: '#2C3A57',
-          800: '#1C263B',
-          900: '#0D131E'
+        'primary': {
+          '100': '#E7CCCB',
+          '200': '#D7ABA8',
+          '300': '#C78985',
+          '400': '#B76762',
+          default: '#9D4E48',
+          '600': '#7A3D38',
+          '700': '#572B28',
+          '800': '#341A18',
+          '900': '#110908'
         },
-        accent: {
-          100: '#F9E9EA',
-          200: '#EEC3C6',
-          300: '#E09FA4',
-          400: '#CF7D83', // '#D8737C',
-          500: '#BD5D65',
-          default: '#A84048',
-          600: '#8D2D34',
-          700: '#6E1D23',
-          800: '#4D1015',
-          900: '#280709'
-        }
       },
       opacity: {
         '10': '0.1',
         '20': '0.2'
       }
     },
-    boxShadow: {
-      ...defaultTheme.boxShadow,
-      outline: '0 0 0 3px rgba(0, 86, 87,0.5)'
-    }
   },
   variants: {
     backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],

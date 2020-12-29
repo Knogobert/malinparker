@@ -1,3 +1,0 @@
-[filter "lfs"]
-	clean = ''
-	smudge = ''

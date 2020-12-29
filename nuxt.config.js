@@ -1,5 +1,8 @@
 import glob from 'glob'
 import path from 'path'
+import postcssImport from 'postcss-import'
+import postcssNesting from 'postcss-nesting'
+import postcssPresetEnv from 'postcss-preset-env'
 import * as SITE_INFO from './assets/content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
@@ -13,7 +16,6 @@ const dynamicRoutes = getDynamicPaths(
 )
 
 export default {
-  mode: 'universal',
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -22,6 +24,7 @@ export default {
         : 'http://localhost:3000',
     lang: SITE_INFO.sitelang || 'en-US'
   },
+  components: true,
   /*
    ** Headers of the page
    */
@@ -36,7 +39,17 @@ export default {
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/hfo8vko.css' }]
+    link: [
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap'
+      }
+    ] // ? Imports the font 'Roboto Mono' and is optimized by the netlify plugin 'Subfont'
   },
   generate: {
     routes: dynamicRoutes,
@@ -50,7 +63,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/scss/main.scss'],
+  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -73,7 +86,15 @@ export default {
     extractCSS: true,
     postcss: {
       plugins: {
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
+        'postcss-import': postcssImport,
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        'postcss-nesting': postcssNesting,
+        'postcss-preset-env': postcssPresetEnv({
+          stage: 1,
+          features: {
+            'nesting-rules': false
+          }
+        })
       }
     },
     /*
@@ -104,6 +125,10 @@ export default {
     }
   },
   pwa: {
+    icon: {
+      source: 'static/icon.png',
+      filename: 'icon.png'
+    },
     manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
     meta: {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
@@ -131,9 +156,9 @@ export default {
 function getDynamicPaths(urlFilepathTable, cwdPath) {
   console.log('Going to generate dynamicRoutes for these collection types: ', urlFilepathTable)
   const dynamicPaths = [].concat(
-    ...Object.keys(urlFilepathTable).map((url) => {
+    ...Object.keys(urlFilepathTable).map(url => {
       const filepathGlob = urlFilepathTable[url]
-      return glob.sync(filepathGlob, { cwd: cwdPath }).map((filepath) => {
+      return glob.sync(filepathGlob, { cwd: cwdPath }).map(filepath => {
         return `/${url}/${path.basename(filepath, '.json')}`
       })
     })
