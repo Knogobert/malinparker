@@ -16,6 +16,9 @@ const dynamicRoutes = getDynamicPaths(
 )
 
 export default {
+  target: 'static',
+  components: true,
+
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -24,7 +27,6 @@ export default {
         : 'http://localhost:3000',
     lang: SITE_INFO.sitelang || 'en-US'
   },
-  components: true,
   /*
    ** Headers of the page
    */
@@ -56,7 +58,7 @@ export default {
         media: 'print',
         onload: `this.media='all'`,
       }
-    ], // ? Imports the font 'Roboto Mono' and is optimized by the netlify plugin 'Subfont'
+    ], // ? Imports the font 'Roboto Mono'
     noscript: [{
       innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">'
     }],
@@ -74,7 +76,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss'],
+  css: ['@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -117,7 +119,7 @@ export default {
    ** Custom additions configuration
    */
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
+    cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
   purgeCSS: {
