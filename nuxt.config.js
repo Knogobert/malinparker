@@ -46,10 +46,21 @@ export default {
         crossorigin: true,
       },
       {
+        rel: 'preload',
+        as: 'style',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap',
+      },
+      {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap',
+        media: 'print',
+        onload: `this.media='all'`,
       }
-    ] // ? Imports the font 'Roboto Mono' and is optimized by the netlify plugin 'Subfont'
+    ], // ? Imports the font 'Roboto Mono' and is optimized by the netlify plugin 'Subfont'
+    noscript: [{
+      innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">'
+    }],
+    __dangerouslyDisableSanitizers: ['noscript']
   },
   generate: {
     routes: dynamicRoutes,

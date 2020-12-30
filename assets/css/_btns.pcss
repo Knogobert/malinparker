@@ -1,5 +1,6 @@
 .btn {
-  @apply text-center rounded py-2 px-4 border border-white text-primary;
+  @apply text-center rounded py-2 px-4 border border-solid border-transparent text-primary;
+
   &:hover {
     @apply border-gray-200 bg-primary-600 text-white;
   }
@@ -10,10 +11,19 @@
       @apply bg-primary-600;
     }
   }
+
   &.btn--disabled,
   &[disabled='true'],
-  :disabled {
+  &:disabled {
     @apply text-gray-400 cursor-not-allowed;
+  }
+
+  &.btn-ghost {
+    @apply border-primary-100 bg-transparent text-primary-400;
+
+    &:hover {
+      @apply border-primary-600 bg-primary-600 text-white;
+    }
   }
 }
 
@@ -22,6 +32,12 @@
     @apply border-white text-primary;
     &:hover {
       @apply border-gray-200 bg-primary-600 text-white;
+    }
+
+    &.btn-ghost {
+      &:hover {
+        @apply border-primary-600;
+      }
     }
   }
 }
