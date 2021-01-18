@@ -1,7 +1,7 @@
 <template>
-  <div class="grid-container">
+  <section class="grid-container">
     <div class="headline self-end">
-      <h3 class="font-sm">Hej, mitt namn är</h3>
+      <h3 class="text-sm">Hej, mitt namn är</h3>
     </div>
 
     <div class="intro">
@@ -12,15 +12,15 @@
       </div>
     </div>
 
-    <div class="cta flex flex-col md:flex-row">
+    <div class="cta flex flex-col md:flex-row items-end">
       <nuxt-link to="/contact" class="btn btn-ghost">Kontakta mig</nuxt-link>
       <div class="flex-1"></div>
       <div class="flex-auto text-right ml-4">
-        <h4 class="uppercase text-gray-500">Kontakt</h4>
+        <h4 class="uppercase text-gray">Kontakt</h4>
         <a href="mailto:hello@malinkatrine.com" class="">hello@malinkatrine.com</a>
       </div>
       <div class="flex-auto text-right ml-4">
-        <h4 class="uppercase text-gray-500">Plats</h4>
+        <h4 class="uppercase text-gray">Plats</h4>
         <p class="text-primary">Göteborg</p>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="image">
       <nuxt-image class="" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

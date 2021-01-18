@@ -1,6 +1,7 @@
 <template>
   <div class="main flex flex-col">
-    <section-hero />
+    <section-hero class="mb-16" />
+    <section-knowledge class="" />
   </div>
 </template>
 

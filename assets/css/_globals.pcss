@@ -7,7 +7,21 @@ html {
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--bg-secondary);
   color: var(--text);
-  @apply font-mono transition-colors duration-200 ease-in-out;
+  @apply
+    font-mono
+    p-4
+    transition-colors
+    duration-200
+    ease-in-out;
+
+  & > div {
+    background-color: var(--bg);
+    @apply
+      rounded-3xl
+      transition-colors
+      duration-200
+      ease-in-out;
+  }
 }

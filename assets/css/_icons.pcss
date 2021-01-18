@@ -4,7 +4,8 @@
     border: 2px solid var(--border-color);
     @apply relative m-0 p-2 top-0 cursor-pointer rounded-lg transition-all duration-200 ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateY(-1px);
       border-color: var(--border-color-secondary);
     }
@@ -17,7 +18,8 @@
       background-color: var(--bg);
       border-color: var(--border-color-secondary);
 
-      &:hover {
+      &:hover,
+      &:focus {
         border-color: var(--border-color);
       }
     }

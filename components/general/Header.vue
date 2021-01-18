@@ -1,14 +1,15 @@
 <template>
-  <nav class="">
-    <ul class="flex fixed top-0 inset-x-0 p-3">
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/">Home</nuxt-link>
+  <nav class="header">
+    <ul class="flex justify-end py-4 px-8 max-w-5xl mx-auto">
+      <li class="underscore mr-2"></li>
+      <li class="mx-2">
+        <nuxt-link class="px-4" to="/">Home</nuxt-link>
       </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
+      <li class="mx-2">
+        <nuxt-link class="px-4" to="/blog">Blog</nuxt-link>
       </li>
-      <li class="flex-1">
-        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
+      <li class="ml-2">
+        <nuxt-link class="pl-4" to="/projects">Projects</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -21,17 +22,37 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.header {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+
+.underscore {
+  margin-bottom: 3.5px;
+  @apply
+    border-b
+    border-primary
+    flex-1
+}
+
+a:hover {
+  @apply underline;
+}
+
 .nuxt-link-exact-active {
-  @apply text-primary-100 bg-primary bg-opacity-20;
+  @apply text-primary-100 underline;
   &:hover {
-    @apply text-white bg-primary-600;
+    @apply text-primary-200;
   }
 }
 .light-mode {
   & .nuxt-link-exact-active {
-    @apply text-primary-600;
+    @apply text-primary-800;
     &:hover {
-      @apply text-white;
+      @apply text-primary-700;
     }
   }
 }

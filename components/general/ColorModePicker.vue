@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed bottom-0 left-0 m-3">
-    <component :is="`icon-${color}`" @click="changeColorMode" title="Toggle background color" />
+  <div class="picker fixed m-3">
+    <component :is="`icon-${color}`" @click="changeColorMode" tabindex="0" title="Toggle background color" />
   </div>
 </template>
 
@@ -58,6 +58,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.picker {
+  left: 1rem;
+  bottom: 1rem;
+}
 .icon {
   width: 44px;
   height: 44px;
