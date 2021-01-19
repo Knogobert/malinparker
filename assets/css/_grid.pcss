@@ -1,12 +1,17 @@
 @layer base {
   .wrapper {
-    min-height: 100vh;
+    min-height: calc(100vh - 2rem);
     padding-top: 56px; /* header height */
     @apply my-0 mx-auto flex justify-center items-start flex-col;
   }
 
   .main {
-    @apply w-full max-w-5xl mx-auto px-8 py-2 flex-auto;
+    @apply w-full max-w-5xl mx-auto px-4 py-2 flex-auto;
+  }
+  @screen sm {
+    .main {
+      @apply px-8 py-2;
+    }
   }
 
   .articles {

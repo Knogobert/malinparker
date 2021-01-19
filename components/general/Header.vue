@@ -1,6 +1,6 @@
 <template>
   <nav class="header">
-    <ul class="flex justify-end py-4 px-8 max-w-5xl mx-auto">
+    <ul class="flex justify-end py-4 px-4 sm:px-8 max-w-5xl mx-auto">
       <li class="underscore mr-2"></li>
       <li class="mx-2">
         <nuxt-link class="px-4" to="/">Home</nuxt-link>
