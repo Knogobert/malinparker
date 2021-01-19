@@ -32,10 +32,6 @@ export default {
 
 .underscore {
   margin-bottom: 3.5px;
-  @apply
-    border-b
-    border-primary
-    flex-1
 }
 
 a:hover {

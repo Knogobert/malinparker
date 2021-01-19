@@ -2,6 +2,7 @@
   <div class="main flex flex-col">
     <section-hero class="mb-16" />
     <section-knowledge class="mb-16" />
+    <section-selected-work class="mb-16" />
   </div>
 </template>
 
