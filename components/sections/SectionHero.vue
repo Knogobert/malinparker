@@ -57,16 +57,13 @@ export default {
     grid-template-rows: 2rem 1fr 3rem;
     gap: 1rem 1rem;
     grid-template-areas:
-      "headline headline image"
-      ". intro image"
-      ". cta cta";
+      "headline headline headline"
+      "intro intro image"
+      "cta cta cta";
   }
 }
 @screen md {
   .grid-container {
-    grid-template-columns: 2rem 1.5fr 1fr;
-    grid-template-rows: 2rem 1fr 3rem;
-    gap: 1rem 1rem;
     grid-template-areas:
       "headline headline image"
       ". intro image"

@@ -17,7 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.6",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "vue-intersect": "^1.1.6"
   },
   "devDependencies": {
     "@nuxt/image": "0.0.4",

@@ -5,18 +5,22 @@
       <div class="underscore ml-2"></div>
     </div>
 
-    <div class="image">
+    <div class="image self-center">
       <nuxt-image class="" src="/img/knowledge.svg" alt="Knowledge tree" fit="contain" />
     </div>
 
     <div class="intro sm:place-self-center">
-      <h2 class="subtitle mb-4">Skills</h2>
-      <ul>
-        <li>Skill1</li>
-        <li>Skill2</li>
-        <li>Skill3</li>
-        <li>Skill4</li>
-        <li>Skill5</li>
+      <h2 class="subtitle mb-4">Skills.</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-8">
+        <li>UX Research</li>
+        <li>Adobe Suite</li>
+        <li>UI Design</li>
+        <li>User&nbsp;Testing</li>
+        <li>Graphic&nbsp;Design</li>
+        <li>Prototyping</li>
+        <li>Figma</li>
+        <li>Illustration</li>
+        <li>Photography</li>
       </ul>
     </div>
   </section>
@@ -47,11 +51,16 @@ export default {
 }
 @screen sm {
   .grid-container {
-    grid-template-columns: 2rem 2fr 3rem 1.5fr;
+    grid-template-columns: 2fr 2rem 1fr;
     grid-template-rows: 2rem 1fr;
     grid-template-areas:
-      "headline headline headline headline"
-      "image image . intro";
+      "headline headline headline"
+      "image . intro";
+  }
+}
+@screen md {
+  .grid-container {
+    grid-template-columns: 2fr 3rem 1.5fr;
   }
 }
 

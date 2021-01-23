@@ -1,7 +1,7 @@
 <template>
-  <div class="picker fixed m-3">
-    <component :is="`icon-${color}`" @click="changeColorMode" tabindex="0" title="Toggle background color" />
-  </div>
+  <button class="picker fixed z-20 m-3" @click="changeColorMode" tabindex="0" title="Toggle background color">
+    <component :is="`icon-${color}`" />
+  </button>
 </template>
 
 <script>
@@ -61,6 +61,7 @@ export default {
 .picker {
   left: 1rem;
   bottom: 1rem;
+  -moz-outline-radius: 1rem;
 }
 .icon {
   width: 44px;

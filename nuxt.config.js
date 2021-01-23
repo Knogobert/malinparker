@@ -96,6 +96,7 @@ export default {
    ** Build configuration
    */
   build: {
+    transpile: ['vue-intersect'],
     extractCSS: true,
     postcss: {
       plugins: {
