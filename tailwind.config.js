@@ -50,9 +50,9 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark', 'dark-hover', 'dark-active']
+    backgroundColor: ['dark'], //, 'dark-hover', 'dark-group-hover'],
+    borderColor: ['dark'], // , 'dark-focus', 'dark-focus-within'],
+    textColor: ['dark'], // , 'dark-hover', 'dark-active']
   },
   plugins: [require('tailwindcss-dark-mode')()],
   purge: {

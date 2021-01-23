@@ -12,14 +12,14 @@
       </div>
     </div>
 
-    <div class="cta flex flex-col md:flex-row items-end">
-      <nuxt-link to="/contact" class="btn btn-ghost">Kontakta mig</nuxt-link>
+    <div class="cta flex flex-col sm:flex-row items-start sm:items-end">
+      <nuxt-link to="/contact" class="btn btn-ghost mt-2 sm:mt-0">Kontakta mig</nuxt-link>
       <div class="flex-1"></div>
-      <div class="flex-auto text-right ml-4">
+      <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
         <h4 class="uppercase text-gray">Kontakt</h4>
         <a href="mailto:hello@malinkatrine.com" class="">hello@malinkatrine.com</a>
       </div>
-      <div class="flex-auto text-right ml-4">
+      <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
         <h4 class="uppercase text-gray">Plats</h4>
         <p class="text-primary">Göteborg</p>
       </div>
@@ -40,15 +40,46 @@ export default {
 <style lang="postcss" scoped>
 .grid-container {
   display: grid;
-  grid-template-columns: 2rem 1.5fr 1fr;
-  grid-template-rows: 2rem 1fr 3rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem auto auto auto;
   gap: 1rem 1rem;
   grid-template-areas:
-    "headline headline image"
-    ". intro image"
-    ". cta image";
+    "headline"
+    "intro"
+    "image"
+    "cta";
 
   place-items: stretch;
+}
+@screen sm {
+  .grid-container {
+    grid-template-columns: 2rem 1.5fr 1fr;
+    grid-template-rows: 2rem 1fr 3rem;
+    gap: 1rem 1rem;
+    grid-template-areas:
+      "headline headline image"
+      ". intro image"
+      ". cta cta";
+  }
+}
+@screen md {
+  .grid-container {
+    grid-template-columns: 2rem 1.5fr 1fr;
+    grid-template-rows: 2rem 1fr 3rem;
+    gap: 1rem 1rem;
+    grid-template-areas:
+      "headline headline image"
+      ". intro image"
+      ". cta cta";
+  }
+}
+@screen lg {
+  .grid-container {
+    grid-template-areas:
+      "headline headline image"
+      ". intro image"
+      ". cta image";
+  }
 }
 
 .headline { grid-area: headline; }

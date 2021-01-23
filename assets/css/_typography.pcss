@@ -11,13 +11,20 @@
 
   .title {
     color: var(--color-primary);
-    @apply block font-serif text-4xl tracking-wide leading-snug transition-colors duration-150 ease-in-out;
+    @apply block font-serif text-2xl tracking-wide leading-snug transition-colors duration-150 ease-in-out;
   }
 
   .subtitle {
     color: var(--text-secondary);
     word-spacing: 0.15em;
-    @apply block font-serif text-4xl tracking-wide leading-snug transition-colors duration-150 ease-in-out;
+    @apply block font-serif text-2xl tracking-wide leading-snug transition-colors duration-150 ease-in-out;
+  }
+
+  @screen sm {
+    .title,
+    .subtitle {
+      @apply text-4xl;
+    }
   }
 
   .light-mode {
