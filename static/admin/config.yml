@@ -44,10 +44,11 @@ collections:
     slug: '{{slug}}'
     preview_path: 'cases/{{slug}}'
     fields:
+      - { label: 'Selected work', name: 'selected', widget: 'boolean', required: false, hint: 'Should it appear on the start page?' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', required: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
       - {
           label: 'Cover Image',
           name: 'cover',

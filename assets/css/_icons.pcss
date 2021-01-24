@@ -1,7 +1,7 @@
 @layer components {
   .icon {
-    background-color: var(--bg-secondary);
-    @apply relative border border-primary-600 m-0 p-2 top-0 cursor-pointer rounded-2xl transition-all duration-200 ease-in-out;
+    background-color: var(--bg);
+    @apply relative text-gray-400 border border-primary-600 m-0 p-2 top-0 cursor-pointer rounded-2xl transition-all duration-200 ease-in-out;
     -moz-outline-radius: 1rem;
 
     &:hover,
@@ -15,8 +15,7 @@
   }
   .light-mode {
     & .icon {
-      background-color: var(--bg);
-      @apply border-primary-400;
+      @apply text-gray-600 border-primary-400;
 
       &:hover,
       &:focus {

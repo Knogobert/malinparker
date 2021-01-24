@@ -6,7 +6,7 @@
 
     <div class="intro">
       <div class="flex-1">
-        <h1 class="title mb-1">Malin Katrine Parker.</h1>
+        <h1 class="title text-gray-600 dark:text-primary mb-1">Malin Katrine Parker.</h1>
         <h2 class="subtitle mb-4">UX designer som vill designa och andas hållbart.</h2>
         <p>Motiveras av att förenkla och förbättra människors vardag. Trivs i snabba, långsamma designprocesser med känslan av att bidra med något viktigt. Jag är en formstark och inlyssnande person som gillar att leka kurragömma med min katt. </p>
       </div>

@@ -1,6 +1,6 @@
 @layer base {
   p {
-    color: var(--text-secondary);
+    color: var(--text);
     @apply font-mono leading-normal transition-colors duration-150 ease-in-out;
   }
 
@@ -10,12 +10,12 @@
   }
 
   .title {
-    color: var(--color-primary);
+    color: var(--text);
     @apply block font-serif text-2xl tracking-wide leading-snug transition-colors duration-150 ease-in-out;
   }
 
   .subtitle {
-    color: var(--text-secondary);
+    color: var(--text);
     word-spacing: 0.15em;
     @apply block font-serif text-2xl tracking-wide leading-snug transition-colors duration-150 ease-in-out;
   }
@@ -28,8 +28,8 @@
   }
 
   .light-mode {
-    .title {
+    /* .title {
       color: var(--color-primary-600);
-    }
+    } */
   }
 }

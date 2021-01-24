@@ -66,6 +66,5 @@ export default {
 
 .headline { grid-area: headline; }
 .intro { grid-area: intro; }
-.cta { grid-area: cta; }
 .image { grid-area: image; }
 </style>

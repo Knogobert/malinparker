@@ -6,14 +6,14 @@
           <nuxt-link class="sm:hidden" to="/">MKP</nuxt-link>
           <nuxt-link class="hidden sm:block" to="/">Malin Katrine Parker</nuxt-link>
         </li>
-        <li class="underscore mr-2"></li>
-        <li class="mx-2">
+        <li class="underscore mr-4"></li>
+        <li class="">
           <nuxt-link class="px-4" to="/cases">UX/UI</nuxt-link>
         </li>
         <!-- <li class="mx-2">
           <nuxt-link class="px-4" to="/design">graphic design</nuxt-link>
         </li> -->
-        <li class="ml-2 -mr-4">
+        <li class="-mr-4">
           <nuxt-link class="px-4" to="/contact">who am i?</nuxt-link>
         </li>
       </ul>

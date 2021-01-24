@@ -1,6 +1,19 @@
 {
+  "selected": true,
   "date": "2021-01-24T20:35:29.027Z",
   "title": "bokA",
-  "excerpt": "Short descriptive text",
-  "body": "Longer **markdown**-*enabled* content text. ![Alter](https://www.tutorialspoint.com/yaml/images/yaml-mini-logo.jpg \"Title\")"
+  "excerpt": "Applikation med suverän position för bibliotekarier runt hela landet falukorv. En konceptlösning på hur man kan välja ut böcker och se vilken genre de tillhör. Där får man inspiration till nästa val och förslag på att kunna plocka böcker i samma kategori eller fylla i de luckor man saknar.",
+  "body": "GUI examination · Design a system that help librarians and sales people to put together suggestions of up to ten books in packages for different request.",
+  "cover": {
+    "src": "/img/boka-feature.png",
+    "alt": "en applikation med 300 valbara böcker"
+  },
+  "meta": {
+    "steps": [1, 2, 3, 5],
+    "duration": "5 days",
+    "methods": "Wireframing, prototyping, think aloud.",
+    "tools": "Paper & pen, Figma, Color blind (figma plug-in)",
+    "role": "Individual project",
+    "workedWith": ""
+  }
 }
