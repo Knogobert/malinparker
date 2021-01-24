@@ -17,7 +17,7 @@ export default {
         {
           slug: 'boka',
           title: 'bokA.',
-          featuredImage: { src: '/img/boka-feature.png', alt: 'en applikation med 300 valbara böcker' },
+          cover: { src: '/img/boka-feature.png', alt: 'en applikation med 300 valbara böcker' },
           images: [],
           excerpt: 'Applikation med suverän position för bibliotekarier runt hela landet falukorv. En konceptlösning på hur man kan välja ut böcker och se vilken genre de tillhör. Där får man inspiration till nästa val och förslag på att kunna plocka böcker i samma kategori eller fylla i de luckor man saknar.',
           meta: {
@@ -32,7 +32,7 @@ export default {
         {
           slug: 'catan',
           title: 'Catan.',
-          featuredImage: { src: '/img/catan-feature.jpg', alt: 'en ipad med ett spelbräde och en iphone som kontrollerar brädet' },
+          cover: { src: '/img/catan-feature.jpg', alt: 'en ipad med ett spelbräde och en iphone som kontrollerar brädet' },
           images: [],
           excerpt: 'Applikation med suverän position för bibliotekarier runt hela landet falukorv. En konceptlösning på hur man kan välja ut böcker och se vilken genre de tillhör. Där får man inspiration till nästa val och förslag på att kunna plocka böcker i samma kategori eller fylla i de luckor man saknar.',
           meta: {

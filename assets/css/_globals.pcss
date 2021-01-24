@@ -23,6 +23,66 @@ body {
       transition-colors
       duration-200
       ease-in-out;
+
+    &::before,
+    &::after { /* bottom border squares */
+      content: '';
+      background-color: var(--bg-secondary);
+      @apply
+        fixed
+        z-30
+        h-8
+        w-8
+        bottom-0
+        mb-4
+        transition-colors
+        duration-200
+        ease-in-out;
+    }
+    &::before { /* bottom left border square */
+      @apply left-0 ml-4 rounded-tr-3xl;
+    }
+    &::after { /* bottom right border square */
+      @apply right-0 mr-4 rounded-tl-3xl;
+    }
+
+    & > div {
+      &::before,
+      &::after { /* bottom border radiuses */
+        content: '';
+        background-color: var(--bg);
+        @apply
+          fixed
+          z-40
+          h-8
+          w-8
+          bottom-0
+          mb-4
+          transition-colors
+          duration-200
+          ease-in-out;
+      }
+      &::before { /* bottom left border radius */
+        @apply left-0 ml-4 rounded-bl-3xl rounded-tr-3xl;
+      }
+      &::after { /* bottom right border radius */
+        @apply right-0 mr-4 rounded-br-3xl rounded-tl-3xl;
+      }
+    }
+  }
+
+  &::after { /* bottom solid border */
+    content: '';
+    background-color: var(--bg-secondary);
+    @apply
+      fixed
+      z-40
+      h-4
+      bottom-0
+      inset-x-0
+      transition-colors
+      duration-200
+      ease-in-out;
   }
 }
 

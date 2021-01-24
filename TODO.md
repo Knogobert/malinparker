@@ -8,7 +8,7 @@
 
 ### In Progress
 
-- [ ] Setup first page
 
 ### Done ✓
 
+- [X] Setup first page

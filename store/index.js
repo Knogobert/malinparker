@@ -1,16 +1,16 @@
-import { SET_BLOG_POSTS, SET_PROJECT_POSTS } from './mutations.type'
+import { SET_BLOG_POSTS, SET_CASE_POSTS } from './mutations.type'
 
 export const state = () => ({
-  blogPosts: [],
-  projectPosts: []
+  // blogPosts: [],
+  casePosts: []
 })
 
 export const mutations = {
-  [SET_BLOG_POSTS](state, list) {
-    state.blogPosts = list
-  },
-  [SET_PROJECT_POSTS](state, list) {
-    state.projectPosts = list
+  // [SET_BLOG_POSTS](state, list) {
+  //   state.blogPosts = list
+  // },
+  [SET_CASE_POSTS](state, list) {
+    state.casePosts = list
   }
 }
 
@@ -24,12 +24,12 @@ export const actions = {
   },
   async nuxtServerInit({ commit }) {
     // Blog collection type
-    let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
-    await commit(SET_BLOG_POSTS, actions.getPosts(blogFiles))
+    // let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
+    // await commit(SET_BLOG_POSTS, actions.getPosts(blogFiles))
 
-    // Project collection type
-    let projectFiles = await require.context('~/assets/content/projects/', false, /\.json$/)
-    await commit(SET_PROJECT_POSTS, actions.getPosts(projectFiles))
+    // Case Study collection type
+    let caseFiles = await require.context('~/assets/content/cases/', false, /\.json$/)
+    await commit(SET_CASE_POSTS, actions.getPosts(caseFiles))
 
     // ? When adding/changing NetlifyCMS collection types, make sure to:
     // ? 1. Add/rename exact slugs here

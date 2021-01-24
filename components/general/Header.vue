@@ -2,15 +2,19 @@
   <header ref="header">
     <nav :class="{ 'shadow-xl': intersecting }">
       <ul class="flex justify-end py-4 px-4 sm:px-8 max-w-5xl mx-auto">
+        <li v-if="$route.path !== '/'" class="mr-4 sm:mr-6">
+          <nuxt-link class="sm:hidden" to="/">MKP</nuxt-link>
+          <nuxt-link class="hidden sm:block" to="/">Malin Katrine Parker</nuxt-link>
+        </li>
         <li class="underscore mr-2"></li>
         <li class="mx-2">
-          <nuxt-link class="px-4" to="/">Home</nuxt-link>
+          <nuxt-link class="px-4" to="/cases">UX/UI</nuxt-link>
         </li>
-        <li class="mx-2">
-          <nuxt-link class="px-4" to="/blog">Blog</nuxt-link>
-        </li>
-        <li class="ml-2">
-          <nuxt-link class="pl-4" to="/projects">Projects</nuxt-link>
+        <!-- <li class="mx-2">
+          <nuxt-link class="px-4" to="/design">graphic design</nuxt-link>
+        </li> -->
+        <li class="ml-2 -mr-4">
+          <nuxt-link class="px-4" to="/contact">who am i?</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -30,11 +34,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-header {
-  z-index: 100;
+header { /* top solid border */
   height: 2rem;
   background: var(--bg-secondary);
-  @apply fixed inset-x-0 top-0 transition-colors duration-200 ease-in-out;
+  @apply fixed z-40 inset-x-0 top-0 transition-colors duration-200 ease-in-out;
 }
 
 nav {

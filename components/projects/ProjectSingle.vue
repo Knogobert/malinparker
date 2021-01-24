@@ -1,8 +1,8 @@
 <template>
   <article v-if="project" class="project">
-    <nuxt-link :to="`/projects/${project.slug}`">
-      <figure class="" v-if="project.featuredImage && project.featuredImage.src">
-        <nuxt-image :src="project.featuredImage.src" :alt="project.featuredImage.alt" fit="cover" />
+    <nuxt-link :to="`/cases/${project.slug}`">
+      <figure class="" v-if="project.cover && project.cover.src">
+        <nuxt-image :src="project.cover.src" :alt="project.cover.alt" fit="cover" />
       </figure>
       <div class="intro">
         <h4 class="subtitle">{{ project.title }}</h4>
