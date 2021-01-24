@@ -9,7 +9,7 @@
     "alt": "en applikation med 300 valbara böcker"
   },
   "meta": {
-    "steps": [1, 2, 3, 5],
+    "visibleSteps": [1, 2, 3, 5],
     "duration": "5 days",
     "methods": "Wireframing, prototyping, think aloud.",
     "tools": "Paper & pen, Figma, Color blind (figma plug-in)",

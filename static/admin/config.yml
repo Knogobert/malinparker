@@ -60,12 +60,46 @@ collections:
           ]
         }
       - {
-          label: 'Gallery',
-          name: 'gallery',
-          widget: 'list',
-          required: false,
-          summary: '{{fields.image}}',
-          field: { label: 'Image', name: 'image', widget: 'image' },
+          label: "Steps",
+          name: "steps",
+          widget: "list",
+          summary: '{{fields.title}}',
+          fields: [
+            {
+              label: 'Step type',
+              name: 'type',
+              widget: 'select',
+              multiple: false,
+              required: true,
+              options: [
+                { label: 'Research', value: 1 },
+                { label: 'Empathize', value: 2 },
+                { label: 'Ideate', value: 3 },
+                { label: 'Prototype', value: 4 },
+                { label: 'Test', value: 5 },
+              ]
+            },
+            { label: Title, name: title, widget: string, required: true },
+            { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false },
+            {
+              label: 'Photos',
+              name: 'photos',
+              widget: 'list',
+              required: false,
+              collapsed: true,
+              summary: '{{fields.image.src}} - {{fields.image.alt}}',
+              field: {
+                label: 'Image',
+                name: 'image',
+                widget: 'object',
+                required: false,
+                fields: [
+                  { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+                  { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+                ]
+              },
+            }
+          ],
         }
       - {
           label: 'Metadata',
@@ -74,8 +108,8 @@ collections:
           required: false,
           fields: [
             {
-              label: 'Steps',
-              name: 'steps',
+              label: 'Visible Steps',
+              name: 'visibleSteps',
               widget: 'select',
               multiple: true,
               required: false,
@@ -94,3 +128,22 @@ collections:
             { label: 'Worked With', name: 'workedWith', widget: 'string', required: false },
           ]
         }
+      - {
+          label: 'Final Product',
+          name: 'final',
+          widget: 'list',
+          required: false,
+          summary: '{{fields.image.src}} - {{fields.image.alt}}',
+          field: {
+            label: 'Image',
+            name: 'image',
+            widget: 'object',
+            required: false,
+            fields: [
+              { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+              { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+              { label: 'Image Text', name: 'body', widget: 'markdown', minimal: true, required: false },
+            ]
+          },
+        }
+      - { label: 'Retrospective', name: 'retrospective', widget: 'markdown', minimal: true, required: false }

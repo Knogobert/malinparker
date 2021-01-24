@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     filteredSteps() {
-      return this.steps.filter((step) => this.visibleSteps.includes(step.number));
+      return this.steps.filter((step) => this.visibleSteps.includes(step.type));
     }
   },
 }

@@ -58,8 +58,8 @@
 
     <case-section-steps
       class="mt-16"
-      :steps="[{ number: 1 }, { number: 2 }]"
-      :visible-steps="casePost.meta.steps"
+      :steps="[{ type: 1 }, { type: 2 }]"
+      :visible-steps="casePost.meta.visibleSteps"
     />
 
     <!-- <img
