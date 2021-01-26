@@ -2,9 +2,10 @@
   <section>
     <h2 class="subtitle">Process.</h2>
     <case-section-steps-single
-      v-for="step in filteredSteps"
+      v-for="(step, i) in filteredSteps"
       :key="step.id"
       :step="step"
+      :reverseLayout="(i + 1) % 2 === 0"
     />
   </section>
 </template>
@@ -22,3 +23,9 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss" scoped>
+section + section {
+  @apply mt-16;
+}
+</style>

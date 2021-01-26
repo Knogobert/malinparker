@@ -16,11 +16,11 @@
       <nuxt-link to="/contact" class="btn btn-ghost mt-2 sm:mt-0">Kontakta mig</nuxt-link>
       <div class="flex-1"></div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="uppercase text-gray">Kontakt</h4>
+        <h4 class="text-base uppercase text-gray">Kontakt</h4>
         <a href="mailto:hello@malinkatrine.com" class="">hello@malinkatrine.com</a>
       </div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="uppercase text-gray">Plats</h4>
+        <h4 class="text-base uppercase text-gray">Plats</h4>
         <p class="text-primary">Göteborg</p>
       </div>
     </div>

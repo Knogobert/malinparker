@@ -1,7 +1,7 @@
 <template>
   <main
     v-if="casePost"
-    class="main"
+    class="main pb-32"
   >
     <h1 class="title text-4xl sm:text-5xl mb-8">{{ casePost.title }}</h1>
     <!-- <p class="mt-4">{{ casePost.excerpt }}</p> -->
@@ -58,7 +58,7 @@
 
     <case-section-steps
       class="mt-16"
-      :steps="[{ type: 1 }, { type: 2 }]"
+      :steps="casePost.steps"
       :visible-steps="casePost.meta.visibleSteps"
     />
 
@@ -68,14 +68,14 @@
       :src="casePost.cover.src"
       :alt="casePost.cover.alt"
     > -->
-    <div v-if="casePost.gallery">
+    <section v-if="casePost.gallery">
       <img
         v-for="image in casePost.gallery"
         class="image"
         :key="image.id"
         :src="image"
       >
-    </div>
+    </section>
   </main>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <header ref="header">
     <nav :class="{ 'shadow-xl': intersecting }">
-      <ul class="flex justify-end py-4 px-4 sm:px-8 max-w-5xl mx-auto">
+      <ul class="flex justify-end py-4 px-4 sm:px-8 max-w-6xl mx-auto">
         <li v-if="$route.path !== '/'" class="mr-4 sm:mr-6">
           <nuxt-link class="sm:hidden" to="/">MKP</nuxt-link>
           <nuxt-link class="hidden sm:block" to="/">Malin Katrine Parker</nuxt-link>

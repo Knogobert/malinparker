@@ -82,8 +82,8 @@ collections:
             { label: Title, name: title, widget: string, required: true },
             { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false },
             {
-              label: 'Photos',
-              name: 'photos',
+              label: 'Images',
+              name: 'images',
               widget: 'list',
               required: false,
               collapsed: true,

@@ -8,12 +8,50 @@
     "src": "/img/boka-feature.png",
     "alt": "en applikation med 300 valbara böcker"
   },
+  "steps": [
+    {
+      "type": 1,
+      "title": "Research",
+      "body": "To be able to understand the user I started with conducting an unstructured interview with a person working in a book store with a lot of knowladge about books and experience with putting together suggestions of books to book circles. I asked questions trying to understand which information about a book is the most crutial and common and what questions she would nomally ask a customer. I also conducted secondary reasearch by looking up bookstores and librarby systems online to find information and inspiration from similar services."
+    },
+    {
+      "type": 2,
+      "title": "Empathize",
+      "body": "With the information from my research I got some insights to work with. Some of them were realizing that the most common thing to filter the search on is presumably by genre, followed by target group and date of publication is the most important. For some people the design of the book is really important too, and therefore I also want to include a way of looking at the book cover in my design.\n\nBiggest challenge - To fit lots of information in a small space and still keep it understandable and user friendly.",
+      "images": [
+        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+      ]
+    },
+    {
+      "type": 4,
+      "title": "Prototype",
+      "body": "I started out by sketching various layout options on paper and eventually decided on where to roughly place the different components in the system. When this was decided I moved over to Figma to get going with a more detailed view and the look & feel of the system.",
+      "images": [
+        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"},
+        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+      ]
+    },
+    {
+      "type": 5,
+      "title": "Test",
+      "body": "During the project I frequently conducted a lot of small tests on detailed parts such as the icons, colors and different functionalities in the filtration. I did this by asking quiestions to potential users such as \"what do you think this icon stand for\" or \"what do you think happens when you click this button... or do this or that\". Because the project had a very short amout of time this really helped me to get fast answers fast and keep up my pace.\n\nDuring one of my tests I understood the importance of not moving the icons for \"type of media\" labelled as TYP.\n\nI had from the start decided on to use symbols as a way to visualise target group, the gender of the writer, popularity and so on. But here I relized I would be a good idea to also include colors in some way. Because my reseach had given me the information that genre is the most important filter, I decided to use colors here to make that as clear as possible.\n\nTo make sure everyone would be able to see the different colors I spent a lot of time on checking them with a color blindness tool, while also making sure they still looked nice toghether. This was not easy, but I'm glad I put some time into this as I think it really paid off.",
+      "images": [
+        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"},
+        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+      ]
+    }
+  ],
   "meta": {
-    "visibleSteps": [1, 2, 3, 5],
+    "visibleSteps": [1, 2, 4, 5],
     "duration": "5 days",
     "methods": "Wireframing, prototyping, think aloud.",
     "tools": "Paper & pen, Figma, Color blind (figma plug-in)",
     "role": "Individual project",
     "workedWith": ""
-  }
+  },
+  "final": [
+    { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad", "body": "Some written text next to the first 'final product' picture"},
+    { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+  ],
+  "retrospective": "Challanges. what can be improved. whats next"
 }

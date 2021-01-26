@@ -1,14 +1,12 @@
 <template>
-  <section class="grid-container">
-    <div class="headline self-start">
-      <h3 class="subtitle">Research</h3>
+  <section class="grid-container" :class="{ 'grid--reverse': reverseLayout, 'grid--only-text': images.length === 0 }">
+    <div class="images self-start">
+      <nuxt-image v-for="image in images" :key="image.id" :src="image.src" :alt="image.alt"/>
     </div>
 
     <div class="intro sm:place-self-start">
-      To be able to understand the user I started with conducting an unstructured interview with a person working in a book store with a lot of knowladge about books and experience with putting together suggestions of books to book circles. I asked questions trying to understand which information about a book is the most crutial and common and what questions she would nomally ask a customer.
-      <br>
-      I also conducted secondary reasearch by looking up bookstores and librarby systems online to find information and inspiration from similar services.
-      {{ step }}
+      <h3 class="text-3xl mb-4" >{{ step.title }}</h3>
+      <div v-html="$md.render(step.body)"/>
     </div>
   </section>
 </template>
@@ -17,6 +15,15 @@
 export default {
   props: {
     step: Object,
+    reverseLayout: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    images() {
+      return this.step?.images || [];
+    }
   },
 }
 </script>
@@ -27,17 +34,27 @@ export default {
   grid-template-rows: auto 1fr;
   gap: 1rem 1rem;
   grid-template-areas:
-    "headline"
+    "images"
     "intro";
   place-items: stretch;
+
 }
 @screen sm {
   .grid-container {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "headline intro";
+    grid-template-areas: "images intro";
+    &.grid--reverse {
+      grid-template-areas: "intro images";
+    }
+    &.grid--only-text {
+      grid-template-columns: 1fr 3fr;
+      &.grid--reverse {
+        grid-template-columns: 3fr 1fr;
+      }
+    }
   }
 }
 
-.headline { grid-area: headline; }
+.images { grid-area: images; }
 .intro { grid-area: intro; }
 </style>
