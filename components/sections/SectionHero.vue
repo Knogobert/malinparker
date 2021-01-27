@@ -16,17 +16,17 @@
       <nuxt-link to="/contact" class="btn btn-ghost mt-2 sm:mt-0">Kontakta mig</nuxt-link>
       <div class="flex-1"></div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="text-base uppercase text-gray">Kontakt</h4>
-        <a href="mailto:hello@malinkatrine.com" class="">hello@malinkatrine.com</a>
+        <h4 class="text-base uppercase text-gray dark:text-gray-600">Kontakt</h4>
+        <a href="mailto:hello@malinkatrine.com" class="text-primary dark:text-primary-400 hover:underline">hello@malinkatrine.com</a>
       </div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="text-base uppercase text-gray">Plats</h4>
-        <p class="text-primary">Göteborg</p>
+        <h4 class="text-base uppercase text-gray dark:text-gray-600">Plats</h4>
+        <p class="text-primary dark:text-primary-400">Göteborg</p>
       </div>
     </div>
 
     <div class="image">
-      <nuxt-image class="" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" />
+      <nuxt-image loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" />
     </div>
   </section>
 </template>
@@ -42,7 +42,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2rem auto auto auto;
-  gap: 1rem 1rem;
+  gap: 1rem 3rem;
   grid-template-areas:
     "headline"
     "intro"
@@ -53,9 +53,9 @@ export default {
 }
 @screen sm {
   .grid-container {
-    grid-template-columns: 2rem 1.5fr 1fr;
+    grid-template-columns: 0rem 1.5fr 1fr;
     grid-template-rows: 2rem 1fr 3rem;
-    gap: 1rem 1rem;
+    /* gap: 1rem 1rem; */
     grid-template-areas:
       "headline headline headline"
       "intro intro image"

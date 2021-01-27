@@ -16,27 +16,27 @@ module.exports = {
       },
       colors: {
         gray: {
-          '50': '#FAF9F9',
-          '100': '#E8E3E1',
-          '200': '#D6CCCA',
-          '300': '#C3B6B4', // '#DCCABB',
-          '400': '#AFA09E',
-          default: '#9A8A89',
-          '600': '#7D6D6C',
-          '700': '#5F5150',
-          '800': '#403534',
-          '900': '#211A1A'
+          '50': 'var(--color-gray-50)',      // #FAF9F9
+          '100': 'var(--color-gray-100)',    // #E8E3E1
+          '200': 'var(--color-gray-200)',    // #D6CCCA
+          '300': 'var(--color-gray-300)',    // #C3B6B4
+          '400': 'var(--color-gray-400)',    // #AFA09E
+          default: 'var(--color-gray)',      // #9A8A89
+          '600': 'var(--color-gray-600)',    // #7D6D6C
+          '700': 'var(--color-gray-700)',    // #5F5150
+          '800': 'var(--color-gray-800)',    // #403534
+          '900': 'var(--color-gray-900)',    // #211A1A
         },
         primary: {
-          '100': '#E7CCCB',
-          '200': '#D7ABA8',
-          '300': '#C78985',
-          '400': '#B76762',
-          default: '#9D4E48',
-          '600': '#7A3D38',
-          '700': '#572B28',
-          '800': '#341A18',
-          '900': '#110908'
+          '100': 'var(--color-primary-100)', // #E7CCCB
+          '200': 'var(--color-primary-200)', // #D7ABA8
+          '300': 'var(--color-primary-300)', // #C78985
+          '400': 'var(--color-primary-400)', // #B76762
+          default: 'var(--color-primary)',   // #9D4E48
+          '600': 'var(--color-primary-600)', // #7A3D38
+          '700': 'var(--color-primary-700)', // #572B28
+          '800': 'var(--color-primary-800)', // #341A18
+          '900': 'var(--color-primary-900)', // #110908
         },
       },
       opacity: {

@@ -54,14 +54,18 @@ export default {
       @apply shadow-xl;
     }
 
+    & .intro {
+      & .subtitle,
+      & p {
+        @apply text-primary-100;
+      }
+    }
+
     & footer .btn {
       @apply bg-primary text-white border-primary;
     }
   }
 }
-/* .project.project--reverse > a {
-  @apply ;
-} */
 @screen md {
   .project > a {
     @apply flex-row;
@@ -93,9 +97,12 @@ export default {
     &:focus {
       @apply bg-primary-100;
 
-      /* & footer .btn {
-        @apply bg-primary text-white border-primary;
-      } */
+      & .intro {
+        & .subtitle,
+        & p {
+          @apply text-primary-600;
+        }
+      }
     }
   }
 }

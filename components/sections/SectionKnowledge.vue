@@ -1,7 +1,7 @@
 <template>
   <section class="grid-container">
     <div class="headline self-end flex justify-start">
-      <h3 class="text-sm text-primary lowercase">My knowledge</h3>
+      <h3 class="text-sm text-primary dark:text-primary-300 lowercase">My knowledge</h3>
       <div class="underscore ml-2"></div>
     </div>
 
@@ -35,10 +35,6 @@ export default {
 <style lang="postcss" scoped>
 .underscore {
   margin-bottom: 6px;
-  @apply
-    border-b
-    border-primary
-    flex-1
 }
 
 .grid-container {
