@@ -40,8 +40,10 @@
   }
 
   .image {
-    @apply rounded-lg;
-
+    & > img {
+      object-fit: initial !important;
+      @apply rounded-lg;
+    }
     & + .image {
       @apply mt-8;
     }
