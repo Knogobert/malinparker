@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h2 class="subtitle">Process.</h2>
+  <section class="steps">
+    <h2 class="subtitle mb-4">Process.</h2>
     <case-section-steps-single
       v-for="(step, i) in filteredSteps"
       :key="step.id"
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-section + section {
-  @apply mt-16;
+.steps .step + .step {
+  @apply mt-24;
 }
 </style>

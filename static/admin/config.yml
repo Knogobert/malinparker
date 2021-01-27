@@ -48,7 +48,6 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', required: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
       - {
           label: 'Cover Image',
           name: 'cover',
@@ -59,48 +58,7 @@ collections:
             { label: 'Cover Image Alt', name: 'alt', widget: 'string', required: false },
           ]
         }
-      - {
-          label: "Steps",
-          name: "steps",
-          widget: "list",
-          summary: '{{fields.title}}',
-          fields: [
-            {
-              label: 'Step type',
-              name: 'type',
-              widget: 'select',
-              multiple: false,
-              required: true,
-              options: [
-                { label: 'Research', value: 1 },
-                { label: 'Empathize', value: 2 },
-                { label: 'Ideate', value: 3 },
-                { label: 'Prototype', value: 4 },
-                { label: 'Test', value: 5 },
-              ]
-            },
-            { label: Title, name: title, widget: string, required: true },
-            { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false },
-            {
-              label: 'Images',
-              name: 'images',
-              widget: 'list',
-              required: false,
-              collapsed: true,
-              summary: '{{fields.image.src}} - {{fields.image.alt}}',
-              field: {
-                label: 'Image',
-                name: 'image',
-                widget: 'object',
-                required: false,
-                fields: [
-                  { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
-                  { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
-                ]
-              },
-            }
-          ],
-        }
+      - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
       - {
           label: 'Metadata',
           name: 'meta',
@@ -127,6 +85,50 @@ collections:
             { label: 'Role', name: 'role', widget: 'string', required: false },
             { label: 'Worked With', name: 'workedWith', widget: 'string', required: false },
           ]
+        }
+      - { label: 'Context', name: 'context', widget: 'markdown', minimal: true, required: false }
+      - {
+          label: "Steps",
+          name: "steps",
+          widget: "list",
+          summary: '{{fields.title}}',
+          fields: [
+            {
+              label: 'Step type',
+              name: 'type',
+              widget: 'select',
+              multiple: false,
+              required: true,
+              options: [
+                { label: 'Research', value: 1 },
+                { label: 'Empathize', value: 2 },
+                { label: 'Ideate', value: 3 },
+                { label: 'Prototype', value: 4 },
+                { label: 'Test', value: 5 },
+              ]
+            },
+            { label: Title, name: title, widget: string, required: true },
+            { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false },
+            { label: 'Larger images', name: 'largerImages', widget: 'boolean', required: false, hint: 'Should the images take up a larger area than the text?' },
+            {
+              label: 'Images',
+              name: 'images',
+              widget: 'list',
+              required: false,
+              collapsed: true,
+              summary: '{{fields.image.src}} - {{fields.image.alt}}',
+              field: {
+                label: 'Image',
+                name: 'image',
+                widget: 'object',
+                required: false,
+                fields: [
+                  { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+                  { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+                ]
+              },
+            }
+          ],
         }
       - {
           label: 'Final Product',

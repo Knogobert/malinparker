@@ -39,6 +39,14 @@
     @apply w-full object-cover my-4;
   }
 
+  .image {
+    @apply rounded-lg;
+
+    & + .image {
+      @apply mt-8;
+    }
+  }
+
   /** LIGHT MODE */
   .light-mode {
     & .articles {

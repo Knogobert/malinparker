@@ -1,14 +1,14 @@
 <template>
-  <section class="grid-container" :class="{ 'grid--reverse': reverseLayout, 'grid--only-text': images.length === 0 }">
+  <div class="step grid-container" :class="gridClasses">
     <div class="images self-start">
-      <nuxt-image v-for="image in images" :key="image.id" :src="image.src" :alt="image.alt"/>
+      <nuxt-image v-for="image in images" :key="image.id" :src="image.src" :alt="image.alt" class="image"/>
     </div>
 
-    <div class="intro sm:place-self-start">
-      <h3 class="text-3xl mb-4" >{{ step.title }}</h3>
-      <div v-html="$md.render(step.body)"/>
+    <div class="intro md:place-self-start">
+      <h3 class="text-2xl md:text-3xl mb-4" >{{ step.title }}</h3>
+      <div class="md-content" v-html="$md.render(step.body)"/>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -23,6 +23,13 @@ export default {
   computed: {
     images() {
       return this.step?.images || [];
+    },
+    gridClasses() {
+      return {
+        'grid--reverse': this.reverseLayout,
+        'grid--only-text': this.images.length === 0,
+        'grid--larger-images': this.step.largerImages,
+      };
     }
   },
 }
@@ -34,12 +41,12 @@ export default {
   grid-template-rows: auto 1fr;
   gap: 1rem 1rem;
   grid-template-areas:
-    "images"
-    "intro";
+    "intro"
+    "images";
   place-items: stretch;
 
 }
-@screen sm {
+@screen md {
   .grid-container {
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "images intro";
@@ -50,6 +57,12 @@ export default {
       grid-template-columns: 1fr 3fr;
       &.grid--reverse {
         grid-template-columns: 3fr 1fr;
+      }
+    }
+    &.grid--larger-images {
+      grid-template-columns: 2fr 1fr;
+      &.grid--reverse {
+        grid-template-columns: 1fr 2fr;
       }
     }
   }

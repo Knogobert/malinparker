@@ -1,5 +1,5 @@
 <template>
-  <button class="picker fixed z-50 m-3" @click="changeColorMode" tabindex="0" title="Toggle background color">
+  <button class="picker fixed z-50 m-3" @click="changeColorMode" tabindex="0" title="Toggle background color" aria-label="Toggle background color">
     <component :is="`icon-${inverseColor}`" />
   </button>
 </template>

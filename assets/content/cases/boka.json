@@ -3,11 +3,20 @@
   "date": "2021-01-24T20:35:29.027Z",
   "title": "bokA",
   "excerpt": "Applikation med suverän position för bibliotekarier runt hela landet falukorv. En konceptlösning på hur man kan välja ut böcker och se vilken genre de tillhör. Där får man inspiration till nästa val och förslag på att kunna plocka böcker i samma kategori eller fylla i de luckor man saknar.",
-  "body": "GUI examination · Design a system that help librarians and sales people to put together suggestions of up to ten books in packages for different request.",
   "cover": {
     "src": "/img/boka-feature.png",
     "alt": "en applikation med 300 valbara böcker"
   },
+  "body": "GUI examination · Design a system that help librarians and sales people to put together suggestions of up to ten books in packages for different request.",
+  "meta": {
+    "visibleSteps": [1, 2, 4, 5],
+    "duration": "5 days",
+    "methods": "Wireframing, prototyping, think aloud.",
+    "tools": "Paper & pen, Figma, Color blind (figma plug-in)",
+    "role": "Individual project",
+    "workedWith": ""
+  },
+  "context": "### Function specification:\n* Format: no more than 1850 x 1000 pixels, everything must be visible at all times, no dialogs, dropdowns, scolling or etc is aloud. (with one exception)\n* The user must be able to put together packages of up to 10 books\n* The user needs to be able to always see at least 300 books\n* 100 of these 300 must visualise the following 4 properties:\n  * genre\n  * type\n  * target group\n  * popularity\n* The remaining 200 must visualise at least 2 properties\n* All books have tags, and the system should be able to show if books have mutual tags\n* People with color blindness should be able to use the system\n* The user needs to be able to read all the detailed information about a book. (Exception: This can be done with a pop-up)",
   "steps": [
     {
       "type": 1,
@@ -19,16 +28,17 @@
       "title": "Empathize",
       "body": "With the information from my research I got some insights to work with. Some of them were realizing that the most common thing to filter the search on is presumably by genre, followed by target group and date of publication is the most important. For some people the design of the book is really important too, and therefore I also want to include a way of looking at the book cover in my design.\n\nBiggest challenge - To fit lots of information in a small space and still keep it understandable and user friendly.",
       "images": [
-        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+        { "src": "/img/boka-empathize@2x.png", "alt": "sketches of the dashboard on a notepad"}
       ]
     },
     {
       "type": 4,
       "title": "Prototype",
       "body": "I started out by sketching various layout options on paper and eventually decided on where to roughly place the different components in the system. When this was decided I moved over to Figma to get going with a more detailed view and the look & feel of the system.",
+      "largerImages": true,
       "images": [
-        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"},
-        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+        { "src": "/img/boka-prototype-1@2x.png", "alt": "a crude prototype layout of the dashboard"},
+        { "src": "/img/boka-prototype-2@2x.png", "alt": "Book cards in detail, showing iconography and colors"}
       ]
     },
     {
@@ -36,22 +46,17 @@
       "title": "Test",
       "body": "During the project I frequently conducted a lot of small tests on detailed parts such as the icons, colors and different functionalities in the filtration. I did this by asking quiestions to potential users such as \"what do you think this icon stand for\" or \"what do you think happens when you click this button... or do this or that\". Because the project had a very short amout of time this really helped me to get fast answers fast and keep up my pace.\n\nDuring one of my tests I understood the importance of not moving the icons for \"type of media\" labelled as TYP.\n\nI had from the start decided on to use symbols as a way to visualise target group, the gender of the writer, popularity and so on. But here I relized I would be a good idea to also include colors in some way. Because my reseach had given me the information that genre is the most important filter, I decided to use colors here to make that as clear as possible.\n\nTo make sure everyone would be able to see the different colors I spent a lot of time on checking them with a color blindness tool, while also making sure they still looked nice toghether. This was not easy, but I'm glad I put some time into this as I think it really paid off.",
       "images": [
-        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"},
-        { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+        { "src": "/img/boka-test-1@2x.png", "alt": "detailed view of the design elements"},
+        { "src": "/img/boka-test-2@2x.png", "alt": "icons and colors of the genres, showing how they look in different color vision deficiencies"}
       ]
     }
   ],
-  "meta": {
-    "visibleSteps": [1, 2, 4, 5],
-    "duration": "5 days",
-    "methods": "Wireframing, prototyping, think aloud.",
-    "tools": "Paper & pen, Figma, Color blind (figma plug-in)",
-    "role": "Individual project",
-    "workedWith": ""
-  },
   "final": [
-    { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad", "body": "Some written text next to the first 'final product' picture"},
-    { "src": "/img/boka-feature.png", "alt": "sketches of the dashboard on a notepad"}
+    { "src": "/img/boka-final-1@2x.png", "alt": "a zoomed in view of the top-left part of the dashboard", "body": "Some written text next to the first 'final product' picture"},
+    { "src": "/img/boka-final-2@2x.png", "alt": "a zoomed in view of the top-left part of the dashboard with image covers turned on", "body": "Some written text next to the second 'final product' picture"},
+    { "src": "/img/boka-final-3@2x.png", "alt": "a modal that is showed when clicking on a book"},
+    { "src": "/img/boka-final-4@2x.png", "alt": "a zoomed in view of the bottom-right part of the dashboard"},
+    { "src": "/img/boka-final-5@2x.png", "alt": "a zoomed in view of the bottom-left part of the dashboard"}
   ],
-  "retrospective": "Challanges. what can be improved. whats next"
+  "retrospective": "Challenges. what can be improved. whats next"
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="grid-container">
+  <section class="grid-container" :class="{ below }">
     <div class="headline self-start">
       <h2 class="subtitle"><slot name="title" /></h2>
     </div>
@@ -11,7 +11,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    below: {
+      type: Boolean,
+      default: false,
+    },
+  },
+}
 </script>
 
 <style lang="postcss" scoped>
@@ -28,6 +35,14 @@ export default {}
   .grid-container {
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "headline intro";
+
+    &.below {
+      grid-template-columns: auto;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "headline"
+        "intro";
+    }
   }
 }
 
