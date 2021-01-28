@@ -3,7 +3,6 @@
 ### Todo
 
 - [ ] Add folder collection type for pages
-- [ ] Add category relation to Project collection type
 - [ ] Add collection type for menu settings
 
 ### In Progress
@@ -11,4 +10,5 @@
 
 ### Done ✓
 
+- [X] Add image modal plugin for zooming in
 - [X] Setup first page

@@ -1,0 +1,43 @@
+/* Medium Zoom - https://github.com/francoischalifour/medium-zoom/ */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 29;
+}
+
+.medium-zoom-overlay {
+  left: 1rem !important;
+  right: 1rem !important;
+}
+
+body.medium-zoom--opened {
+  /* Move up header */
+  & #header {
+    height: 1.5rem;
+    & nav {
+      @apply transform -translate-y-4;
+    }
+  }
+
+  /* Move down "footer" */
+  &::after,
+  & .picker {
+    @apply transform translate-y-4;
+  }
+  & > #__nuxt {
+    &::before,
+    &::after { /* bottom border squares */
+      @apply transform translate-y-4;
+    }
+
+    & > div {
+      &::before,
+      &::after { /* bottom border radiuses */
+        @apply transform translate-y-4;
+      }
+    }
+  }
+
+  & .__nim_o {
+    object-fit: initial !important;
+  }
+}

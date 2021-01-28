@@ -125,7 +125,7 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'image', 'intro'],
-    whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/]
+    whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/, /medium-zoom/, /^header/, /__nim_o/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference

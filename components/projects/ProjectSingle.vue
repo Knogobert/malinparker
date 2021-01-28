@@ -2,7 +2,7 @@
   <article v-if="project" class="project">
     <nuxt-link :to="`/cases/${project.slug}`">
       <figure class="" v-if="project.cover && project.cover.src">
-        <nuxt-image :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
+        <nuxt-img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
       </figure>
       <div class="intro">
         <h4 class="subtitle">{{ project.title }}</h4>

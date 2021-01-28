@@ -4,7 +4,7 @@
     <ul>
       <li v-for="image in images" :key="image.id" class="grid-container">
         <div class="images self-start">
-          <nuxt-image v-if="image.src" :src="image.src" :alt="image.alt" class="image"/>
+          <nuxt-img v-if="image.src" :src="image.src" :alt="image.alt" class="image" />
         </div>
 
         <div class="intro md:place-self-start">

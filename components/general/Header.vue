@@ -1,5 +1,5 @@
 <template>
-  <header ref="header">
+  <header id="header" ref="header">
     <nav :class="{ 'shadow-xl': intersecting }">
       <ul class="flex justify-end py-4 px-4 sm:px-8 max-w-6xl mx-auto">
         <li v-if="$route.path !== '/'" class="mr-4 sm:mr-6">
@@ -35,14 +35,14 @@ export default {
 
 <style lang="postcss" scoped>
 header { /* top solid border */
-  height: 2rem;
+  height: 2.5rem;
   background: var(--bg-secondary);
-  @apply fixed z-40 inset-x-0 top-0 transition-colors duration-200 ease-in-out;
+  @apply fixed z-40 inset-x-0 top-0 transition-all duration-200 ease-in-out;
 }
 
 nav {
   background: var(--bg);
-  @apply rounded-2xl mt-4 mx-4 transition duration-200 ease-in-out;
+  @apply rounded-3xl mt-4 mx-4 transition duration-200 ease-in-out;
 }
 
 .underscore {
