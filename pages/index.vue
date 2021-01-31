@@ -1,9 +1,9 @@
 <template>
-  <main class="main flex flex-col">
+  <div>
     <section-hero class="mb-16" />
     <section-knowledge class="mb-16" />
     <section-selected-work class="mb-16" />
-  </main>
+  </div>
 </template>
 
 <script>

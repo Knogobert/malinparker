@@ -1,9 +1,8 @@
 <template>
-  <main
-    v-if="casePost"
-    class="main pb-32"
-  >
-    <router-back class="block -mt-4 mb-16" />
+  <div v-if="casePost" class="pb-32">
+    <nav>
+      <router-back class="block -mt-4 mb-16" />
+    </nav>
 
     <h1 class="title text-4xl sm:text-5xl mb-8">{{ casePost.title }}</h1>
     <!-- <p class="mt-4">{{ casePost.excerpt }}</p> -->
@@ -46,7 +45,7 @@
       :src="casePost.cover.src"
       :alt="casePost.cover.alt"
     > -->
-  </main>
+  </div>
 </template>
 
 <script>

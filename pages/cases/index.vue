@@ -1,11 +1,8 @@
 <template>
-  <main
-    v-if="casePosts"
-    class="main pb-16"
-  >
+  <div v-if="casePosts" class="pb-16">
     <h1 class="title text-left mb-8">UX/UI Case Studies</h1>
     <projects :posts="casePosts" />
-  </main>
+  </div>
 </template>
 <script>
 export default {

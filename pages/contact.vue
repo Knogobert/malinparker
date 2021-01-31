@@ -1,8 +1,8 @@
 <template>
-  <main class="main flex flex-col">
+  <div>
     <h1>Contact WIP</h1>
     <section-hero class="mb-16" />
-  </main>
+  </div>
 </template>
 
 <script>

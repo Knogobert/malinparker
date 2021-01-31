@@ -40,11 +40,12 @@
   }
 
   .image {
-    & > img,
+    @apply rounded-3xl;
+    /* & > img,
     & > picture {
       object-fit: initial !important;
       @apply rounded-lg;
-    }
+    } */
     & + .image {
       @apply mt-8;
     }

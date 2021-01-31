@@ -7,7 +7,9 @@
       @leave="intersecting = false"
       rootMargin="0px 0px -92.5% 0px"
     >
-      <nuxt ref="main" />
+      <main class="main flex flex-col">
+        <nuxt />
+      </main>
     </intersect>
   </div>
 </template>
