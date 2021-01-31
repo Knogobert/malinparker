@@ -1,7 +1,7 @@
 <template>
   <div v-if="casePost" class="pb-32" v-once>
-    <nav>
-      <router-back class="block -mt-4 mb-16" />
+    <nav class="nav-back">
+      <router-back class="block" />
     </nav>
 
     <h1 class="title text-4xl sm:text-5xl mb-8">{{ casePost.title }}</h1>

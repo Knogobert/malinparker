@@ -93,3 +93,13 @@ body {
     border-b
     flex-1
 }
+
+.nav-back {
+  left: 2rem;
+  bottom: 1.5rem;
+  @apply fixed z-40 transition duration-200 ease-in-out;
+
+  & a:hover span {
+    @apply underline;
+  }
+}

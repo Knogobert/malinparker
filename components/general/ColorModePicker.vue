@@ -64,7 +64,7 @@ export default {
 
 <style lang="postcss" scoped>
 .picker {
-  left: 1rem;
+  right: 1rem;
   bottom: 1rem;
   -moz-outline-radius: 1rem;
   @apply transition duration-200 ease-in-out;
