@@ -1,7 +1,7 @@
 <template>
   <article v-if="project" class="project">
     <nuxt-link :to="`/cases/${project.slug}`">
-      <figure class="" v-if="project.cover && project.cover.src">
+      <figure class="p-4" v-if="project.cover && project.cover.src">
         <nuxt-img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
       </figure>
       <div class="intro">
@@ -28,8 +28,8 @@ export default {
   @apply flex flex-col justify-between rounded-3xl;
   -moz-outline-radius: 1.5rem;
 
-  & figure > div {
-    @apply m-4 rounded-2xl shadow-sm transition-shadow duration-200 ease-in-out;
+  & figure > img {
+    @apply rounded-2xl shadow-sm transition-shadow duration-200 ease-in-out;
   }
 
   & .intro {
@@ -50,7 +50,7 @@ export default {
   &:focus {
     @apply bg-primary-700;
 
-    & figure > div {
+    & figure > img {
       @apply shadow-xl;
     }
 

@@ -40,7 +40,7 @@ export default {
       if (this.timer !== null) clearTimeout(this.timer);
 
       this.timer = setTimeout(() => {
-        this.zoomInstance = mediumZoom('.image > img', {
+        this.zoomInstance = mediumZoom('.image', {
           margin: 32,
           background: 'var(--bg)',
           scrollOffset: 100,
