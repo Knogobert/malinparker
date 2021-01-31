@@ -13,8 +13,7 @@
 export default {
   computed: {
     selectedWorkPosts() {
-      if (this.$store.state.casePosts) return this.$store.state.casePosts.filter((work) => work.selected);
-      return [];
+      return this.$store.state?.casePosts?.filter((work) => work.selected) || [];
     }
   }
 }

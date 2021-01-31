@@ -1,5 +1,5 @@
 <template>
-  <div v-if="casePost" class="pb-32">
+  <div v-if="casePost" class="pb-32" v-once>
     <nav>
       <router-back class="block -mt-4 mb-16" />
     </nav>
