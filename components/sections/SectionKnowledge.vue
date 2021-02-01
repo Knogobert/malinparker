@@ -6,7 +6,7 @@
     </div>
 
     <div class="image self-center">
-      <nuxt-img class="image" src="/img/knowledge.svg" alt="Knowledge tree" fit="contain" />
+      <img class="image" src="/img/knowledge.svg" alt="Knowledge tree" fit="contain" />
     </div>
 
     <div class="intro sm:place-self-center">

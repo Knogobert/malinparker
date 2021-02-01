@@ -26,7 +26,7 @@
     </div>
 
     <div class="image">
-      <nuxt-img loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" />
+      <img loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" />
     </div>
   </section>
 </template>
