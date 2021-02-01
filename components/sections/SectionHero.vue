@@ -1,41 +1,35 @@
 <template>
   <section class="grid-container">
     <div class="headline self-end">
-      <h3 class="text-sm">Hej, mitt namn är</h3>
+      <h3 class="text-sm">Hi, my name is</h3>
     </div>
 
     <div class="intro">
       <div class="flex-1">
         <h1 class="title text-gray-600 dark:text-primary mb-1">Malin Katrine Parker.</h1>
-        <h2 class="subtitle mb-4">UX designer som vill designa och andas hållbart.</h2>
+        <h2 class="subtitle mb-4">UX designer who breathes and designs sustainability.</h2>
         <p>Motiveras av att förenkla och förbättra människors vardag. Trivs i snabba, långsamma designprocesser med känslan av att bidra med något viktigt. Jag är en formstark och inlyssnande person som gillar att leka kurragömma med min katt. </p>
       </div>
     </div>
 
     <div class="cta flex flex-col sm:flex-row items-start sm:items-end">
-      <nuxt-link to="/contact" class="btn btn-ghost mt-2 sm:mt-0">Kontakta mig</nuxt-link>
+      <nuxt-link to="/contact" class="btn btn-ghost mt-2 sm:mt-0">get in touch</nuxt-link>
       <div class="flex-1"></div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="text-base uppercase text-gray dark:text-gray-600">Kontakt</h4>
+        <h4 class="text-base uppercase text-gray dark:text-gray-600">Contact</h4>
         <a href="mailto:hello@malinkatrine.com" class="text-primary dark:text-primary-400 hover:underline">hello@malinkatrine.com</a>
       </div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="text-base uppercase text-gray dark:text-gray-600">Plats</h4>
-        <p class="text-primary dark:text-primary-400">Göteborg</p>
+        <h4 class="text-base uppercase text-gray dark:text-gray-600">Location</h4>
+        <p class="text-primary dark:text-primary-400">Gothenburg</p>
       </div>
     </div>
 
-    <div class="image">
+    <div class="images">
       <img loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" />
     </div>
   </section>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="postcss" scoped>
 .grid-container {
@@ -46,7 +40,7 @@ export default {
   grid-template-areas:
     "headline"
     "intro"
-    "image"
+    "images"
     "cta";
 
   place-items: stretch;
@@ -58,29 +52,29 @@ export default {
     /* gap: 1rem 1rem; */
     grid-template-areas:
       "headline headline headline"
-      "intro intro image"
+      "intro intro images"
       "cta cta cta";
   }
 }
 @screen md {
   .grid-container {
     grid-template-areas:
-      "headline headline image"
-      ". intro image"
+      "headline headline images"
+      ". intro images"
       ". cta cta";
   }
 }
 @screen lg {
   .grid-container {
     grid-template-areas:
-      "headline headline image"
-      ". intro image"
-      ". cta image";
+      "headline headline images"
+      ". intro images"
+      ". cta images";
   }
 }
 
 .headline { grid-area: headline; }
 .intro { grid-area: intro; }
 .cta { grid-area: cta; }
-.image { grid-area: image; }
+.images { grid-area: images; }
 </style>

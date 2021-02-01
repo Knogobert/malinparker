@@ -5,13 +5,14 @@
       <div class="underscore ml-2"></div>
     </div>
 
-    <div class="image self-center">
-      <img class="image" src="/img/knowledge.svg" alt="Knowledge tree" fit="contain" />
+    <div class="images self-center">
+      <!-- <img class="images" src="/img/knowledge-diagram.svg" alt="Knowledge tree" fit="contain" /> -->
+      <svg-knowlegde-diagram class="image w-full h-auto" title="Knowledge tree" />
     </div>
 
-    <div class="intro sm:place-self-center">
+    <div class="intro md:place-self-center">
       <h2 class="subtitle mb-4">Skills.</h2>
-      <ul class="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-8">
+      <ul class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-8">
         <li>UX Research</li>
         <li>Adobe Suite</li>
         <li>UI Design</li>
@@ -26,12 +27,6 @@
   </section>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="postcss" scoped>
 .underscore {
   margin-bottom: 6px;
@@ -42,19 +37,20 @@ export default {
   grid-template-columns: 1fr;
   grid-template-rows: 2rem 1fr auto;
   gap: 3rem 1rem;
-  grid-template-areas: "headline" "image" "intro";
+  grid-template-areas: "headline" "images" "intro";
   place-items: stretch;
 }
-@screen sm {
+@screen md {
   .grid-container {
     grid-template-columns: 2fr 2rem 1fr;
     grid-template-rows: 2rem 1fr;
+    gap: 2rem 1rem;
     grid-template-areas:
       "headline headline headline"
-      "image . intro";
+      "images . intro";
   }
 }
-@screen md {
+@screen lg {
   .grid-container {
     grid-template-columns: 2fr 3rem 1.5fr;
   }
@@ -62,5 +58,5 @@ export default {
 
 .headline { grid-area: headline; }
 .intro { grid-area: intro; }
-.image { grid-area: image; }
+.images { grid-area: images; }
 </style>
