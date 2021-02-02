@@ -1,5 +1,5 @@
 <template>
-  <article v-if="project" class="project">
+  <article v-if="project" class="project project-case">
     <nuxt-link :to="`/cases/${project.slug}`">
       <figure class="p-4" v-if="project.cover && project.cover.src">
         <img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.project > a {
+.project-case > a {
   @apply flex flex-col justify-between rounded-3xl;
   -moz-outline-radius: 1.5rem;
 
@@ -67,7 +67,7 @@ export default {
   }
 }
 @screen md {
-  .project > a {
+  .project-case > a {
     @apply flex-row;
 
     & figure {
@@ -85,13 +85,13 @@ export default {
       @apply self-end;
     }
   }
-  .project.project--reverse > a {
+  .project-case.project--reverse > a {
     @apply flex-row-reverse;
   }
 }
 
 .light-mode {
-  & .project > a {
+  & .project-case > a {
     &:active,
     &:hover,
     &:focus {

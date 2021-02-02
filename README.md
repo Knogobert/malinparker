@@ -117,7 +117,7 @@ Deployed easily with their boilerplate via:
 
 - > This repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting .git/hooks/pre-push.
 
-  - Install git-lfs then run `git lfs install` in project root
+  - Install git-lfs then run `git lfs install` in project root. Then to download the images, run `git lfs pull`.
 
 - > I can’t get Git LFS to run correctly on Netlify
 
