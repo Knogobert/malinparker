@@ -11,8 +11,8 @@ public_folder: /img
 
 # ? Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - label: 'Site settings'
-    name: 'site'
+  - name: 'site'
+    label: 'Site settings'
     files:
       - label: 'Info'
         name: 'info'
@@ -149,3 +149,36 @@ collections:
           },
         }
       - { label: 'Retrospective', name: 'retrospective', widget: 'markdown', minimal: true, required: false }
+  - name: 'design'
+    label: 'Graphic Designs'
+    label_singular: 'Graphic Design'
+    folder: 'assets/content/designs'
+    create: true
+    format: 'json'
+    slug: '{{slug}}'
+    preview_path: 'designs/{{slug}}'
+    fields:
+      - {
+          label: Order,
+          description: 'Put the number in which order you want the design to have and match it according to the others (tip: set the numbers in orders of 10, so that you can fit another one between someday)',
+          name: order,
+          widget: number,
+          min: 1,
+          max: 10000,
+          value_type: int,
+          required: true,
+          default: 100
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
+      - {
+          label: 'Cover Image',
+          name: 'cover',
+          widget: 'object',
+          required: false,
+          fields: [
+            { label: 'Cover Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+            { label: 'Cover Image Alt', name: 'alt', widget: 'string', required: false },
+          ]
+        }

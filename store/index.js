@@ -1,16 +1,16 @@
-import { SET_BLOG_POSTS, SET_CASE_POSTS } from './mutations.type'
+import { SET_CASE_POSTS, SET_DESIGN_POSTS } from './mutations.type'
 
 export const state = () => ({
-  // blogPosts: [],
-  casePosts: []
+  casePosts: [],
+  designPosts: []
 })
 
 export const mutations = {
-  // [SET_BLOG_POSTS](state, list) {
-  //   state.blogPosts = list
-  // },
   [SET_CASE_POSTS](state, list) {
     state.casePosts = list
+  },
+  [SET_DESIGN_POSTS](state, list) {
+    state.designPosts = list
   }
 }
 
@@ -23,13 +23,13 @@ export const actions = {
     })
   },
   async nuxtServerInit({ commit }) {
-    // Blog collection type
-    // let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
-    // await commit(SET_BLOG_POSTS, actions.getPosts(blogFiles))
-
     // Case Study collection type
     let caseFiles = await require.context('~/assets/content/cases/', false, /\.json$/)
     await commit(SET_CASE_POSTS, actions.getPosts(caseFiles))
+
+    // Graphic Design collection type
+    let designFiles = await require.context('~/assets/content/designs/', false, /\.json$/)
+    await commit(SET_DESIGN_POSTS, actions.getPosts(designFiles))
 
     // ? When adding/changing NetlifyCMS collection types, make sure to:
     // ? 1. Add/rename exact slugs here

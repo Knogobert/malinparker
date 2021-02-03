@@ -10,9 +10,9 @@
         <li class="">
           <nuxt-link class="px-4" to="/cases">UX/UI</nuxt-link>
         </li>
-        <!-- <li class="mx-2">
+        <li class="mx-2">
           <nuxt-link class="px-4" to="/design">graphic design</nuxt-link>
-        </li> -->
+        </li>
         <li class="-mr-4">
           <nuxt-link class="px-4" to="/contact">who am i?</nuxt-link>
         </li>

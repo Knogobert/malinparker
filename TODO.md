@@ -7,6 +7,7 @@
 
 ### In Progress
 
+- [ ] Add folder collection type for design
 
 ### Done ✓
 
