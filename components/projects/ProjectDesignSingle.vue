@@ -1,12 +1,13 @@
 <template>
-  <article v-if="project" class="project project-design">
+  <article class="project project-design">
     <nuxt-link :to="`/designs/${project.slug}`">
-      <figure class="p-4" v-if="project.cover && project.cover.src">
+      <figure class="relative p-4" v-if="project.cover && project.cover.src">
         <img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
-        <figcaption>
-          <h4>{{ project.title }}</h4>
-          <!-- <p>{{ project.excerpt }}</p> -->
-          <button class="btn btn-ghost w-full md:w-auto" tabindex="-1">read more</button>
+        <figcaption
+          class="absolute inset-0 flex flex-col justify-between items-between rounded-xl bg-white bg-opacity-75 m-4 p-4"
+        >
+          <h4 class="text-xl dark:text-primary-100 mb-2">{{ project.title }}</h4>
+          <button class="btn btn-ghost self-end w-full " tabindex="-1">see more</button>
         </figcaption>
       </figure>
     </nuxt-link>
@@ -16,7 +17,11 @@
 <script>
 export default {
   props: {
-    project: Object,
+    project: {
+      type: Object,
+      required: true,
+      validator: (val) => val.slug && val.title,
+    },
   },
 }
 </script>
@@ -27,7 +32,12 @@ export default {
   -moz-outline-radius: 1.5rem;
 
   & figure > img {
-    @apply rounded-2xl shadow-sm transition-shadow duration-200 ease-in-out;
+    @apply rounded-xl shadow-sm transition-shadow duration-200 ease-in-out;
+  }
+
+  & figcaption {
+    @apply opacity-0 transition-opacity duration-200 ease-in-out;
+    backdrop-filter: saturate(25%);
   }
 
   & .btn {
@@ -43,6 +53,10 @@ export default {
       @apply shadow-xl;
     }
 
+    & figcaption {
+      @apply opacity-100;
+    }
+
     & .btn {
       @apply bg-primary text-white border-primary;
     }
@@ -55,13 +69,16 @@ export default {
     & figure {
       flex: 1 1 60%;
       @apply self-center;
-      /* & > div {
-        @apply m-2;
-      } */
     }
   }
 }
 
+.dark-mode {
+  & figcaption {
+    @apply bg-black;
+    --bg-opacity: 0.75;
+  }
+}
 .light-mode {
   & .project-design > a {
     &:active,

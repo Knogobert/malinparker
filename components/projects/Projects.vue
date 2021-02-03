@@ -16,6 +16,9 @@
       />
     </template>
   </div>
+  <div v-else>
+    Couldn’t find any projects
+  </div>
 </template>
 
 <script>
@@ -50,8 +53,8 @@ export default {
 
 .projects-designs {
   display: grid;
-  grid-gap: 0.5rem; /* [1] Add some gap between rows and columns */
-  grid-template-columns: repeat( auto-fill, minmax( 200px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
-  grid-auto-rows: 250px; /* [3] Set the height for implicitly-created row track */
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat( auto-fill, minmax(20rem, 1fr) );
+  grid-auto-rows: auto;
 }
 </style>

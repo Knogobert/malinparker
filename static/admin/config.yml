@@ -169,7 +169,7 @@ collections:
           required: true,
           default: 100
         }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be?' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
       - {
@@ -181,4 +181,22 @@ collections:
             { label: 'Cover Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
             { label: 'Cover Image Alt', name: 'alt', widget: 'string', required: false },
           ]
+        }
+      - {
+          label: 'Additional Images',
+          name: 'images',
+          widget: 'list',
+          required: false,
+          collapsed: true,
+          summary: '{{fields.image.src}} - {{fields.image.alt}}',
+          field: {
+            label: 'Image',
+            name: 'image',
+            widget: 'object',
+            required: false,
+            fields: [
+              { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+              { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+            ]
+          },
         }

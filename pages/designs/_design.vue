@@ -5,7 +5,12 @@
     </nav>
 
     <h1 class="title text-4xl sm:text-5xl mb-8">{{ designPost.title }}</h1>
-    <!-- <p class="mt-4">{{ designPost.excerpt }}</p> -->
+    <p class="mt-4">{{ designPost.body }}</p>
+    <ul v-if="designPost.images && designPost.images.length !== 0" class="images max-w-2xl mx-auto">
+      <li v-for="image in designPost.images" :key="image.id">
+        <img v-if="image.src" :src="image.src" :alt="image.alt" class="image" />
+      </li>
+    </ul>
     <!-- <img
       v-if="designPost.cover"
       class="cover-image"
@@ -26,3 +31,13 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.images {
+  & li {
+    & + li {
+      @apply mt-8;
+    }
+  }
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <article v-if="project" class="project project-case">
+  <article class="project project-case">
     <nuxt-link :to="`/cases/${project.slug}`">
       <figure class="p-4" v-if="project.cover && project.cover.src">
         <img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
@@ -18,7 +18,11 @@
 <script>
 export default {
   props: {
-    project: Object,
+    project: {
+      type: Object,
+      required: true,
+      validator: (val) => val.slug && val.title,
+    },
   },
 }
 </script>
@@ -29,7 +33,7 @@ export default {
   -moz-outline-radius: 1.5rem;
 
   & figure > img {
-    @apply rounded-2xl shadow-sm transition-shadow duration-200 ease-in-out;
+    @apply rounded-xl shadow-sm transition-shadow duration-200 ease-in-out;
   }
 
   & .intro {
