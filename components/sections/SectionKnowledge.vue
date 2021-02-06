@@ -12,17 +12,22 @@
 
     <div class="intro md:place-self-center">
       <h2 class="subtitle mb-4">Skills.</h2>
-      <ul class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-8">
-        <li>UX Research</li>
-        <li>Adobe Suite</li>
-        <li>UI Design</li>
-        <li>User&nbsp;Testing</li>
-        <li>Graphic&nbsp;Design</li>
-        <li>Prototyping</li>
-        <li>Figma</li>
-        <li>Illustration</li>
-        <li>Photography</li>
-      </ul>
+      <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-x-8 text-sm">
+        <ul class="grid grid-cols-1 gap-y-4">
+          <li>UI Design</li>
+          <li>User&nbsp;Testing</li>
+          <li>Graphic&nbsp;Design</li>
+          <li>Figma</li>
+          <li>Photography</li>
+        </ul>
+        <ul class="grid grid-cols-1 gap-y-4 md:mt-4 lg:mt-0">
+          <li>UX Research</li>
+          <li>Adobe Suite</li>
+          <li>Illustration</li>
+          <li>Prototyping</li>
+          <li>Basic HTML + CSS</li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>

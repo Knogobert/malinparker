@@ -14,7 +14,7 @@ collections:
   - name: 'site'
     label: 'Site settings'
     files:
-      - label: 'Info'
+      - label: 'General Setup & Info'
         name: 'info'
         file: 'assets/content/site/info.json'
         format: 'json'
@@ -34,7 +34,7 @@ collections:
               widget: string,
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
-          - { label: 'Resumé URL', name: 'resumeUrl', widget: 'image', required: false, allow_multiple: false },
+          - { label: 'Resumé URL', name: 'resumeUrl', widget: 'image', required: false, allow_multiple: false }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
   - name: 'case'
     label: 'Case Studies'
@@ -112,8 +112,8 @@ collections:
               multiple: false,
               required: true,
               options: [
-                { label: 'Research', value: 1 },
-                { label: 'Empathize', value: 2 },
+                { label: 'Empathize', value: 1 },
+                { label: 'Define', value: 2 },
                 { label: 'Ideate', value: 3 },
                 { label: 'Prototype', value: 4 },
                 { label: 'Test', value: 5 },

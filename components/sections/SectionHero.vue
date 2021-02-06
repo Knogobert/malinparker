@@ -7,8 +7,8 @@
     <div class="intro">
       <div class="flex-1">
         <h1 class="title text-gray-600 dark:text-primary mb-1">Malin Katrine Parker.</h1>
-        <h2 class="subtitle mb-4">UX designer who breathes and designs sustainability.</h2>
-        <p>Motiveras av att förenkla och förbättra människors vardag. Trivs i snabba, långsamma designprocesser med känslan av att bidra med något viktigt. Jag är en formstark och inlyssnande person som gillar att leka kurragömma med min katt. </p>
+        <h2 class="subtitle mt-0 mb-4">UX designer who breathes and designs sustainability.</h2>
+        <p>My motivation is to simplify and enhance people’s everyday life. I like it best when working in efficient yet thoughtful processes with a feeling that I’m contributing to something meaningful and important for others. My biggest strengths are that I’m an observant, questioning introvert. I love caring for my plants and playing hide and seek with my cat Misu.</p>
       </div>
     </div>
 
@@ -58,14 +58,14 @@
       "cta cta cta";
   }
 }
-@screen md {
+/* @screen md {
   .grid-container {
     grid-template-areas:
       "headline headline images"
       ". intro images"
       ". cta cta";
   }
-}
+} */
 @screen lg {
   .grid-container {
     grid-template-areas:

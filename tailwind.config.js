@@ -39,6 +39,9 @@ module.exports = {
           '900': 'var(--color-primary-900)', // #110908
         },
       },
+      screns: {
+        'xs': '420px',
+      }
       // borderRadius: {
       //   ...defaultTheme.borderRadius,
       //   'huge': '5rem'

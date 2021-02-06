@@ -8,6 +8,15 @@
   p {
     color: var(--text);
     @apply transition-colors duration-200 ease-in-out;
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6,
+    & + p {
+      @apply mt-4;
+    }
   }
 
   h1 {
@@ -67,6 +76,12 @@
     color: var(--text);
     @apply font-mono leading-normal transition-colors duration-200 ease-in-out;
 
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6,
     & + p {
       @apply mt-4;
     }
@@ -100,6 +115,16 @@
   }
 
   .md-content {
+    & p {
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5,
+      & + h6 {
+        @apply mt-8;
+      }
+    }
     & h3 {
       @apply
         text-lg

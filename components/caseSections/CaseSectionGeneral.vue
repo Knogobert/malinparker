@@ -37,11 +37,11 @@ export default {
     grid-template-areas: "headline intro";
 
     &.below {
-      grid-template-columns: auto;
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: auto 1fr;
       grid-template-areas:
-        "headline"
-        "intro";
+        "headline headline"
+        ". intro";
     }
   }
 }
