@@ -5,7 +5,7 @@
         <img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
       </figure>
       <div class="intro">
-        <h4 class="subtitle">{{ project.title }}</h4>
+        <h4 class="subtitle mb-2">{{ project.title }}</h4>
         <p>{{ project.excerpt }}</p>
         <footer>
           <button class="btn btn-ghost w-full md:w-auto" tabindex="-1">read case study</button>

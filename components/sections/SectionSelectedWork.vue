@@ -13,7 +13,10 @@
 export default {
   computed: {
     selectedWorkPosts() {
-      return this.$store.state?.casePosts?.filter((work) => work.selected) || [];
+      return [...this.$store.state?.casePosts]
+        .sort((a,b) => a.order - b.order)
+        .filter((work) => work.selected)
+        || [];
     }
   }
 }

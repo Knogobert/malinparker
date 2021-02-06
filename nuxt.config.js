@@ -25,7 +25,8 @@ export default {
       process.env.NODE_ENV === 'production'
         ? process.env.URL || 'http://createADotEnvFileAndSetURL'
         : 'http://localhost:3000',
-    lang: SITE_INFO.sitelang || 'en-US'
+    lang: SITE_INFO.sitelang || 'en-US',
+    resumeUrl: SITE_INFO.resumeUrl || '/img/cv-Malin-Parker-6-feb-2021.pdf',
   },
   /*
    ** Headers of the page

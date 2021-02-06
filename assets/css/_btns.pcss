@@ -27,6 +27,20 @@
         @apply border-primary-600 bg-primary-600 text-white;
       }
     }
+
+    &.btn-pill {
+      color: var(--text-secondary);
+      @apply rounded-2xl border-primary-300 bg-transparent text-primary-300;
+      -moz-outline-radius: 1rem;
+
+      &:hover {
+        @apply border-primary-300 bg-primary-300 text-white;
+      }
+
+      &.lowercase {
+        padding-top: 0.4rem;
+      }
+    }
   }
 
   .light-mode {
@@ -40,6 +54,13 @@
         @apply border-primary-400;
         &:hover {
           @apply border-primary-600;
+        }
+      }
+
+      &.btn-pill {
+        @apply border-primary-600 text-primary-600;
+        &:hover {
+          @apply border-primary-600 bg-primary-600 text-white;
         }
       }
     }

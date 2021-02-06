@@ -1,7 +1,8 @@
 {
+  "order": 110,
+  "slug": "catan",
   "selected": true,
-  "date": "2021-01-24T20:35:29.027Z",
-  "title": "Catan",
+  "title": "Catan goes mobile.",
   "excerpt": "Applikation med suverän position för bibliotekarier runt hela landet falukorv. En konceptlösning på hur man kan välja ut böcker och se vilken genre de tillhör. Där får man inspiration till nästa val och förslag på att kunna plocka böcker i samma kategori eller fylla i de luckor man saknar.",
   "body": "Longer **markdown**-*enabled* content text.",
   "cover": {

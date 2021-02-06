@@ -4,13 +4,15 @@
 
 - [ ] Translate to English
 - [ ] Update projects
+- [ ] Update skills
 
 ### In Progress
 
-- [ ] Add resumé
+- [ ] Fix mobile menu
 
 ### Done ✓
 
+- [X] Add resumé
 - [X] Replace Bugaki font with +Jakarta Sans
 - [X] Use CSS Colums masonry for design projects
 - [X] Add folder collection type for design

@@ -34,6 +34,7 @@ collections:
               widget: string,
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
+          - { label: 'Resumé URL', name: 'resumeUrl', widget: 'image', required: false, allow_multiple: false },
           # - { label: Site Email, name: siteemail, widget: string, required: false }
   - name: 'case'
     label: 'Case Studies'
@@ -44,8 +45,19 @@ collections:
     slug: '{{slug}}'
     preview_path: 'cases/{{slug}}'
     fields:
+      - {
+          label: Order,
+          description: 'Put the number in which order you want the design to have and match it according to the others (tip: set the numbers in orders of 10, so that you can fit another one between someday)',
+          name: order,
+          widget: number,
+          min: 1,
+          max: 10000,
+          value_type: int,
+          required: true,
+          default: 100
+        }
+      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be?' }
       - { label: 'Selected work', name: 'selected', widget: 'boolean', required: false, hint: 'Should it appear on the start page?' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', required: false }
       - {

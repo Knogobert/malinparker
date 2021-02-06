@@ -6,7 +6,7 @@
         <figcaption
           class="absolute inset-0 flex flex-col justify-between items-between rounded-xl bg-white bg-opacity-75 m-4 p-4"
         >
-          <h4 class="text-xl dark:text-primary-100 mb-2">{{ project.title }}</h4>
+          <h4 class="font-sans font-bold text-xl dark:text-primary-100 mb-2">{{ project.title }}</h4>
           <button class="btn btn-ghost self-end w-full " tabindex="-1">see more</button>
         </figcaption>
       </figure>

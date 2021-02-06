@@ -1,20 +1,26 @@
 <template>
   <header id="header" ref="header">
     <nav :class="{ 'shadow-xl': intersecting }">
-      <ul class="flex justify-end py-4 px-4 sm:px-8 max-w-6xl mx-auto">
-        <li v-if="$route.path !== '/'" class="mr-4 sm:mr-6">
+      <ul class="flex justify-end items-end py-4 px-4 sm:px-8 max-w-6xl mx-auto">
+        <li v-if="$route.path !== '/'" class="mr-4">
           <nuxt-link class="sm:hidden" to="/">MKP</nuxt-link>
           <nuxt-link class="hidden sm:block" to="/">Malin Katrine Parker</nuxt-link>
         </li>
-        <li class="underscore mr-4"></li>
+        <li class="underscore mr-1"></li>
         <li class="">
           <nuxt-link class="px-4" to="/cases">UX/UI</nuxt-link>
         </li>
-        <li class="mx-2">
+        <li class="mx-1">
           <nuxt-link class="px-4" to="/designs">graphic design</nuxt-link>
         </li>
-        <li class="-mr-4">
-          <nuxt-link class="px-4" to="/contact">who am i?</nuxt-link>
+        <li class="-mr-1 sm:-mr-5">
+          <a
+            :href="resumeUrl"
+            target="_blank"
+            ref="noopener"
+            title="Opens a PDF in a new tab"
+            class="btn btn-pill leading-none lowercase px-3 -my-3 no-underline"
+          >resumé</a>
         </li>
       </ul>
     </nav>
@@ -29,6 +35,11 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  computed: {
+    resumeUrl() {
+      return process.env.resumeUrl;
+    }
   },
 }
 </script>
@@ -49,7 +60,7 @@ nav {
   margin-bottom: 3.5px;
 }
 
-a:hover {
+a:not(.no-underline):hover {
   @apply underline;
 }
 
