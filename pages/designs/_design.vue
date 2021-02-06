@@ -8,7 +8,7 @@
     <p class="mt-4">{{ designPost.body }}</p>
     <ul v-if="designPost.images && designPost.images.length !== 0" class="images max-w-2xl mx-auto">
       <li v-for="image in designPost.images" :key="image.id">
-        <img v-if="image.src" :src="image.src" :alt="image.alt" class="image" />
+        <img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image" />
       </li>
     </ul>
     <!-- <img

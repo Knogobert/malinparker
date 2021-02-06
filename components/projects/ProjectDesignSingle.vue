@@ -2,7 +2,7 @@
   <article class="project project-design">
     <nuxt-link :to="`/designs/${project.slug}`">
       <figure class="relative p-4" v-if="project.cover && project.cover.src">
-        <img :src="project.cover.src" :alt="project.cover.alt || ''" fit="cover" />
+        <img :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover" />
         <figcaption
           class="absolute inset-0 flex flex-col justify-between items-between rounded-xl bg-white bg-opacity-75 m-4 p-4"
         >

@@ -4,7 +4,7 @@
     <ul>
       <li v-for="image in images" :key="image.id" class="grid-container">
         <div class="images self-start">
-          <img v-if="image.src" :src="image.src" :alt="image.alt" class="image" />
+          <img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image" />
         </div>
 
         <div class="intro md:place-self-start">
