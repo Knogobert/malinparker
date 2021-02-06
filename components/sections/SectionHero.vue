@@ -1,7 +1,7 @@
 <template>
   <section class="grid-container">
     <div class="headline self-end">
-      <h3 class="text-sm">Hi, my name is</h3>
+      <h3 class="monotitle text-sm">Hi, my name is</h3>
     </div>
 
     <div class="intro">
@@ -16,11 +16,11 @@
       <nuxt-link to="/contact" class="btn btn-ghost mt-2 sm:mt-0">get in touch</nuxt-link>
       <div class="flex-1"></div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="text-base uppercase text-gray dark:text-gray-600">Contact</h4>
+        <h4 class="text-base uppercase text-gray dark:text-primary-300">Contact</h4>
         <a href="mailto:hello@malinkatrine.com" class="text-primary dark:text-primary-400 hover:underline">hello@malinkatrine.com</a>
       </div>
       <div class="flex-auto text-left sm:text-right mt-4 sm:ml-4">
-        <h4 class="text-base uppercase text-gray dark:text-gray-600">Location</h4>
+        <h4 class="text-base uppercase text-gray dark:text-primary-300">Location</h4>
         <p class="text-primary dark:text-primary-400">Gothenburg</p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <section class="grid-container">
     <div class="headline self-end flex justify-start">
-      <h3 class="text-sm text-primary dark:text-primary-300 lowercase">My knowledge</h3>
+      <h3 class="monotitle text-sm text-primary dark:text-primary-300 lowercase">My knowledge</h3>
       <div class="underscore ml-2"></div>
     </div>
 

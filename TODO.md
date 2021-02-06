@@ -2,7 +2,8 @@
 
 ### Todo
 
-- [ ] Replace Bugaki font
+- [ ] Translate to English
+- [ ] Update projects
 
 ### In Progress
 
@@ -10,6 +11,7 @@
 
 ### Done ✓
 
+- [X] Replace Bugaki font with +Jakarta Sans
 - [X] Use CSS Colums masonry for design projects
 - [X] Add folder collection type for design
 - [X] Add image modal plugin for zooming in

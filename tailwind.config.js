@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
-        serif: ['Bugakii', ...defaultTheme.fontFamily.serif]
+        sans: ['PlusJakartaSans', ...defaultTheme.fontFamily.sans]
       },
       colors: {
         gray: {
@@ -38,10 +38,6 @@ module.exports = {
           '800': 'var(--color-primary-800)', // #341A18
           '900': 'var(--color-primary-900)', // #110908
         },
-      },
-      opacity: {
-        '10': '0.1',
-        '20': '0.2'
       },
       // borderRadius: {
       //   ...defaultTheme.borderRadius,

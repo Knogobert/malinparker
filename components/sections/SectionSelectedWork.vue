@@ -1,7 +1,7 @@
 <template>
   <section v-if="selectedWorkPosts.length !== 0">
     <div class="flex justify-start mb-12">
-      <h3 class="text-sm text-primary dark:text-primary-300 lowercase">Selected work</h3>
+      <h3 class="monotitle text-sm text-primary dark:text-primary-300 lowercase">Selected work</h3>
       <div class="underscore ml-2"></div>
     </div>
 
