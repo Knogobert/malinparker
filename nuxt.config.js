@@ -141,13 +141,13 @@ export default {
   },
   pwa: {
     icon: {
-      source: 'static/favicon.png',
-      filename: 'favicon.png'
+      source: 'static/icon.png',
+      filename: 'icon.png'
     },
-    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
+    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', short_name: 'MKP', lang: SITE_INFO.sitelang || process.env.lang || 'en-US' },
     meta: {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
-      lang: process.env.lang,
+      lang: SITE_INFO.sitelang || process.env.lang || 'en-US',
       ogHost: process.env.URL,
       ogImage: '/ogp-dark.png'
     }
