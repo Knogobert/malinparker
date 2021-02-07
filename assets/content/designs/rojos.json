@@ -4,7 +4,8 @@
   "title": "Rojos Förpackning",
   "cover": {
     "src": "/img/rojos-2.jpg",
-    "alt": "a top-down view of a pie packaging"
+    "alt": "a top-down view of a pie packaging",
+    "height": 200
   },
   "images": [
     { "src": "/img/rojos-2.jpg", "alt": "a top-down view of a pie packaging"},

@@ -81,7 +81,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-content-placeholders'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -127,7 +127,7 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'image', 'intro'],
-    whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/, /medium-zoom/, /^header/, /__nim_o/]
+    whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/, /medium-zoom/, /^header/, /__nim_o/, /^vue-content-/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference

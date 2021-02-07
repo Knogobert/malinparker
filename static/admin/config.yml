@@ -68,6 +68,16 @@ collections:
           fields: [
             { label: 'Cover Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
             { label: 'Cover Image Alt', name: 'alt', widget: 'string', required: false },
+            {
+              label: 'Cover Image Placeholder Height',
+              name: 'height',
+              description: 'The estimated height of the picture that will be used for the placeholder before the image has loaded (in pixels)',
+              widget: number,
+              min: 100,
+              max: 1000,
+              value_type: int,
+              required: false
+            },
           ]
         }
       - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
@@ -192,6 +202,16 @@ collections:
           fields: [
             { label: 'Cover Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
             { label: 'Cover Image Alt', name: 'alt', widget: 'string', required: false },
+            {
+              label: 'Cover Image Placeholder Height',
+              name: 'height',
+              description: 'The estimated height of the picture that will be used for the placeholder before the image has loaded (in pixels)',
+              widget: number,
+              min: 100,
+              max: 1000,
+              value_type: int,
+              required: false
+            },
           ]
         }
       - {

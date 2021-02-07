@@ -4,7 +4,8 @@
   "title": "Spaghetti Förpackning",
   "cover": {
     "src": "/img/spaghetti-1.jpg",
-    "alt": "a package of spaghetti standing up"
+    "alt": "a package of spaghetti standing up",
+    "height": 460
   },
   "images": [
     { "src": "/img/spaghetti-1.jpg", "alt": "a package of spaghetti standing up"},

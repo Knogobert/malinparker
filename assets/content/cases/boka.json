@@ -6,7 +6,8 @@
   "excerpt": "An add-on for company or library databases with the goal to help the user putting together suggestion of books for different requests. How to fit lots of information in a small space and still keep it understandable and user friendly?",
   "cover": {
     "src": "/img/boka-feature.png",
-    "alt": "en applikation med 300 valbara böcker"
+    "alt": "en applikation med 300 valbara böcker",
+    "height": 375
   },
   "body": "GUI examination · Design a system that help librarians and sales people put together suggestions of up to ten books in packages for different request.",
   "meta": {

@@ -8,6 +8,16 @@
 .page-leave-to {
   opacity: 0;
 }
+/* 
+.fade-enter-active {
+  @apply transition-opacity duration-200 ease-in-out;
+}
+.fade-enter-to {
+  @apply opacity-100;
+}
+.fade-enter {
+  @apply opacity-0;
+} */
 
 .slide-left-enter-active,
 .slide-left-leave-active,
@@ -18,17 +28,14 @@
   overflow: hidden;
   @apply duration-200;
 }
-
 .slide-right-leave-active {
   opacity: 0;
   transform: translate(2em, 0);
 }
-
 .slide-left-leave-active {
   opacity: 0;
   transform: translate(-2em, 0);
 }
-
 .slide-left-enter,
 .slide-right-enter {
   opacity: 0;
