@@ -2,13 +2,13 @@
 
 ### Todo
 
-- [ ] Update projects
 
 ### In Progress
 
 
 ### Done ✓
 
+- [X] Update projects
 - [X] Add placeholder images
 - [X] Translate to English
 - [X] Fix mobile menu
