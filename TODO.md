@@ -2,15 +2,16 @@
 
 ### Todo
 
-- [ ] Translate to English
 - [ ] Update projects
 
 ### In Progress
 
-- [ ] Fix mobile menu
 
 ### Done ✓
 
+- [X] Add placeholder images
+- [X] Translate to English
+- [X] Fix mobile menu
 - [X] Update skills
 - [X] Add resumé
 - [X] Replace Bugaki font with +Jakarta Sans

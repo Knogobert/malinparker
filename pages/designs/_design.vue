@@ -11,12 +11,6 @@
         <img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image" />
       </li>
     </ul>
-    <!-- <img
-      v-if="designPost.cover"
-      class="cover-image"
-      :src="designPost.cover.src"
-      :alt="designPost.cover.alt"
-    > -->
   </div>
 </template>
 

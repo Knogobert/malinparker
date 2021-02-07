@@ -39,8 +39,12 @@ module.exports = {
           '900': 'var(--color-primary-900)', // #110908
         },
       },
-      screns: {
-        'xs': '420px',
+      screens: {
+        'xs': '480px',
+        // 'sm': '640px',
+        // 'md': '768px',
+        // 'lg': '1024px',
+        // 'xl': '1280px',
       }
       // borderRadius: {
       //   ...defaultTheme.borderRadius,

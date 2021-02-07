@@ -39,12 +39,6 @@
       <template v-slot:title>Retrospective.</template>
       <div class="md-content" v-html="$md.render(casePost.retrospective)" />
     </case-section-general>
-    <!-- <img
-      v-if="casePost.cover"
-      class="cover-image"
-      :src="casePost.cover.src"
-      :alt="casePost.cover.alt"
-    > -->
   </div>
 </template>
 
