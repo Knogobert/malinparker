@@ -35,6 +35,9 @@ export default {
       loadingImage: true
     }
   },
+  mounted() {
+    setTimeout(() => { this.loadingImage = false; }, 2000);
+  },
 }
 </script>
 

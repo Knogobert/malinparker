@@ -19,6 +19,12 @@
       </ul>
     </case-section-general>
 
+    <case-section-general>
+      <figure class="" v-if="casePost.cover && casePost.cover.src">
+        <img :src="casePost.cover.src" :alt="casePost.cover.alt || ''" loading="lazy" fit="cover" class="image"/>
+      </figure>
+    </case-section-general>
+
     <case-section-general v-if="casePost.context" class="mt-16">
       <template v-slot:title>Context.</template>
       <div class="md-content" v-html="$md.render(casePost.context)" />
