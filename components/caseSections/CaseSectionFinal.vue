@@ -4,7 +4,7 @@
     <ul>
       <li v-for="image in images" :key="image.id" class="grid-container">
         <div class="images self-start">
-          <img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image" />
+          <nuxt-img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image" @load="addMediumZoom"/>
         </div>
 
         <div class="intro md:place-self-start">
@@ -22,6 +22,19 @@ export default {
       type: Array,
       required: true,
     },
+  },
+  methods: {
+    addMediumZoom() {
+      console.log('Yani');
+      this.$nextTick(() => {
+        console.log('YaniBrani');
+        mediumZoom('.image', {
+          margin: 32,
+          background: 'var(--bg)',
+          scrollOffset: 100,
+        });
+      });
+    }
   },
 }
 </script>
