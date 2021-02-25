@@ -1,0 +1,17 @@
+{
+  "order": 100,
+  "title": "Vinyl Cover",
+  "cover": {
+    "src": "/img/1-fram-1.jpg",
+    "alt": "vinlyl-cover-front"
+  },
+  "images": [
+    {
+      "image": {
+        "src": "/img/2-bak-1.jpg",
+        "alt": "vinyl-cover-back"
+      }
+    }
+  ],
+  "slug": "vinylcover"
+}
