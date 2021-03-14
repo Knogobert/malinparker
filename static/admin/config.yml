@@ -5,6 +5,7 @@ publish_mode: editorial_workflow
 backend:
   name: git-gateway
   branch: master
+  squash_merges: true
 
 media_folder: static/img
 public_folder: /img
@@ -34,7 +35,7 @@ collections:
               widget: string,
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
-          - { label: 'Resumé URL', name: 'resumeUrl', widget: 'image', required: false, allow_multiple: false }
+          - { label: 'Résumé URL', name: 'resumeUrl', widget: 'image', required: false, allow_multiple: false }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
   - name: 'case'
     label: 'Case Studies'
@@ -42,6 +43,7 @@ collections:
     folder: 'assets/content/cases'
     create: true
     format: 'json'
+    identifier_field: slug
     slug: '{{slug}}'
     preview_path: 'cases/{{slug}}'
     fields:
@@ -56,7 +58,7 @@ collections:
           required: true,
           default: 100
         }
-      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be?' }
+      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be? /cases/SLUG_HERE' }
       - { label: 'Selected work', name: 'selected', widget: 'boolean', required: false, hint: 'Should it appear on the start page?' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', required: false }
@@ -177,6 +179,7 @@ collections:
     folder: 'assets/content/designs'
     create: true
     format: 'json'
+    identifier_field: slug
     slug: '{{slug}}'
     preview_path: 'designs/{{slug}}'
     fields:
@@ -191,7 +194,7 @@ collections:
           required: true,
           default: 100
         }
-      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be?' }
+      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be? /designs/SLUG_HERE' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
       - {

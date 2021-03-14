@@ -30,7 +30,7 @@
             ref="noopener"
             title="Opens a PDF in a new tab"
             class="btn btn-pill leading-none lowercase px-3 -my-3 no-underline"
-          >resumé</a>
+          >résumé</a>
         </li>
       </ul>
       <transition name="fade">
