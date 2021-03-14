@@ -1,0 +1,23 @@
+{
+  "order": 105,
+  "slug": "yearbook",
+  "title": "Year Book",
+  "cover": {
+    "src": "/img/arsbok-0-zoom.jpg",
+    "alt": "Zoomed in corner of cut out on book cover"
+  },
+  "images": [
+    {
+      "src": "/img/arsbok-1-framsida.jpg",
+      "alt": "Book cover standing up. Says \"Årsbok\" meaning Year Book in Swedish"
+    },
+    {
+      "src": "/img/arsbok-2-framsida.jpg",
+      "alt": "Book cover held in hands"
+    },
+    {
+      "src": "/img/arsbok-3-bladder.jpg",
+      "alt": "Hands flipping through book"
+    }
+  ]
+}
