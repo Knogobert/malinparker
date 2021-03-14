@@ -1,5 +1,5 @@
-site_url: https://malinparker.netlify.app/
-logo_url: https://malinparker.netlify.app/icon.png
+site_url: https://malinkatrine.com/
+logo_url: https://malinkatrine.com/icon.png
 
 publish_mode: editorial_workflow
 backend:
@@ -58,7 +58,7 @@ collections:
           required: true,
           default: 100
         }
-      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be? /cases/SLUG_HERE' }
+      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be? "/cases/SLUG_HERE"' }
       - { label: 'Selected work', name: 'selected', widget: 'boolean', required: false, hint: 'Should it appear on the start page?' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', required: false }
@@ -140,17 +140,11 @@ collections:
               widget: 'list',
               required: false,
               collapsed: true,
-              summary: '{{fields.image.src}} - {{fields.image.alt}}',
-              field: {
-                label: 'Image',
-                name: 'image',
-                widget: 'object',
-                required: false,
-                fields: [
-                  { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
-                  { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
-                ]
-              },
+              summary: '{{fields.src}} - {{fields.alt}}',
+              fields: [
+                { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+                { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+              ]
             }
           ],
         }
@@ -159,18 +153,12 @@ collections:
           name: 'final',
           widget: 'list',
           required: false,
-          summary: '{{fields.image.src}} - {{fields.image.alt}}',
-          field: {
-            label: 'Image',
-            name: 'image',
-            widget: 'object',
-            required: false,
-            fields: [
-              { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
-              { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
-              { label: 'Image Text', name: 'body', widget: 'markdown', minimal: true, required: false },
-            ]
-          },
+          summary: '{{fields.src}} - {{fields.alt}}',
+          fields: [
+            { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+            { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+            { label: 'Image Text', name: 'body', widget: 'markdown', minimal: true, required: false },
+          ]
         }
       - { label: 'Retrospective', name: 'retrospective', widget: 'markdown', minimal: true, required: false }
   - name: 'design'
@@ -194,7 +182,7 @@ collections:
           required: true,
           default: 100
         }
-      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small letters and dashes'], hint: 'What should the url be? /designs/SLUG_HERE' }
+      - { label: 'URL slug', name: 'slug', widget: 'string', required: true, pattern: ['[a-z-]', 'Must be small ASCII letters and dashes'], hint: 'What should the url be? "/designs/SLUG_HERE"' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Content', name: 'body', widget: 'markdown', minimal: true, required: false }
       - {
@@ -223,15 +211,9 @@ collections:
           widget: 'list',
           required: false,
           collapsed: true,
-          summary: '{{fields.image.src}} - {{fields.image.alt}}',
-          field: {
-            label: 'Image',
-            name: 'image',
-            widget: 'object',
-            required: false,
-            fields: [
-              { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
-              { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
-            ]
-          },
+          summary: '{{fields.src}} - {{fields.alt}}',
+          fields: [
+            { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+            { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+          ]
         }
