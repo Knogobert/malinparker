@@ -160,17 +160,11 @@ collections:
           widget: 'list',
           required: false,
           summary: '{{fields.image.src}} - {{fields.image.alt}}',
-          field: {
-            label: 'Image',
-            name: 'image',
-            widget: 'object',
-            required: false,
-            fields: [
-              { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
-              { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
-              { label: 'Image Text', name: 'body', widget: 'markdown', minimal: true, required: false },
-            ]
-          },
+          fields: [
+            { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+            { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+            { label: 'Image Text', name: 'body', widget: 'markdown', minimal: true, required: false },
+          ]
         }
       - { label: 'Retrospective', name: 'retrospective', widget: 'markdown', minimal: true, required: false }
   - name: 'design'
@@ -224,14 +218,8 @@ collections:
           required: false,
           collapsed: true,
           summary: '{{fields.image.src}} - {{fields.image.alt}}',
-          field: {
-            label: 'Image',
-            name: 'image',
-            widget: 'object',
-            required: false,
-            fields: [
-              { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
-              { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
-            ]
-          },
+          fields: [
+            { label: 'Image Source', name: 'src', widget: 'image', required: false, allow_multiple: false },
+            { label: 'Image Alt', name: 'alt', widget: 'string', required: false },
+          ]
         }
