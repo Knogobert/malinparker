@@ -15,9 +15,12 @@ const dynamicRoutes = getDynamicPaths(
   dynamicContentPath
 )
 
-export default {
+export default defineNuxtConfig({
   target: 'static',
   components: true,
+  dir: {
+    public: 'static',
+  },
 
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
@@ -65,11 +68,11 @@ export default {
     }],
     __dangerouslyDisableSanitizers: ['noscript']
   },
-  generate: {
-    routes: dynamicRoutes,
-    fallback: true,
-    subFolders: false
-  },
+  // generate: {
+  //   routes: dynamicRoutes,
+  //   fallback: true,
+  //   subFolders: false
+  // },
   /*
    ** Customize the progress-bar color
    */
@@ -85,11 +88,11 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss'],
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-purgecss'],
+  // modules: ['nuxt-purgecss'],
   // modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
   // markdownit: {
   //   injected: true
@@ -98,7 +101,7 @@ export default {
    ** Build configuration
    */
   build: {
-    transpile: ['vue-intersect'],
+    // transpile: ['vue-intersect'],
     extractCSS: true,
     postcss: {
       plugins: {
@@ -153,7 +156,7 @@ export default {
       ogImage: '/ogp-dark.png'
     }
   }
-}
+})
 
 /**
  * Create an array of URLs from a list of files
