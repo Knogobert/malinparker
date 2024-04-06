@@ -81,7 +81,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-content-placeholders'],
+  plugins: ['~/plugins/vue-content-placeholders', '~/plugins/markdownit'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -89,10 +89,11 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
-  markdownit: {
-    injected: true
-  },
+  modules: ['nuxt-purgecss'],
+  // modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
+  // markdownit: {
+  //   injected: true
+  // },
   /*
    ** Build configuration
    */
