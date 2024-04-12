@@ -2,17 +2,14 @@
   <article class="project project-design w-full">
     <nuxt-link :to="`/designs/${project.slug}`">
       <figure class="relative p-4" v-if="project.cover && project.cover.src">
-        <content-placeholders v-show="loadingImage">
-          <content-placeholders-img
-            class="w-full p-4 rounded-xl opacity-50"
-            :class="{ 'h-64': !project.cover.height }"
-            :style="`height: ${project.cover.height}px`"
-          />
-        </content-placeholders>
-        <img :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover" :class="loadingImage ? '' : 'show'" @load="loadingImage = false" />
+        <skeleton-content-placeholders v-show="loadingImage">
+          <skeleton-content-placeholders-img class="w-full p-4 rounded-xl opacity-50"
+            :class="{ 'h-64': !project.cover.height }" :style="`height: ${project.cover.height}px`" />
+        </skeleton-content-placeholders>
+        <img :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover"
+          :class="loadingImage ? '' : 'show'" @load="loadingImage = false" />
         <figcaption
-          class="absolute inset-0 flex flex-col justify-between items-between rounded-xl bg-white bg-opacity-75 m-4 p-4"
-        >
+          class="absolute inset-0 flex flex-col justify-between items-between rounded-xl bg-white bg-opacity-75 m-4 p-4">
           <h4 class="font-sans font-bold text-xl dark:text-primary-100 mb-2">{{ project.title }}</h4>
           <button class="btn btn-ghost self-end w-full " tabindex="-1">see more</button>
         </figcaption>

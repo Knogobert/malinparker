@@ -1,8 +1,5 @@
 import glob from 'glob'
 import path from 'path'
-import postcssImport from 'postcss-import'
-import postcssNesting from 'postcss-nesting'
-import postcssPresetEnv from 'postcss-preset-env'
 import * as SITE_INFO from './assets/content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
@@ -84,42 +81,17 @@ export default defineNuxtConfig({
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-content-placeholders', '~/plugins/markdownit'],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss'],
+  plugins: [],
   /*
    ** Nuxt.js modules
    */
-  // modules: ['nuxt-purgecss'],
-  // modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
-  // markdownit: {
-  //   injected: true
-  // },
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss'],
   /*
    ** Build configuration
    */
   build: {
     // transpile: ['vue-intersect'],
     extractCSS: true,
-    postcss: {
-      plugins: {
-        'postcss-import': postcssImport,
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-        'postcss-nesting': postcssNesting,
-        'postcss-preset-env': postcssPresetEnv({
-          stage: 1,
-          features: {
-            'nesting-rules': false
-          }
-        })
-      }
-    },
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
   },
   /*
    ** Custom additions configuration
@@ -128,11 +100,11 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
-  purgeCSS: {
-    mode: 'postcss',
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'image', 'intro'],
-    whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/, /medium-zoom/, /^header/, /__nim_o/, /^vue-content-/]
-  },
+  // purgeCSS: {
+  //   mode: 'postcss',
+  //   whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'image', 'intro'],
+  //   whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/, /medium-zoom/, /^header/, /__nim_o/, /^vue-content-/]
+  // },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
@@ -144,11 +116,35 @@ export default defineNuxtConfig({
     }
   },
   pwa: {
-    icon: {
-      source: 'static/icon.png',
-      filename: 'icon.png'
+    manifest: {
+      name: SITE_INFO.sitename || process.env.npm_package_name || '',
+      short_name: 'MKP',
+      lang: SITE_INFO.sitelang || process.env.lang || 'en-US',
+      icons: [
+        {
+          src: 'pwa-64x64.png',
+          sizes: '64x64',
+          type: 'image/png',
+        },
+        {
+          src: 'pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: 'maskable-icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        }
+      ],
     },
-    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', short_name: 'MKP', lang: SITE_INFO.sitelang || process.env.lang || 'en-US' },
     meta: {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
       lang: SITE_INFO.sitelang || process.env.lang || 'en-US',

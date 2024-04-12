@@ -8,7 +8,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
-    darkSelector: '.dark-mode',
+    darkMode: 'class',
     extend: {
       fontFamily: {
         mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
@@ -57,13 +57,13 @@ module.exports = {
     borderColor: ['dark'], // , 'dark-focus', 'dark-focus-within'],
     textColor: ['dark'], // , 'dark-hover', 'dark-active']
   },
-  plugins: [require('tailwindcss-dark-mode')()],
-  purge: {
-    // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: process.env.NODE_ENV === 'production',
-    content: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue', 'plugins/**/*.js', 'nuxt.config.js'],
-    options: {
-      // Set whitelist in nuxt.config.js -> purgeCSS.whitelist: ['dark-mode', 'light-mode', 'btn', 'icon']
-    }
-  }
+  plugins: [],
+  content: [ // Learn more on https://tailwindcss.com/docs/content-configuration
+    'components/**/*.vue',
+    'layouts/**/*.vue',
+    'pages/**/*.vue',
+    'plugins/**/*.js',
+    // 'nuxt.config.js'
+  ],
+  safelist: [],
 }

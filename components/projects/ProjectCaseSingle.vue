@@ -2,14 +2,12 @@
   <article class="project project-case w-full">
     <nuxt-link :to="`/cases/${project.slug}`">
       <figure class="p-4" v-if="project.cover && project.cover.src">
-        <content-placeholders v-show="loadingImage">
-          <content-placeholders-img
-            class="w-full p-4 rounded-xl opacity-50"
-            :class="{ 'h-64': !project.cover.height }"
-            :style="`height: ${project.cover.height}px`"
-          />
-        </content-placeholders>
-        <img :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover" :class="loadingImage ? '' : 'show'"  @load="loadingImage = false" />
+        <skeleton-content-placeholders v-show="loadingImage">
+          <skeleton-content-placeholders-img class="w-full p-4 rounded-xl opacity-50"
+            :class="{ 'h-64': !project.cover.height }" :style="`height: ${project.cover.height}px`" />
+        </skeleton-content-placeholders>
+        <img :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover"
+          :class="loadingImage ? '' : 'show'" @load="loadingImage = false" />
       </figure>
       <div class="intro">
         <h4 class="subtitle mb-2">{{ project.title }}</h4>
