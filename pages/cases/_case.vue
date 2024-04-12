@@ -56,6 +56,11 @@ export default {
       return {
         casePost: await require(`~/assets/content/cases/${params.case}.json`)
       }
+  },
+  data() {
+    return {
+      $md: { render: (d) => d },
+    }
   }
 }
 </script>

@@ -23,6 +23,11 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      $md: { render: (d) => d },
+    }
+  }
 }
 </script>
 
