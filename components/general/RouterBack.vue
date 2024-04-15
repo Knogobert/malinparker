@@ -13,4 +13,13 @@ function goBack() {
   console.log('TODO goBack:', goBack)
   // $router.go(-2)
 }
+// function navigate(){
+//   return navigateTo({
+//     path: '/search',
+//     query: {
+//       name: 'first name',
+//       type: '1'
+//     }
+//   })
+// }
 </script>

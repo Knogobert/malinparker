@@ -7,7 +7,7 @@
 
     <div class="images self-center">
       <!-- <img class="images" src="/img/knowledge-diagram.svg" alt="Knowledge tree" fit="contain" /> -->
-      <svg-knowlegde-diagram class="image w-full h-auto" title="Knowledge tree" />
+      <Svgs-SvgKnowlegdeDiagram class="image w-full h-auto" title="Knowledge tree" />
     </div>
 
     <div class="intro md:place-self-center">

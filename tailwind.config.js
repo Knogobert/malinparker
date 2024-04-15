@@ -2,41 +2,59 @@
  ** TailwindCSS Configuration File
  **
  ** Docs: https://tailwindcss.com/docs/configuration
- ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+ ** Default: https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/config.full.js
  */
-const defaultTheme = require('tailwindcss/defaultTheme')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     darkMode: 'class',
     extend: {
       fontFamily: {
-        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
-        sans: ['PlusJakartaSans', ...defaultTheme.fontFamily.sans]
+        sans: [
+          'PlusJakartaSans',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        mono: [
+          'Roboto Mono',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
       },
       colors: {
         gray: {
-          '50': 'var(--color-gray-50)',      // #FAF9F9
-          '100': 'var(--color-gray-100)',    // #E8E3E1
-          '200': 'var(--color-gray-200)',    // #D6CCCA
-          '300': 'var(--color-gray-300)',    // #C3B6B4
-          '400': 'var(--color-gray-400)',    // #AFA09E
-          default: 'var(--color-gray)',      // #9A8A89
-          '600': 'var(--color-gray-600)',    // #7D6D6C
-          '700': 'var(--color-gray-700)',    // #5F5150
-          '800': 'var(--color-gray-800)',    // #403534
-          '900': 'var(--color-gray-900)',    // #211A1A
+          '50': 'hsl(var(--color-gray-50) / <alpha-value>)',      // #FAF9F9
+          '100': 'hsl(var(--color-gray-100) / <alpha-value>)',    // #E8E3E1
+          '200': 'hsl(var(--color-gray-200) / <alpha-value>)',    // #D6CCCA
+          '300': 'hsl(var(--color-gray-300) / <alpha-value>)',    // #C3B6B4
+          '400': 'hsl(var(--color-gray-400) / <alpha-value>)',    // #AFA09E
+          DEFAULT: 'hsl(var(--color-gray) / <alpha-value>)',      // #9A8A89
+          '600': 'hsl(var(--color-gray-600) / <alpha-value>)',    // #7D6D6C
+          '700': 'hsl(var(--color-gray-700) / <alpha-value>)',    // #5F5150
+          '800': 'hsl(var(--color-gray-800) / <alpha-value>)',    // #403534
+          '900': 'hsl(var(--color-gray-900) / <alpha-value>)',    // #211A1A
         },
         primary: {
-          '100': 'var(--color-primary-100)', // #E7CCCB
-          '200': 'var(--color-primary-200)', // #D7ABA8
-          '300': 'var(--color-primary-300)', // #C78985
-          '400': 'var(--color-primary-400)', // #B76762
-          default: 'var(--color-primary)',   // #9D4E48
-          '600': 'var(--color-primary-600)', // #7A3D38
-          '700': 'var(--color-primary-700)', // #572B28
-          '800': 'var(--color-primary-800)', // #341A18
-          '900': 'var(--color-primary-900)', // #110908
+          '100': 'hsl(var(--color-primary-100) / <alpha-value>)', // #E7CCCB
+          '200': 'hsl(var(--color-primary-200) / <alpha-value>)', // #D7ABA8
+          '300': 'hsl(var(--color-primary-300) / <alpha-value>)', // #C78985
+          '400': 'hsl(var(--color-primary-400) / <alpha-value>)', // #B76762
+          DEFAULT: 'hsl(var(--color-primary) / <alpha-value>)',   // #9D4E48
+          '600': 'hsl(var(--color-primary-600) / <alpha-value>)', // #7A3D38
+          '700': 'hsl(var(--color-primary-700) / <alpha-value>)', // #572B28
+          '800': 'hsl(var(--color-primary-800) / <alpha-value>)', // #341A18
+          '900': 'hsl(var(--color-primary-900) / <alpha-value>)', // #110908
         },
       },
       screens: {
@@ -51,11 +69,6 @@ module.exports = {
       //   'huge': '5rem'
       // }
     },
-  },
-  variants: {
-    backgroundColor: ['dark'], //, 'dark-hover', 'dark-group-hover'],
-    borderColor: ['dark'], // , 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark'], // , 'dark-hover', 'dark-active']
   },
   plugins: [],
   content: [ // Learn more on https://tailwindcss.com/docs/content-configuration

@@ -1,59 +1,37 @@
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  padding: env(safe-area-inset);
-}
+@layer base {
+  html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    padding: env(safe-area-inset);
+  }
 
-body {
-  background-color: var(--bg-secondary);
-  color: var(--text);
-  @apply
-    font-mono
-    transition-colors
-    duration-200
-    ease-in-out;
-
-  & > #__nuxt {
-    background-color: var(--bg);
+  body {
+    background-color: var(--bg-secondary);
+    color: var(--text);
     @apply
-      m-4
-      rounded-3xl
+      font-mono
       transition-colors
       duration-200
       ease-in-out;
 
-    &::before,
-    &::after { /* bottom border squares */
-      content: '';
-      background-color: var(--bg-secondary);
+    & > #__nuxt {
+      background-color: var(--bg);
       @apply
-        fixed
-        z-30
-        h-8
-        w-8
-        bottom-0
-        mb-4
-        transition
+        m-4
+        rounded-3xl
+        transition-colors
         duration-200
         ease-in-out;
-    }
-    &::before { /* bottom left border square */
-      @apply left-0 ml-4 rounded-tr-3xl;
-    }
-    &::after { /* bottom right border square */
-      @apply right-0 mr-4 rounded-tl-3xl;
-    }
 
-    & > div {
       &::before,
-      &::after { /* bottom border radiuses */
+      &::after { /* bottom border squares */
         content: '';
-        background-color: var(--bg);
+        background-color: var(--bg-secondary);
         @apply
           fixed
-          z-40
+          z-30
           h-8
           w-8
           bottom-0
@@ -62,44 +40,68 @@ body {
           duration-200
           ease-in-out;
       }
-      &::before { /* bottom left border radius */
-        @apply left-0 ml-4 rounded-bl-3xl rounded-tr-3xl;
+      &::before { /* bottom left border square */
+        @apply left-0 ml-4 rounded-tr-3xl;
       }
-      &::after { /* bottom right border radius */
-        @apply right-0 mr-4 rounded-br-3xl rounded-tl-3xl;
+      &::after { /* bottom right border square */
+        @apply right-0 mr-4 rounded-tl-3xl;
       }
+
+      & > div {
+        &::before,
+        &::after { /* bottom border radiuses */
+          content: '';
+          background-color: var(--bg);
+          @apply
+            fixed
+            z-40
+            h-8
+            w-8
+            bottom-0
+            mb-4
+            transition
+            duration-200
+            ease-in-out;
+        }
+        &::before { /* bottom left border radius */
+          @apply left-0 ml-4 rounded-bl-3xl rounded-tr-3xl;
+        }
+        &::after { /* bottom right border radius */
+          @apply right-0 mr-4 rounded-br-3xl rounded-tl-3xl;
+        }
+      }
+    }
+
+    &::after { /* bottom solid border */
+      content: '';
+      background-color: var(--bg-secondary);
+      @apply
+        fixed
+        z-40
+        h-4
+        bottom-0
+        inset-x-0
+        transition
+        duration-200
+        ease-in-out;
     }
   }
 
-  &::after { /* bottom solid border */
-    content: '';
-    background-color: var(--bg-secondary);
+  .underscore {
+    margin-bottom: 6px;
+    border-color: var(--border-color);
     @apply
-      fixed
-      z-40
-      h-4
-      bottom-0
-      inset-x-0
-      transition
-      duration-200
-      ease-in-out;
+      border-b
+      flex-1
   }
-}
 
-.underscore {
-  margin-bottom: 6px;
-  border-color: var(--border-color);
-  @apply
-    border-b
-    flex-1
-}
+  .nav-back {
+    left: 2rem;
+    bottom: 1.5rem;
+    @apply fixed z-40 transition duration-200 ease-in-out;
 
-.nav-back {
-  left: 2rem;
-  bottom: 1.5rem;
-  @apply fixed z-40 transition duration-200 ease-in-out;
-
-  & a:hover span {
-    @apply underline;
+    & a:hover span {
+      @apply underline;
+    }
   }
 }

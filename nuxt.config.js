@@ -15,10 +15,10 @@ const dynamicRoutes = getDynamicPaths(
 export default defineNuxtConfig({
   target: 'static',
   components: true,
+  devtools: { enabled: true },
   dir: {
     public: 'static',
   },
-
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -65,11 +65,11 @@ export default defineNuxtConfig({
     }],
     __dangerouslyDisableSanitizers: ['noscript']
   },
-  // generate: {
-  //   routes: dynamicRoutes,
-  //   fallback: true,
-  //   subFolders: false
-  // },
+  generate: {
+    routes: dynamicRoutes,
+    fallback: true,
+    subFolders: false
+  },
   /*
    ** Customize the progress-bar color
    */

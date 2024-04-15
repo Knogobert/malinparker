@@ -1,9 +1,9 @@
 <template>
   <div v-once>
-    <section-hero class="mb-16" />
-    <section-knowledge class="mb-16" />
-    <section-selected-work class="mb-16" />
-    <Footer />
+    <Sections-SectionHero class="mb-16" />
+    <Sections-SectionKnowledge class="mb-16" />
+    <Sections-SectionSelectedWork class="mb-16" />
+    <General-Footer />
   </div>
 </template>
 

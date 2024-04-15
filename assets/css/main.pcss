@@ -1,20 +1,20 @@
+@import './_vars.pcss';
+@import './_globals.pcss';
+@import './_fonts.pcss';
+/* @import './_mixins.pcss'; */
+@import './_plugins.pcss';
+@import './_transitions.pcss';
+
+/* @layer base { */
+  @import './_typography.pcss';
+  @import './_grid.pcss';
+/* } */
+
+/* @layer components { */
+  @import './_icons.pcss';
+  @import './_btns.pcss';
+/* } */
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-@layer base {
-  @import './_vars.pcss';
-  /* @import './_mixins.pcss'; */
-  @import './_fonts.pcss';
-  @import './_globals.pcss';
-  @import './_plugins.pcss';
-  @import './_transitions.pcss';
-
-  @import './_typography.pcss';
-  @import './_grid.pcss';
-}
-
-@layer components {
-  @import './_icons.pcss';
-  @import './_btns.pcss';
-}

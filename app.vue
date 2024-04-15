@@ -1,25 +1,26 @@
 <template>
   <div class="wrapper">
-    <Header :intersecting="intersecting" />
-    <ColorModePicker />
-    <intersect
+    <General-Header :intersecting="intersecting" />
+    <General-ColorModePicker />
+    <!-- <intersect
       @enter="intersecting = true"
       @leave="intersecting = false"
       rootMargin="0px 0px -92.5% 0px"
-    >
-      <main class="main flex flex-col">
-        <nuxt />
-      </main>
-    </intersect>
+    > -->
+    <main class="main flex flex-col">
+      <!-- <slot /> -->
+      <NuxtPage />
+    </main>
+    <!-- </intersect> -->
   </div>
 </template>
 
 <script>
-import Intersect from 'vue-intersect'
+// import Intersect from 'vue-intersect'
 import mediumZoom from "medium-zoom";
 
 export default {
-  components: { Intersect },
+  // components: { Intersect },
   data() {
     return {
       intersecting: false,

@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   async asyncData({ params, payload }) {
     if (payload) return { designPost: payload }
@@ -24,12 +24,18 @@ export default {
       }
   }
 }
+</script> -->
+
+<script setup>
+const { params } = useRoute()
+const { data: designPost } = await useAsyncData('design', () => require(`~/assets/content/designs/${params.design}.json`))
 </script>
+
 
 <style lang="postcss" scoped>
 .images {
   & li {
-    & + li {
+    &+li {
       @apply mt-8;
     }
   }
