@@ -5,7 +5,7 @@
       <div class="underscore ml-2"></div>
     </div>
 
-    <projects :posts="selectedWorkPosts"/>
+    <Projects-Projects :posts="selectedWorkPosts" />
   </section>
 </template>
 
@@ -13,10 +13,11 @@
 export default {
   computed: {
     selectedWorkPosts() {
-      return [...this.$store.state?.casePosts]
-        .sort((a,b) => a.order - b.order)
-        .filter((work) => work.selected)
-        || [];
+      return [];
+      // return [...this.$store?.state?.casePosts]
+      //   .sort((a,b) => a.order - b.order)
+      //   .filter((work) => work.selected)
+      //   || [];
     }
   }
 }

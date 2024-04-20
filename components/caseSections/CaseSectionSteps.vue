@@ -1,7 +1,7 @@
 <template>
   <section class="steps">
     <h2 class="subtitle mb-4">Process.</h2>
-    <case-section-steps-single
+    <CaseSectionStepsSingle
       v-for="(step, i) in filteredSteps"
       :key="step.id"
       :step="step"

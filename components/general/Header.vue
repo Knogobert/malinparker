@@ -3,8 +3,8 @@
     <nav :class="{ 'shadow-xl': intersecting || isOpen }">
       <ul class="flex justify-end items-end py-4 px-4 sm:px-8 max-w-6xl mx-auto">
         <li v-if="$route.path !== '/'" class="mr-4">
-          <nuxt-link class="sm:hidden" to="/">MKP</nuxt-link>
-          <nuxt-link class="hidden sm:block" to="/">Malin Katrine Parker</nuxt-link>
+          <NuxtLink class="sm:hidden" to="/">MKP</NuxtLink>
+          <NuxtLink class="hidden sm:block" to="/">Malin Katrine Parker</NuxtLink>
         </li>
         <li class="underscore mr-1"></li>
         <li class="xs:hidden -my-2 -mr-2">
@@ -18,10 +18,10 @@
         </button>
         </li>
         <li class="hidden xs:inline-block">
-          <nuxt-link class="px-4" to="/cases">UX/UI</nuxt-link>
+          <NuxtLink class="px-4" to="/cases">UX/UI</NuxtLink>
         </li>
         <li class="hidden xs:inline-block mx-1">
-          <nuxt-link class="px-4" to="/designs">graphic design</nuxt-link>
+          <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
         </li>
         <li class="hidden xs:inline-block -mr-1 sm:-mr-5">
           <a
@@ -36,10 +36,10 @@
       <transition name="fade">
         <ul v-if="isOpen" class="xs:hidden flex flex-col items-end rounded-b-3xl py-4 px-10 mx-auto bg-primary-100 dark:bg-primary-900 transition duration-200 ease-in-out">
           <li class="my-2">
-            <nuxt-link class="px-4" to="/cases">UX/UI</nuxt-link>
+            <NuxtLink class="px-4" to="/cases">UX/UI</NuxtLink>
           </li>
           <li class="my-2">
-            <nuxt-link class="px-4" to="/designs">graphic design</nuxt-link>
+            <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
           </li>
           <li class="my-2 -ml-3 px-4">
             <a
@@ -155,14 +155,14 @@ a:not(.no-underline):hover {
   stroke-dashoffset: -64px;
 }
 
-.nuxt-link-exact-active {
+.NuxtLink-exact-active {
   @apply text-primary-100 underline;
   &:hover {
     @apply text-primary-200;
   }
 }
 .light-mode {
-  & .nuxt-link-exact-active {
+  & .NuxtLink-exact-active {
     @apply text-primary-800;
     &:hover {
       @apply text-primary-700;

@@ -13,6 +13,7 @@ const dynamicRoutes = getDynamicPaths(
 )
 
 export default defineNuxtConfig({
+  // extends: ["gh:user/repo", { auth: process.env.GITHUB_TOKEN, install: true }], // https://nuxt.com/docs/api/nuxt-config#themes / https://nuxt-themes.netlify.app/themes/docus
   target: 'static',
   components: true,
   devtools: { enabled: true },
@@ -85,7 +86,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss'],
+  modules: [ '@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss' ],
   /*
    ** Build configuration
    */

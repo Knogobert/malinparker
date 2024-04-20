@@ -1,7 +1,7 @@
 <template>
   <div class="projects" v-if="posts && posts.length !== 0" :class="classes">
     <template v-if="type === 'case'">
-      <project-case-single
+      <ProjectCaseSingle
         v-for="(post, i) in posts"
         :key="post.id"
         :project="post"
@@ -9,7 +9,7 @@
       />
     </template>
     <template v-else-if="type === 'design'">
-      <project-design-single
+      <ProjectDesignSingle
         v-for="post in posts"
         :key="post.id"
         :project="post"

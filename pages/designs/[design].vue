@@ -1,7 +1,7 @@
 <template>
   <div v-if="designPost" class="pb-32" v-once>
     <nav class="nav-back">
-      <router-back class="block" />
+      <General-RouterBack class="block" />
     </nav>
 
     <h1 class="title text-4xl sm:text-5xl mb-8">{{ designPost.title }}</h1>
@@ -29,6 +29,7 @@ export default {
 <script setup>
 const { params } = useRoute()
 const { data: designPost } = await useAsyncData('design', () => require(`~/assets/content/designs/${params.design}.json`))
+console.log('designPost:', designPost)
 </script>
 
 

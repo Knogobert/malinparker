@@ -1,6 +1,6 @@
 <template>
   <article class="project project-case w-full">
-    <nuxt-link :to="`/cases/${project.slug}`">
+    <NuxtLink :to="`/cases/${project.slug}`">
       <figure class="p-4" v-if="project.cover && project.cover.src">
         <Skeleton-ContentPlaceholders v-show="loadingImage">
           <Skeleton-ContentPlaceholdersImg class="w-full p-4 rounded-xl opacity-50"
@@ -16,7 +16,7 @@
           <button class="btn btn-ghost w-full md:w-auto" tabindex="-1">read case study</button>
         </footer>
       </div>
-    </nuxt-link>
+    </NuxtLink>
   </article>
 </template>
 
