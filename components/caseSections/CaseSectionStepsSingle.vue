@@ -24,7 +24,7 @@ export default {
     return {
       $md: { render: (d) => d },
     }
-  }
+  },
   computed: {
     images() {
       return this.step?.images || [];

@@ -17,7 +17,7 @@ collections:
     files:
       - label: 'General Setup & Info'
         name: 'info'
-        file: 'assets/content/site/info.json'
+        file: 'content/site/info.json'
         format: 'json'
         editor:
           preview: false
@@ -40,7 +40,7 @@ collections:
   - name: 'case'
     label: 'Case Studies'
     label_singular: 'Case Study'
-    folder: 'assets/content/cases'
+    folder: 'content/cases'
     create: true
     format: 'json'
     identifier_field: slug
@@ -164,7 +164,7 @@ collections:
   - name: 'design'
     label: 'Graphic Designs'
     label_singular: 'Graphic Design'
-    folder: 'assets/content/designs'
+    folder: 'content/designs'
     create: true
     format: 'json'
     identifier_field: slug

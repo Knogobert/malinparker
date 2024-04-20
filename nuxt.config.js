@@ -1,16 +1,16 @@
 import glob from 'glob'
 import path from 'path'
-import * as SITE_INFO from './assets/content/site/info.json'
+import * as SITE_INFO from './content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
-const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
-const dynamicRoutes = getDynamicPaths(
-  {
-    'cases': 'cases/*.json',
-    'designs': 'designs/*.json'
-  },
-  dynamicContentPath
-)
+// const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
+// const dynamicRoutes = getDynamicPaths(
+//   {
+//     'cases': 'cases/*.json',
+//     'designs': 'designs/*.json'
+//   },
+//   dynamicContentPath
+// )
 
 export default defineNuxtConfig({
   // extends: ["gh:user/repo", { auth: process.env.GITHUB_TOKEN, install: true }], // https://nuxt.com/docs/api/nuxt-config#themes / https://nuxt-themes.netlify.app/themes/docus
@@ -66,11 +66,11 @@ export default defineNuxtConfig({
     }],
     __dangerouslyDisableSanitizers: ['noscript']
   },
-  generate: {
-    routes: dynamicRoutes,
-    fallback: true,
-    subFolders: false
-  },
+  // generate: {
+  //   routes: dynamicRoutes,
+  //   fallback: true,
+  //   subFolders: false
+  // },
   /*
    ** Customize the progress-bar color
    */
@@ -86,13 +86,12 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: [ '@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss' ],
+  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content'],
   /*
    ** Build configuration
    */
   build: {
     // transpile: ['vue-intersect'],
-    extractCSS: true,
   },
   /*
    ** Custom additions configuration
@@ -101,11 +100,12 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
-  // purgeCSS: {
-  //   mode: 'postcss',
-  //   whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'image', 'intro'],
-  //   whitelistPatterns: [/^article/, /image/, /md-content/, /^grid/, /step/, /medium-zoom/, /^header/, /__nim_o/, /^vue-content-/]
-  // },
+  content: {
+    // liveEdit: false,
+    // markdown: {
+    //   mdc: true,
+    // }
+  },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
