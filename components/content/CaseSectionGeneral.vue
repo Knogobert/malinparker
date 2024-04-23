@@ -1,9 +1,7 @@
 <template>
   <section class="grid-container md-content" :class="{ below, [className]: className }">
     <div class="headline self-start">
-      <h2 class="subtitle">
-        <ContentSlot :use="$slots.title" unwrap="p" />
-      </h2>
+      <h2 class="subtitle" v-text="title" />
     </div>
 
     <div class="intro sm:place-self-start">
@@ -12,19 +10,20 @@
   </section>
 </template>
 
-<script>
-export default {
-  props: {
-    below: {
-      type: Boolean,
-      default: false,
-    },
-    className: {
-      type: String,
-      default: '',
-    },
+<script setup>
+const props = defineProps({
+  title: {
+    type: String,
   },
-}
+  below: {
+    type: Boolean,
+    default: false,
+  },
+  className: {
+    type: String,
+    default: '',
+  },
+});
 </script>
 
 <style lang="postcss" scoped>
