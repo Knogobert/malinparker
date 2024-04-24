@@ -1,16 +1,5 @@
-import glob from 'glob'
-import path from 'path'
 import * as SITE_INFO from './content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
-
-// const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
-// const dynamicRoutes = getDynamicPaths(
-//   {
-//     'cases': 'cases/*.json',
-//     'designs': 'designs/*.json'
-//   },
-//   dynamicContentPath
-// )
 
 export default defineNuxtConfig({
   // extends: ["gh:user/repo", { auth: process.env.GITHUB_TOKEN, install: true }], // https://nuxt.com/docs/api/nuxt-config#themes / https://nuxt-themes.netlify.app/themes/docus
@@ -30,48 +19,6 @@ export default defineNuxtConfig({
     resumeUrl: SITE_INFO.resumeUrl || '/img/cv-Malin-Parker-6-feb-2021.pdf',
   },
   /*
-   ** Headers of the page
-   */
-  head: {
-    title: SITE_INFO.sitename || process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
-      }
-    ],
-    link: [
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: true,
-      },
-      {
-        rel: 'preload',
-        as: 'style',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap',
-        media: 'print',
-        onload: `this.media='all'`,
-      }
-    ], // ? Imports the font 'Roboto Mono'
-    noscript: [{
-      innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">'
-    }],
-    __dangerouslyDisableSanitizers: ['noscript']
-  },
-  // generate: {
-  //   routes: dynamicRoutes,
-  //   fallback: true,
-  //   subFolders: false
-  // },
-  /*
    ** Customize the progress-bar color
    */
   loading: { color: '#f3f5f4' },
@@ -86,7 +33,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content'],
+  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts'],
   /*
    ** Build configuration
    */
@@ -100,12 +47,13 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
-  content: {
-    // liveEdit: false,
-    // markdown: {
-    //   mdc: true,
-    // }
+  fonts: {
+    priority: ['bunny', 'fontsource'],
+    providers: {
+      google: false,
+    }
   },
+  content: {},
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
@@ -154,31 +102,3 @@ export default defineNuxtConfig({
     }
   }
 })
-
-/**
- * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable - example below
- * {
- *   blog: 'blog/*.json',
- *   projects: 'projects/*.json'
- * }
- *
- * @return {Array} - Will return those files into urls for SSR generated .html's like
- * [
- *   /blog/2019-08-27-incidunt-laborum-e ,
- *   /projects/story-test-story-1
- * ]
- */
-function getDynamicPaths(urlFilepathTable, cwdPath) {
-  console.log('Going to generate dynamicRoutes for these collection types: ', urlFilepathTable)
-  const dynamicPaths = [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      const filepathGlob = urlFilepathTable[url]
-      return glob.sync(filepathGlob, { cwd: cwdPath }).map(filepath => {
-        return `/${url}/${path.basename(filepath, '.json')}`
-      })
-    })
-  )
-  console.log('Found these dynamicPaths that will be SSR generated:', dynamicPaths)
-  return dynamicPaths
-}

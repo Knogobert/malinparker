@@ -9,7 +9,7 @@ cover: {
   "height": 375
 }
 ---
-::CaseSectionGeneral{title="The Project." :below='true'}
+::CaseSectionGeneral{title="The Project." :below="false"}
 GUI examination · Design a system that help librarians and sales people put together suggestions of up to ten books in packages for different request.
 
 :::List
@@ -22,7 +22,7 @@ GUI examination · Design a system that help librarians and sales people put tog
 :ImageFigure{src='/img/boka-feature.png' alt='an application with 300 selectable books' height=375 layout='intrinsic'}
 ::
 
-::CaseSectionGeneral{title="Context." :below='true' .mt-16}
+::CaseSectionGeneral{title="Context." :below="false" .mt-16}
 ### Function specification:
 * Format: no more than 1850 x 1000 pixels, everything must be visible at all times, no dialogs, dropdowns, scolling or etc is allowed. (with one exception)
 * The user must be able to put together packages of up to 10 books
@@ -83,7 +83,7 @@ To make sure everyone would be able to see the different colors I spent a lot of
 :::
 ::
 
-::CaseSectionFinal{title="Final Producz."}
+::CaseSectionFinal{title="Final Product."}
 ---
 images: [
   {"src": "/img/boka-final-1@2x.png", "alt": "a zoomed in view of the top-left part of the dashboard"},
@@ -95,7 +95,7 @@ images: [
 ---
 ::
 
-::CaseSectionGeneral{title="Retrospecitve." :below='true' .mt-16}
+::CaseSectionGeneral{title="Retrospecitve." :below="true" .mt-16}
 ## Challenges.
 The biggest challenge with this project was definitely to fit everything in this small area and still keep the feeling tidy and structured. After quite some time sketching and wireframing I also realized that I had missed one bullet in the funcion specification \"no scrolling, overlays or etc. is allowed\" which I was competely stunned by (to me it felt obvious to use scolling and overlays for menus, hints and so on, but our teacher really wanted to challenge us, and she succeded). By the time I realized my mistake I had lost quite some time which meant that I also had to fight with the time for the rest of the project. *Lesson learned* — I will always read the brief thoroughly to never miss out on details like this.
 

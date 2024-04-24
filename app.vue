@@ -51,3 +51,28 @@ export default {
   },
 }
 </script>
+
+<script setup>
+import { useSeoMeta, useHead } from '#app'
+import * as SITE_INFO from './content/site/info.json'
+
+useSeoMeta({
+  title: SITE_INFO?.sitename || process.env.npm_package_name || '',
+  description: SITE_INFO?.sitedescription || process.env.npm_package_description || '',
+  // ogTitle: '[og:title]',
+  // ogDescription: '[og:description]',
+  ogImage: '/ogp-dark.png',
+  ogHost: process.env.URL,
+  // ogUrl: '[og:url]',
+  // twitterTitle: '[twitter:title]',
+  // twitterDescription: '[twitter:description]',
+  // twitterImage: '[twitter:image]',
+  // twitterCard: 'summary'
+})
+
+useHead({
+  htmlAttrs: {
+    lang: SITE_INFO.sitelang || process.env.lang || 'en-US',
+  }
+})
+</script>
