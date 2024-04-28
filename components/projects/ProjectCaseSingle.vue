@@ -11,7 +11,7 @@
       </figure>
       <div class="intro">
         <h4 class="subtitle mb-2">{{ project.title }}</h4>
-        <p>{{ project.excerpt }}</p>
+        <p>{{ project?.excerpt ?? project?.description }}</p>
         <footer>
           <button class="btn btn-ghost w-full md:w-auto" tabindex="-1">read case study</button>
         </footer>

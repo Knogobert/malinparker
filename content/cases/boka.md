@@ -2,11 +2,11 @@
 slug: 'boka'
 title: 'GUI — bokA.'
 selected: true
-excerpt: "An add-on for company or library databases with the goal to help the user putting together suggestion of books for different requests. How to fit lots of information in a small space and still keep it understandable and user friendly?"
+description: "An add-on for company or library databases with the goal to help the user putting together suggestion of books for different requests. How to fit lots of information in a small space and still keep it understandable and user friendly?"
 cover: {
-  "src": "/img/boka-feature.png",
-  "alt": "an application with 300 selectable books",
-  "height": 375
+  src: "/img/boka-feature.png",
+  alt: "an application with 300 selectable books",
+  height: 375
 }
 ---
 ::CaseSectionGeneral{title="The Project." :below="false"}

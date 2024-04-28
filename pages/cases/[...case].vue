@@ -5,7 +5,6 @@
     </nav>
 
     <h1 class="title text-4xl sm:text-5xl mb-8">{{ data?.title }}</h1>
-    <p class="mt-4">{{ data?.excerpt }}</p>
 
     <ContentRenderer :value="data">
       <ContentRendererMarkdown :value="data" class="md-content" />
