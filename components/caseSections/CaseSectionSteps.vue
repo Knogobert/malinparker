@@ -23,9 +23,3 @@ export default {
   },
 }
 </script>
-
-<style lang="postcss" scoped>
-.steps .step + .step {
-  @apply mt-24;
-}
-</style>

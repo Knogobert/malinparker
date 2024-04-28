@@ -19,7 +19,7 @@ GUI examination · Design a system that help librarians and sales people put tog
 - **My role:** Individual project
 :::
 
-:ImageFigure{src='/img/boka-feature.png' alt='an application with 300 selectable books' height=375 layout='intrinsic'}
+:ImageFigure{src="/img/boka-feature.png" alt="an application with 300 selectable books" height=375 layout="intrinsic" class="mt-8"}
 ::
 
 ::CaseSectionGeneral{title="Context." :below="false" .mt-16}
@@ -39,7 +39,7 @@ GUI examination · Design a system that help librarians and sales people put tog
 ::
 
 ::CaseSectionSteps{title="Process."}
-:::CaseSectionStepsItem{title="Empathize."}
+:::CaseSectionStepsItem{title="Empathize"}
 To be able to understand the user I started with conducting an unstructured interview with a person working in a book store with a lot of knowledge about books and experience with putting together suggestions of books to book circles. I asked questions trying to understand which information about a book is the most crucial and common, and what questions she would normally ask a customer.
 
 I also conducted secondary research by looking up bookstores and library systems online to find information and inspiration from similar services.

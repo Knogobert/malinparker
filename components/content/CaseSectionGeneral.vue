@@ -1,11 +1,11 @@
 <template>
-  <section class="grid-container md-content" :class="{ below, [className]: className }">
+  <section class="grid-container" :class="{ below, [className]: className }">
     <div class="headline self-start">
       <h2 class="subtitle" v-text="title" />
     </div>
 
-    <div class="intro sm:place-self-start">
-      <ContentSlot :use="$slots.default" />
+    <div class="intro sm:place-self-start md-content">
+      <ContentSlot />
     </div>
   </section>
 </template>

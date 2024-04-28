@@ -8,7 +8,6 @@
         </div>
 
         <div class="intro md:place-self-start">
-          <!-- <div v-if="image.body" class="md-content" v-text="image.body" /> -->
           <ContentSlot class="md-content" />
         </div>
       </li>
