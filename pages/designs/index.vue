@@ -7,5 +7,4 @@
 
 <script setup>
 const { data, error } = await useAsyncData('design', () => queryContent('/designs').find())
-console.log('data:', data)
 </script>

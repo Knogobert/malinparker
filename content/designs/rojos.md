@@ -19,4 +19,3 @@ images: [
   }
 ]
 ---
-Rojos

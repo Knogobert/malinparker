@@ -1,5 +1,9 @@
 <template>
-  <div v-if="data" class="pb-32">
+  <code v-if="error" class="w-full">
+    <h1 class="title text-4xl sm:text-5xl mb-8">Oh no! 🫠</h1>
+    {{ error }}
+  </code>
+  <div v-else class="pb-32" v-once>
     <nav class="nav-back">
       <General-RouterBack class="block" />
     </nav>
