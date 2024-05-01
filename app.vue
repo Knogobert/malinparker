@@ -1,58 +1,16 @@
 <template>
   <div class="wrapper">
-    <General-Header :intersecting="intersecting" />
+    <General-Header :intersecting="isIntersecting" />
     <General-ColorModePicker />
-    <!-- <intersect
-      @enter="intersecting = true"
-      @leave="intersecting = false"
-      rootMargin="0px 0px -92.5% 0px"
-    > -->
-    <main class="main flex flex-col">
-      <!-- <slot /> -->
+    <main class="main flex flex-col" v-intersection-observer="{ rootMargin: '0px 0px -92.5% 0px' }"
+      @intersection-enter="isIntersecting = true" @intersection-leave="isIntersecting = false">
       <NuxtPage />
     </main>
-    <!-- </intersect> -->
   </div>
 </template>
 
-<script>
-// import Intersect from 'vue-intersect'
-import mediumZoom from "medium-zoom";
-
-export default {
-  // components: { Intersect },
-  data() {
-    return {
-      intersecting: false,
-      timer: null,
-      zoomInstance: {},
-    }
-  },
-  watch: {
-    $route(to, from) {
-      this.addMediumZoom();
-    },
-  },
-  mounted() {
-    this.addMediumZoom();
-  },
-  methods: {
-    addMediumZoom() {
-      if (this.timer !== null) clearTimeout(this.timer);
-
-      this.timer = setTimeout(() => {
-        this.zoomInstance = mediumZoom('.image', {
-          margin: 32,
-          background: 'var(--bg)',
-          scrollOffset: 100,
-        });
-      }, 500);
-    },
-  },
-}
-</script>
-
 <script setup>
+import mediumZoom from "medium-zoom";
 import { useSeoMeta, useHead } from '#app'
 import * as SITE_INFO from './content/site/info.json'
 
@@ -73,6 +31,29 @@ useSeoMeta({
 useHead({
   htmlAttrs: {
     lang: SITE_INFO.sitelang || process.env.lang || 'en-US',
+  }
+})
+
+const isIntersecting = ref(false)
+const timer = ref(null)
+const zoomInstance = ref({})
+const addMediumZoom = () => {
+  if (timer.value !== null) clearTimeout(timer.value);
+
+  timer.value = setTimeout(() => {
+    zoomInstance.value = mediumZoom('.image', {
+      margin: 32,
+      background: 'var(--bg)',
+      scrollOffset: 100,
+    });
+  }, 500);
+}
+
+onMounted(() => { addMediumZoom() })
+onUpdated(() => { addMediumZoom() })
+onBeforeUnmount(() => {
+  if (zoomInstance.value) {
+    zoomInstance.value.detach();
   }
 })
 </script>

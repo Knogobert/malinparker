@@ -37,9 +37,7 @@ export default defineNuxtConfig({
   /*
    ** Build configuration
    */
-  build: {
-    // transpile: ['vue-intersect'],
-  },
+  build: {},
   /*
    ** Custom additions configuration
    */
