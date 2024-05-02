@@ -16,7 +16,6 @@ export default defineNuxtConfig({
         ? process.env.URL || 'http://createADotEnvFileAndSetURL'
         : 'http://localhost:3000',
     lang: SITE_INFO.sitelang || 'en-US',
-    resumeUrl: SITE_INFO.resumeUrl || '/img/cv-Malin-Parker-6-feb-2021.pdf',
   },
   /*
    ** Customize the progress-bar color

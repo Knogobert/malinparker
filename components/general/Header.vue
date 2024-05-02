@@ -8,14 +8,17 @@
         </li>
         <li class="underscore mr-1"></li>
         <li class="xs:hidden -my-2 -mr-2">
-          <button class="flex items-center text-primary-600 dark:text-primary-300 pl-4 hover:underline" type="button" @click="isOpen = !isOpen" style="margin-bottom: -2.5px;">
+          <button class="flex items-center text-primary-600 dark:text-primary-300 pl-4 hover:underline" type="button"
+            @click="isOpen = !isOpen" style="margin-bottom: -2.5px;">
             <span class="uppercase">Menu</span>
             <svg class="ham hamRotate ham8" :class="{ active: isOpen }" viewBox="0 0 100 100" width="45" height="45">
-              <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+              <path class="line top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
               <path class="line middle" d="m 30,50 h 40" />
-              <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+              <path class="line bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
             </svg>
-        </button>
+          </button>
         </li>
         <li class="hidden xs:inline-block">
           <NuxtLink class="px-4" to="/cases">UX/UI</NuxtLink>
@@ -24,17 +27,12 @@
           <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
         </li>
         <li class="hidden xs:inline-block -mr-1 sm:-mr-5">
-          <a
-            :href="resumeUrl"
-            target="_blank"
-            ref="noopener"
-            title="Opens a PDF in a new tab"
-            class="btn btn-pill leading-none lowercase px-3 -my-3 no-underline"
-          >résumé</a>
+          <NuxtLink to="/resume" class="btn btn-pill leading-none lowercase -my-3 px-3 no-underline">résumé</NuxtLink>
         </li>
       </ul>
       <transition name="fade">
-        <ul v-if="isOpen" class="xs:hidden flex flex-col items-end rounded-b-3xl py-4 px-10 mx-auto bg-primary-100 dark:bg-primary-900 transition duration-200 ease-in-out">
+        <ul v-if="isOpen"
+          class="xs:hidden flex flex-col items-end rounded-b-3xl py-4 px-10 mx-auto bg-primary-100 dark:bg-primary-900 transition duration-200 ease-in-out">
           <li class="my-2">
             <NuxtLink class="px-4" to="/cases">UX/UI</NuxtLink>
           </li>
@@ -42,13 +40,7 @@
             <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
           </li>
           <li class="my-2 -ml-3 px-4">
-            <a
-              :href="resumeUrl"
-              target="_blank"
-              ref="noopener"
-              title="Opens a PDF in a new tab"
-              class="btn btn-pill leading-none lowercase px-3 no-underline"
-            >resumé</a>
+            <NuxtLink to="/resume" class="btn btn-pill leading-none lowercase px-3 no-underline">résumé</NuxtLink>
           </li>
         </ul>
       </transition>
@@ -76,11 +68,6 @@ export default {
     return {
       isOpen: false,
     };
-  },
-  computed: {
-    resumeUrl() {
-      return process.env.resumeUrl;
-    }
   },
   watch: {
     $route() {
