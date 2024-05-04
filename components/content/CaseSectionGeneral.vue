@@ -1,5 +1,5 @@
 <template>
-  <section class="grid-container" :class="{ below, [className]: className }">
+  <section class="grid-container" :class="{ 'grid--split': split, 'grid--below': below, [className]: className }">
     <div class="headline self-start">
       <h2 class="subtitle" v-text="title" />
     </div>
@@ -14,6 +14,10 @@
 const props = defineProps({
   title: {
     type: String,
+  },
+  split: {
+    type: Boolean,
+    default: false,
   },
   below: {
     type: Boolean,
@@ -30,7 +34,7 @@ const props = defineProps({
 .grid-container {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 1rem 1rem;
+  gap: 1rem;
   grid-template-areas:
     "headline"
     "intro";
@@ -39,15 +43,27 @@ const props = defineProps({
 
 @screen sm {
   .grid-container {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "headline intro";
+    @apply max-w-4xl mx-auto;
+    /* @apply max-w-5xl mx-auto; */
+    gap: 2rem 1rem;
 
-    &.below {
+    /* :not(.images, img, figure, figure *) {
+      @apply max-w-4xl mx-auto;
+    } */
+
+    &.grid--split {
+      max-width: 100%;
+      gap: 1rem;
       grid-template-columns: 1fr 2fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-        "headline headline"
-        ". intro";
+      grid-template-areas: "headline intro";
+    }
+
+    &.grid--below {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "headline headline"
+      ". intro";
     }
   }
 }

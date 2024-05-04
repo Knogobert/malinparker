@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :class="{ 'grid--split': split }">
     <h2 class="subtitle mb-8" v-text="title" />
     <ul>
       <li v-for="image in images" :key="image.id" class="grid-container">
@@ -21,6 +21,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  split: {
+    type: Boolean,
+    default: true,
+  },
   images: {
     type: Array,
     required: true,
@@ -32,7 +36,7 @@ const props = defineProps({
 .grid-container {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 1rem 1rem;
+  gap: 1rem;
   grid-template-areas:
     "images"
     "intro";

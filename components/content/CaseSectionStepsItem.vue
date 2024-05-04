@@ -17,6 +17,10 @@ export default {
     title: {
       type: String,
     },
+    split: {
+      type: Boolean,
+      default: true,
+    },
     images: {
       type: Array,
       default: () => [],
@@ -34,9 +38,10 @@ export default {
   computed: {
     gridClasses() {
       return {
-        'grid--reverse': this.reverseLayout,
-        'grid--only-text': this.images.length === 0,
-        'grid--larger-images': this.largerImages,
+        'grid--split': this.split,
+        'grid--split-reverse': this.split && this.reverseLayout,
+        'grid--split-only-text': this.split && this.images.length === 0,
+        'grid--split-larger-images': this.split && this.largerImages,
       };
     }
   },
@@ -47,36 +52,44 @@ export default {
 .grid-container {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 1rem 1rem;
+  gap: 4rem 1rem;
   grid-template-areas:
     "intro"
     "images";
   place-items: stretch;
-
 }
 
 @screen md {
   .grid-container {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "images intro";
+    /* @apply max-w-5xl mx-auto; */
 
-    &.grid--reverse {
-      grid-template-areas: "intro images";
+    :not(.images, img) {
+      @apply max-w-4xl mx-auto;
     }
 
-    &.grid--only-text {
+    &.grid--split-only-text {
       grid-template-columns: 1fr 3fr;
 
-      &.grid--reverse {
+      &.grid--split-reverse {
         grid-template-columns: 3fr 1fr;
       }
     }
 
-    &.grid--larger-images {
+    &.grid--split-larger-images {
       grid-template-columns: 2fr 1fr;
 
-      &.grid--reverse {
+      &.grid--split-reverse {
         grid-template-columns: 1fr 2fr;
+      }
+    }
+
+    &.grid--split {
+      max-width: 100%;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "images intro";
+
+      &.grid--split-reverse {
+        grid-template-areas: "intro images";
       }
     }
   }

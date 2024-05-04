@@ -26,7 +26,7 @@
         <li class="hidden xs:inline-block mx-1">
           <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
         </li>
-        <li class="hidden xs:inline-block -mr-1 sm:-mr-5">
+        <li class="hidden xs:inline-block -mr-1">
           <NuxtLink to="/resume" class="btn btn-pill leading-none lowercase -my-3 px-3 no-underline">résumé</NuxtLink>
         </li>
       </ul>
