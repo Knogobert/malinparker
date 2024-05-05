@@ -24,7 +24,7 @@
 
 <script setup>
 const { params } = useRoute()
-const { data, error } = await useAsyncData('design', () => queryContent('/designs', params?.design?.[0]).findOne())
+const { data, error } = await useAsyncData('design', () => queryContent('/designs/', params?.design?.[0]).findOne())
 </script>
 
 <style lang="postcss" scoped>

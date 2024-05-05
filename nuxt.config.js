@@ -40,6 +40,14 @@ export default defineNuxtConfig({
   /*
    ** Custom additions configuration
    */
+   experimental: {
+    defaults: {
+      nuxtLink: {
+        prefetchedClass: 'prefetchd',
+        trailingSlash: 'append' // can be undefined, 'append' or 'remove'
+      }
+    }
+  },
   tailwindcss: {
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`

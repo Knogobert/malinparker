@@ -5,5 +5,5 @@
   </div>
 </template>
 <script setup>
-const { data, error } = await useAsyncData('case', () => queryContent('/cases').find())
+const { data, error } = await useAsyncData('case', () => queryContent('/cases/').find())
 </script>

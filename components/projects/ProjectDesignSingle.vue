@@ -1,6 +1,6 @@
 <template>
   <article class="project project-design w-full">
-    <NuxtLink :to="`/designs/${project.slug}`">
+    <NuxtLink :to="`/designs/${project.slug}`" prefetch>
       <figure class="relative p-4" v-if="project.cover && project.cover.src">
         <skeleton-content-placeholders v-show="loadingImage">
           <skeleton-content-placeholders-img class="w-full p-4 rounded-xl opacity-50"

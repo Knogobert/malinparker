@@ -1,5 +1,9 @@
 import { ref } from 'vue';
 
+/**
+ * The observer variable.
+ * @type {IntersectionObserver | null}
+ */
 const observer = ref(null);
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -21,10 +25,10 @@ export default defineNuxtPlugin((nuxtApp) => {
       }, options);
     },
     mounted(el) {
-      observer.value.observe(el);
+      if (observer.value) observer.value?.observe?.(el);
     },
     beforeUnmount(el) {
-      observer.value.disconnect();
+      if (observer.value) observer.value?.disconnect?.();
     }
   })
 })
