@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   /*
    ** Custom additions configuration
    */
-   experimental: {
+  experimental: {
     defaults: {
       nuxtLink: {
         prefetchedClass: 'prefetchd',
@@ -48,17 +48,43 @@ export default defineNuxtConfig({
       }
     }
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/cases/', '/designs/', '/sitemap.xml'],
+    }
+  },
   tailwindcss: {
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
   fonts: {
-    priority: ['bunny', 'fontsource'],
+    priority: ['local', 'bunny', 'fontsource'],
     providers: {
       google: false,
-    }
+    },
+    assets: {
+      prefix: '/static/fonts' // The prefix where your fonts will be accessible
+    },
+    defaults: {
+      weights: [400, 700],
+      styles: ['normal', 'italic'],
+      subsets: [
+        'latin-ext',
+        'latin',
+      ]
+    },
+    fallbacks: {
+      // 'serif': ['Times New Roman'],
+      'sans-serif': ['Helvetica', 'Arial'],
+      // 'monospace': ['Courier New'],
+    },
   },
-  content: {},
+  content: {
+    navigation: {
+      fields: ['slug']
+    },
+  },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found

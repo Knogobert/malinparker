@@ -18,5 +18,5 @@
 
 <script setup>
 const { params } = useRoute()
-const { data, error } = await useAsyncData('case', () => queryContent('/cases', params?.case?.[0]).findOne())
+const { data, error } = await useAsyncData('case', () => queryContent('/cases/', params?.case?.[0]).findOne())
 </script>
