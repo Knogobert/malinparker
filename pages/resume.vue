@@ -66,22 +66,12 @@
       </div>
     </div>
 
-    <div class="cta flex flex-col sm:flex-row mt-8 mb-32">
-      <div class="flex-auto mt-4 sm:mt-0">
-        <a href="mailto:hello@malinkatrine.com" class="btn btn-ghost">get in touch</a>
-      </div>
-      <div class="flex-1"></div>
-      <div class="flex-auto text-left sm:text-right mt-4 sm:mt-0 sm:ml-4">
-        <h4 class="font-mono text-base uppercase text-gray dark:text-primary-300">Contact</h4>
-        <a href="mailto:malin.parker@hiq.se"
-          class="text-primary dark:text-primary-400 hover:underline mt-0">malin.parker@hiq.se</a>
-      </div>
-      <div class="flex-auto text-left sm:text-right mt-4 sm:mt-0 sm:ml-4">
-        <h4 class="font-mono text-base uppercase text-gray dark:text-primary-300">Location</h4>
-        <p class="text-primary dark:text-primary-400 mt-0">Gothenburg</p>
-      </div>
-    </div>
+    <General-Footer button />
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+definePageMeta({
+  layout: 'nude',
+})
+</script>

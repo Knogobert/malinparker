@@ -4,7 +4,9 @@
     <General-ColorModePicker />
     <main class="main flex flex-col" v-intersection-observer="{ rootMargin: '0px 0px -92.5% 0px' }"
       @intersection-enter="isIntersecting = true" @intersection-leave="isIntersecting = false">
-      <NuxtPage />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </main>
   </div>
 </template>

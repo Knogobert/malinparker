@@ -15,21 +15,7 @@
       </div>
     </div>
 
-    <div class="cta flex flex-col sm:flex-row">
-      <div class="flex-auto mt-4 sm:mt-0">
-        <a href="mailto:hello@malinkatrine.com" class="btn btn-ghost">get in touch</a>
-      </div>
-      <div class="flex-1"></div>
-      <div class="flex-auto text-left sm:text-right mt-4 sm:mt-0 sm:ml-4">
-        <h4 class="font-mono text-base uppercase text-gray dark:text-primary-300">Contact</h4>
-        <a href="mailto:hello@malinkatrine.com"
-          class="text-primary dark:text-primary-400 hover:underline mt-0">hello@malinkatrine.com</a>
-      </div>
-      <div class="flex-auto text-left sm:text-right mt-4 sm:mt-0 sm:ml-4">
-        <h4 class="font-mono text-base uppercase text-gray dark:text-primary-300">Location</h4>
-        <p class="text-primary dark:text-primary-400 mt-0">Gothenburg</p>
-      </div>
-    </div>
+    <General-ContactCTA button />
 
     <div class="images">
       <Skeleton-ContentPlaceholders v-show="loadingImage">

@@ -21,27 +21,33 @@
           </button>
         </li>
         <li class="hidden xs:inline-block">
-          <NuxtLink class="px-4" to="/cases">UX/UI</NuxtLink>
+          <NuxtLink class="pl-4 pr-2" to="/cases">UX/UI</NuxtLink>
         </li>
-        <li class="hidden xs:inline-block mx-1">
-          <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
+        <li class="hidden xs:inline-block">
+          <NuxtLink class="px-2 [word-spacing:-0.1rem]" to="/designs">graphic design</NuxtLink>
         </li>
-        <li class="hidden xs:inline-block -mr-1">
+        <li class="hidden xs:inline-block">
+          <NuxtLink class="pl-4" to="/resume">résumé</NuxtLink>
+        </li>
+        <!-- <li class="hidden xs:inline-block -mr-1">
           <NuxtLink to="/resume" class="btn btn-pill leading-none lowercase -my-3 px-3 no-underline">résumé</NuxtLink>
-        </li>
+        </li> -->
       </ul>
       <transition name="fade">
         <ul v-if="isOpen"
           class="xs:hidden flex flex-col items-end rounded-b-3xl py-4 px-10 mx-auto bg-primary-100 dark:bg-primary-900 transition duration-200 ease-in-out">
           <li class="my-2">
-            <NuxtLink class="px-4" to="/cases">UX/UI</NuxtLink>
+            <NuxtLink class="pl-4 pr-2" to="/cases">UX/UI</NuxtLink>
           </li>
           <li class="my-2">
-            <NuxtLink class="px-4" to="/designs">graphic design</NuxtLink>
+            <NuxtLink class="px-2 [word-spacing:-0.1rem]" to="/designs">graphic design</NuxtLink>
           </li>
-          <li class="my-2 -ml-3 px-4">
+          <li class="my-2">
+            <NuxtLink class="pl-4" to="/resume">résumé</NuxtLink>
+          </li>
+          <!-- <li class="my-2 -ml-3 px-4">
             <NuxtLink to="/resume" class="btn btn-pill leading-none lowercase px-3 no-underline">résumé</NuxtLink>
-          </li>
+          </li> -->
         </ul>
       </transition>
     </nav>
