@@ -40,6 +40,9 @@ export default defineNuxtConfig({
   /*
    ** Custom additions configuration
    */
+  studio: {
+    enabled: true
+  },
   experimental: {
     defaults: {
       nuxtLink: {

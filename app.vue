@@ -14,9 +14,10 @@ import mediumZoom from "medium-zoom";
 import { useSeoMeta, useHead } from '#app'
 import * as SITE_INFO from './content/site/info.json'
 
+const { site } = useAppConfig()
 useSeoMeta({
-  title: SITE_INFO?.sitename || process.env.npm_package_name || '',
-  description: SITE_INFO?.sitedescription || process.env.npm_package_description || '',
+  title: site?.title || SITE_INFO?.sitename || process.env.npm_package_name || '',
+  description: site?.description || SITE_INFO?.sitedescription || process.env.npm_package_description || '',
   // ogTitle: '[og:title]',
   // ogDescription: '[og:description]',
   ogImage: '/ogp-dark.png',
@@ -30,7 +31,7 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: SITE_INFO.sitelang || process.env.lang || 'en-US',
+    lang: site?.lang || SITE_INFO.sitelang || process.env.lang || 'en-US',
   }
 })
 

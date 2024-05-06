@@ -8,6 +8,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev:studio": "nuxt dev --tunnel",
     "generate": "nuxt generate",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 static/icon.png",
     "preview": "nuxt preview",
