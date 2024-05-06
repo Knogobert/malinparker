@@ -4,14 +4,20 @@
       <h3 class="monotitle text-sm">Hi, my name is</h3>
     </div>
 
-    <div class="intro">
+    <div class="intro mb-4 lg:mb-12">
       <div class="flex-1">
         <h1 class="title text-gray-600 dark:text-primary mb-1">Malin Katrine Parker.</h1>
         <h2 class="subtitle mt-0 mb-4">UX designer who breathes and designs sustainability.</h2>
-        <p>My motivation is to simplify and enhance people’s everyday life. I like it best when working in efficient yet
+        <p>
+          My motivation is to simplify and enhance people’s everyday life. I like it best when working in efficient yet
           thoughtful processes with a feeling that I’m contributing to something meaningful and important for others. My
-          biggest strengths are that I’m an observant, questioning introvert. I love caring for my plants, sewing and
-          playing hide and seek with my cat Misu.</p>
+          biggest strengths are that I’m an observant, questioning introvert.
+        </p>
+        <p>
+          I love spending time with my family and being in nature doing stuff like running, hiking or drinking coffee.
+          But if I’m not doing that you will likely find me working on a thrilling new sewing project or renovating my
+          latest buy from the flea market.
+        </p>
       </div>
     </div>
 
@@ -57,7 +63,7 @@ export default {
 }
 @screen sm {
   .grid-container {
-    grid-template-columns: 0rem 1.5fr 1fr;
+    grid-template-columns: 0rem 1.5fr 1.25fr;
     grid-template-rows: 2rem 1fr 3rem;
     /* gap: 1rem 1rem; */
     grid-template-areas:
