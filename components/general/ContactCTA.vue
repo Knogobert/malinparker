@@ -12,12 +12,12 @@
     </div>
     <div class="flex-1"></div>
     <div class="flex-auto text-left sm:text-right mt-4 sm:mt-0 sm:ml-4">
-      <h4 class="font-mono text-base uppercase text-gray dark:text-primary-300">Contact</h4>
+      <h4 class="font-mono text-base uppercase text-gray-600 dark:text-primary-300">Contact</h4>
       <a href="mailto:malin.parker@hiq.se"
         class="text-primary dark:text-primary-400 hover:underline mt-0">malin.parker@hiq.se</a>
     </div>
     <div class="flex-auto text-left sm:text-right mt-4 sm:mt-0 sm:ml-4">
-      <h4 class="font-mono text-base uppercase text-gray dark:text-primary-300">Location</h4>
+      <h4 class="font-mono text-base uppercase text-gray-600 dark:text-primary-300">Location</h4>
       <p class="text-primary dark:text-primary-400 mt-0">Gothenburg</p>
     </div>
   </div>
