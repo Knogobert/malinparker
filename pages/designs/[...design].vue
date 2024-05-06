@@ -23,8 +23,8 @@
 </template>
 
 <script setup>
-const { params } = useRoute()
-const { data, error } = await useAsyncData('design', () => queryContent('/designs/', params?.design?.[0]).findOne())
+const { path } = useRoute()
+const { data, error } = await useAsyncData(path, () => queryContent(path).findOne())
 </script>
 
 <style lang="postcss" scoped>

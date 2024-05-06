@@ -17,6 +17,9 @@
 </template>
 
 <script setup>
-const { params } = useRoute()
-const { data, error } = await useAsyncData('case', () => queryContent('/cases/', params?.case?.[0]).findOne())
+const { path } = useRoute()
+const { data, error } = await useAsyncData(path, () => queryContent(path).findOne())
+
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+console.log({ navigation })
 </script>
