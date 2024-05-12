@@ -19,7 +19,4 @@
 <script setup>
 const { path } = useRoute()
 const { data, error } = await useAsyncData(path, () => queryContent(path).findOne())
-
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-console.log({ navigation })
 </script>

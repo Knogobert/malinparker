@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   dir: {
     public: 'static',
   },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -32,7 +35,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts', '@nuxthq/studio'],
+  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts', '@nuxthq/studio', '@nuxt/image'],
   /*
    ** Build configuration
    */
@@ -42,6 +45,11 @@ export default defineNuxtConfig({
    */
   studio: {
     enabled: true
+  },
+  image: {
+    provider: process.env.NODE_ENV === 'production'
+      ? 'netlifyImageCdn'
+      : 'ipx',
   },
   experimental: {
     defaults: {

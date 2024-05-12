@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@nuxt/fonts": "^0.6.1",
-    "@nuxt/image": "^1.5.0",
+    "@nuxt/image": "^1.7.0",
     "@nuxthq/studio": "^1.0.13",
     "@nuxtjs/color-mode": "^3.4.0",
     "@nuxtjs/svg": "^0.4.1",

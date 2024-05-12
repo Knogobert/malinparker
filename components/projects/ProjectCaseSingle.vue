@@ -1,13 +1,13 @@
 <template>
   <article class="project project-case w-full">
     <NuxtLink :to="`/cases/${project.slug}`">
-      <figure class="p-4" v-if="project.cover && project.cover.src">
-        <Skeleton-ContentPlaceholders v-show="loadingImage">
+      <figure class="p-4" v-if="project.cover?.src">
+        <!-- <Skeleton-ContentPlaceholders v-show="loadingImage">
           <Skeleton-ContentPlaceholdersImg class="w-full p-4 rounded-xl opacity-50"
             :class="{ 'h-64': !project.cover.height }" :style="`height: ${project.cover.height}px`" />
-        </Skeleton-ContentPlaceholders>
-        <img :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover"
-          :class="loadingImage ? '' : 'show'" @load="loadingImage = false" />
+        </Skeleton-ContentPlaceholders> -->
+        <NuxtImg :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover" class="image-ph"
+          :class="loadingImage ? '' : 'show'" @load="loadingImage = false" :placeholder="[640, 480]" />
       </figure>
       <div class="intro">
         <h4 class="subtitle mb-2">{{ project.title }}</h4>
@@ -46,7 +46,7 @@ export default {
   -moz-outline-radius: 1.5rem;
 
   & figure > img {
-    @apply opacity-0 rounded-xl shadow-sm transition duration-200 ease-in-out;
+    @apply opacity-25 rounded-xl shadow-sm transition duration-200 ease-in-out;
     &.show {
       @apply opacity-100;
     }

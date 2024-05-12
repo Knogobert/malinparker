@@ -14,9 +14,9 @@
       <ContentRendererMarkdown :value="data" class="md-content" />
     </ContentRenderer>
 
-    <ul v-if="data?.images?.length !== 0" class="images max-w-2xl mx-auto">
+    <ul v-if="data?.images?.length !== 0" class="images max-w-2xl mx-auto space-y-8">
       <li v-for="image in data.images" :key="image.id">
-        <img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image" />
+        <img v-if="image.src" :src="image.src" :alt="image.alt" loading="lazy" class="image w-full" />
       </li>
     </ul>
   </div>

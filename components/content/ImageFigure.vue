@@ -1,6 +1,6 @@
 <template>
   <figure class="">
-    <img :src="src" :alt="alt" :fit="fit" :height="height" :layout="layout" loading="lazy" class="image" />
+    <img :src="src" :alt="alt" :fit="fit" :height="height" :layout="layout" loading="lazy" class="image w-full" />
     <figcaption :class="{ 'sr-only': !figcaption }" v-text="figcaption || alt" />
   </figure>
 </template>

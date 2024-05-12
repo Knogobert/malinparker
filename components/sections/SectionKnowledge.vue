@@ -6,7 +6,7 @@
     </div>
 
     <div class="images self-center">
-      <!-- <img class="images" src="/img/knowledge-diagram.svg" alt="Knowledge tree" fit="contain" /> -->
+      <!-- <NuxtImg class="images" src="/img/knowledge-diagram.svg" alt="Knowledge tree" fit="contain" /> -->
       <Svgs-SvgKnowlegdeDiagram class="image w-full h-auto" title="Knowledge tree" />
     </div>
 

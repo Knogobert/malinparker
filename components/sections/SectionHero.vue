@@ -24,12 +24,12 @@
     <General-ContactCTA button />
 
     <div class="images">
-      <Skeleton-ContentPlaceholders v-show="loadingImage">
+      <!-- <Skeleton-ContentPlaceholders v-show="loadingImage">
         <Skeleton-ContentPlaceholdersImg class="w-full p-4 opacity-50"
           style="height: 45vw; min-height: 320px; max-height: 550px; border-radius: 9999px 9999px 200vw 200vw;" />
-      </Skeleton-ContentPlaceholders>
-      <img loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" class="image-ph"
-        :class="loadingImage ? '' : 'show'" @load="loadingImage = false" />
+      </Skeleton-ContentPlaceholders> -->
+      <NuxtImg loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain" class="image-ph"
+        :class="loadingImage ? '' : 'show'" @load="loadingImage = false" :placeholder="[392, 523]" />
     </div>
   </section>
 </template>

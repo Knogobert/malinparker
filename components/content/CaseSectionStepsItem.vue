@@ -1,7 +1,8 @@
 <template>
   <div class="step grid-container" :class="gridClasses">
-    <div class="images self-start">
-      <img v-for="image in images" :key="image.id" :src="image.src" :alt="image?.alt" loading="lazy" class="image" />
+    <div class="images self-start space-y-8">
+      <NuxtImg v-for="image in images" :key="image.id" :src="image.src" :alt="image?.alt" loading="lazy"
+        class="image w-full" />
     </div>
 
     <div class="intro md:place-self-start">

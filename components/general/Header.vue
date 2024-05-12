@@ -21,13 +21,13 @@
           </button>
         </li>
         <li class="hidden xs:inline-block">
-          <NuxtLink class="pl-4 pr-2" to="/cases">UX/UI</NuxtLink>
+          <NuxtLink class="pl-4 pr-3" to="/cases">UX/UI</NuxtLink>
         </li>
         <li class="hidden xs:inline-block">
-          <NuxtLink class="px-2 [word-spacing:-0.1rem]" to="/designs">graphic design</NuxtLink>
+          <NuxtLink class="px-3 [word-spacing:-0.1rem]" to="/designs">graphic design</NuxtLink>
         </li>
         <li class="hidden xs:inline-block">
-          <NuxtLink class="pl-4" to="/resume">résumé</NuxtLink>
+          <NuxtLink class="pl-3" to="/resume">résumé</NuxtLink>
         </li>
         <!-- <li class="hidden xs:inline-block -mr-1">
           <NuxtLink to="/resume" class="btn btn-pill leading-none lowercase -my-3 px-3 no-underline">résumé</NuxtLink>

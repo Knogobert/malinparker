@@ -1,19 +1,11 @@
 <template>
-  <div class="projects" v-if="posts && posts.length !== 0" :class="classes">
+  <div class="projects -mx-4" v-if="posts && posts.length !== 0" :class="classes">
     <template v-if="type === 'case'">
-      <Projects-ProjectCaseSingle
-        v-for="(post, i) in posts"
-        :key="post.id"
-        :project="post"
-        :class="{ 'project--reverse': (i + 1) % 2 === 0 }"
-      />
+      <Projects-ProjectCaseSingle v-for="(post, i) in posts" :key="post.id" :project="post"
+        :class="{ 'project--reverse': (i + 1) % 2 === 0 }" />
     </template>
     <template v-else-if="type === 'design'">
-      <Projects-ProjectDesignSingle
-        v-for="post in posts"
-        :key="post.id"
-        :project="post"
-      />
+      <Projects-ProjectDesignSingle v-for="post in posts" :key="post.id" :project="post" />
     </template>
   </div>
   <div v-else>

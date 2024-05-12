@@ -2,7 +2,7 @@
   <div class="wrapper">
     <General-Header :intersecting="isIntersecting" />
     <General-ColorModePicker />
-    <main class="main flex flex-col" v-intersection-observer="{ rootMargin: '0px 0px -92.5% 0px' }"
+    <main class="main flex flex-col justify-between" v-intersection-observer="{ rootMargin: '0px 0px -92.5% 0px' }"
       @intersection-enter="isIntersecting = true" @intersection-leave="isIntersecting = false">
       <NuxtLayout>
         <NuxtPage />
@@ -60,3 +60,16 @@ onBeforeUnmount(() => {
   }
 })
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(0.2rem);
+}
+</style>
