@@ -9,7 +9,6 @@ const observer = ref(null);
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('IntersectionObserver', {
     beforeMount(el, binding, vnode) {
-      console.log('el:', el)
       const options = {
         threshold: binding.value.threshold || [0, 0.2],
         root: binding.value.root || null,

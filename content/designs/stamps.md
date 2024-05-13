@@ -1,11 +1,11 @@
 ---
-order: 100
+order: 200
 slug: stamps
 title: Stamps
 cover:
   src: /img/frimarken.gif
   alt: an animated gif showing media related stamps in and out of context
-  height: 220
+  size: large
 images:
   - src: /img/frimarken.gif
     alt: an animated gif showing media related stamps in and out of context

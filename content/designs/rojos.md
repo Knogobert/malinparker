@@ -5,7 +5,7 @@ title: Rojos Packaging
 cover:
   src: /img/rojos-2.jpg
   alt: a top-down view of a pie packaging
-  height: 200
+  size: large
 images:
   - src: /img/rojos-2.jpg
     alt: a top-down view of a pie packaging

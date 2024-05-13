@@ -6,5 +6,5 @@
 </template>
 
 <script setup>
-const { data, error } = await useAsyncData('design', () => queryContent('/designs').find())
+const { data, error } = await useAsyncData('design', () => queryContent('/designs').sort({ order: 1, $numeric: true }).find())
 </script>

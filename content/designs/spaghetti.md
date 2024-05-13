@@ -1,11 +1,11 @@
 ---
-order: 120
+order: 130
 slug: spaghetti
 title: Zeta — Casa di Luca. Packaging re-design.
 cover:
   src: /img/spaghetti-1.jpg
   alt: a package of spaghetti standing up
-  height: 460
+  size: medium
 images:
   - src: /img/spaghetti-1.jpg
     alt: a package of spaghetti standing up

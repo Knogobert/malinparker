@@ -1,10 +1,11 @@
 ---
-order: 105
+order: 140
 slug: yearbook
 title: Yearbook
 cover:
-  src: /img/arsbok-0-zoom.jpg
+  src: /img/arsbok-1-framsida.jpg
   alt: Zoomed in corner of cut out on book cover
+  size: medium
 images:
   - src: /img/arsbok-1-framsida.jpg
     alt: Book cover standing up. Says "Årsbok" meaning Yearbook in Swedish

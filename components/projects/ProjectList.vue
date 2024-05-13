@@ -43,25 +43,10 @@ export default {
   }
 }
 
-/* .projects-designs {
+.projects-designs {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: repeat( auto-fill, minmax(20rem, 1fr) );
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
-} */
-.projects-designs {
-  column-count: 1;
-  column-gap: 1rem;
-
-  @screen sm {
-    column-count: 2;
-  }
-  @screen lg {
-    column-count: 3;
-  }
-
-  & .project-design {
-    @apply inline-block mb-4
-  }
 }
 </style>
