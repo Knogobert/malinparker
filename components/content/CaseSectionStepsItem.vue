@@ -64,7 +64,7 @@ export default {
   .grid-container {
     /* @apply max-w-5xl mx-auto; */
 
-    :not(.images, img) {
+    :not(.images, img, picture) {
       @apply max-w-4xl mx-auto;
     }
 
