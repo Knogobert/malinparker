@@ -27,6 +27,26 @@ export default defineNuxtSchema({
         })
       }
     }),
+    components: group({
+      title: 'Components',
+      description: 'Component configuration',
+      icon: 'i-mdi-puzzle',
+      fields: {
+        case: group({
+          title: 'Case/Cases Component',
+          description: 'The component used to display cases',
+          icon: 'i-mdi-view-dashboard',
+          fields: {
+            reverseLayoutForOddItemsInList: field({
+              type: 'boolean',
+              title: 'Reverse Layout For Odd Items In List',
+              description: 'The layout be reversed for odd items in the list (every other)',
+              icon: 'i-mdi-swap-vertical-variant'
+            }),
+          }
+        }),
+      }
+    }),
     // socials: group({
     //   title: 'Socials',
     //   description: 'Social links',

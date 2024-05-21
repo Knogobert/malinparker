@@ -2,7 +2,7 @@
   <div class="projects -mx-4" v-if="posts && posts.length !== 0" :class="classes">
     <template v-if="type === 'case'">
       <Projects-ProjectCaseSingle v-for="(post, i) in posts" :key="post.id" :project="post"
-        :class="{ 'project--reverse': (i + 1) % 2 === 0 }" />
+        :class="{ 'project--reverse': isReversableLayout && (i + 1) % 2 === 0 }" />
     </template>
     <template v-else-if="type === 'design'">
       <Projects-ProjectDesignSingle v-for="post in posts" :key="post.id" :project="post" />
@@ -13,25 +13,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    posts: Array,
-    type: {
-      type: String,
-      default: 'case',
-      validator: (val) => ['case', 'design'].includes(val)
-    }
-  },
-  computed: {
-    classes() {
-      return {
-        'projects-cases': this.type === 'case',
-        'projects-designs': this.type === 'design',
-      }
-    }
-  },
-}
+<script setup>
+import { computed } from 'vue';
+const { components } = useAppConfig()
+
+const props = defineProps({
+  posts: Array,
+  type: {
+    type: String,
+    default: 'case',
+    validator: (val) => ['case', 'design'].includes(val)
+  }
+})
+
+const classes = computed(() => {
+  return {
+    'projects-cases': props.type === 'case',
+    'projects-designs': props.type === 'design',
+  };
+});
+
+const isReversableLayout = computed(() => components?.case?.reverseLayoutForOddItemsInList ?? true);
 </script>
 
 <style lang="postcss" scoped>

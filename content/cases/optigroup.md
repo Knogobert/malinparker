@@ -1,64 +1,59 @@
 ---
-slug: boka
-title: GUI — bokA.
+slug: optigroup
+title: Optigroup
 selected: true
-description: An add-on for company or library databases with the goal to help the user putting together suggestion of books for different requests. How to fit lots of information in a small space and still keep it understandable and user friendly?
+description: OptiGroup acquires and develops companies that provide reliable and sustainable delivery solutions to B2B customers. They needed a significant facelift in both design and functionality for their e-commerce solution, which is used by four companies within the group.
 cover:
-  src: /img/boka-feature.png
-  alt: an application with 300 selectable books
+  src: /img/optigroup-feature.png
+  alt: a computer displaying the papyrus dashboard
   height: 375
 ---
 
 ::case-section-general{:below="false" split title="The Project."}
-GUI examination · Design a system that help librarians and sales people put together suggestions of up to ten books in packages for different request.
+OptiGroup acquires and develops companies that provide reliable and sustainable delivery solutions to B2B customers. They needed a significant facelift in both design and functionality for their e-commerce solution, which is used by four companies within the group: Papyrus, Procurator, Velimark, and Scaldia. OptiGroup reached out to HiQ to assemble a team with the right expertise, methods, and experience to develop new concepts and design proposals for their e-commerce platform.
 
   :::list
-  - **For:** Hypothetical project
-  - **By:** Individual project
+  - **For:** OptiGroup
+  - **By:** HiQ
   - **My role:** UX/UI Designer
-  - **Duration:** 4 days
+  - **Duration:** 2022/02 – 2023/05
   :::
 
   :::image-figure
   ---
-  alt: an application with 300 selectable books
+  alt: a computer displaying the papyrus dashboard
   class: mt-8
   height: '375'
   layout: intrinsic
-  src: /img/boka-feature.png
+  src: /img/optigroup-feature.png
   ---
   :::
 ::
 
+<!--
 ::case-section-general{.mt-16 :below="false" :split="false" title="Context."}
-### Function specification:
+The new sites consist of the same technologies, which means that the design solutions need to work for all brands across their various markets. This gives us many different stakeholders with needs that need to be taken into consideration, as changing one something on one place will effect all sites.
 
-- Format: no more than 1850 x 1000 pixels, everything must be visible at all times, no dialogs, dropdowns, scolling or etc is allowed. (with one exception)
-- The user must be able to put together packages of up to 10 books
-- The user needs to be able to always see at least 300 books
-- 100 of these 300 must visualize the following 4 properties:
-  * genre
-  * type
-  * target group
-  * popularity
-- The remaining 200 must visualize at least 2 properties
-- All books have tags, and the system should be able to show if books have mutual tags
-- People with color blindness should be able to use the system
-- The user needs to be able to read all the detailed information about a book. (Exception: This can be done with a pop-up)
+In some cases we agree that special solutions are needed, but this is a rarity. Generally, it is the different branding that sets the sites apart.
 ::
+-->
 
-::case-section-steps{.mt-16 title="Process."}
-  :::case-section-steps-item{:split="false" title="Empathize"}
-  To be able to understand the user I started with conducting an unstructured interview with a person working in a book store with a lot of knowledge about books and experience with putting together suggestions of books to book circles. I asked questions trying to understand which information about a book is the most crucial and common, and what questions she would normally ask a customer.
-  
-  I also conducted secondary research by looking up bookstores and library systems online to find information and inspiration from similar services.
+::case-section-steps{.mt-16 title=""}
+  :::case-section-steps-item{:split="false" title="Context."}
+  The new sites consist of the same technologies, which means that the design solutions need to work for all brands across their various markets. This gives us many different stakeholders with needs that need to be taken into consideration, as changing one something on one place will effect all sites.
+
+  In some cases we agree that special solutions are needed, but this is a rarity. Generally, it is the different branding that sets the sites apart.
   :::
 
   :::case-section-steps-item
   ---
   images:
-    - src: /img/boka-empathize@2x.png
-      alt: sketches of the dashboard on a notepad
+    - src: /img/optigroup-1.png
+      alt: 
+    - src: /img/optigroup-2.png
+      alt: 
+    - src: /img/optigroup-3.png
+      alt: A lot of product details that have to be visible and easy to understand on the product rows and everywhere where the product is displayed.
   reverse-layout: true
   split: false
   title: Define
@@ -71,24 +66,7 @@ GUI examination · Design a system that help librarians and sales people put tog
   :::case-section-steps-item
   ---
   images:
-    - src: /img/boka-prototype-1@2x.png
-      alt: a crude prototype layout of the dashboard
-    - src: /img/boka-prototype-2@2x.png
-      alt: Book cards in detail, showing iconography and colors
-  larger-images: true
-  split: false
-  title: Prototype
-  ---
-  I started out by sketching various layout options on paper and eventually decided on where to roughly place the different components in the system. When this was decided I moved over to Figma to get going with a more detailed view for getting a look & feel of the system.
-  :::
-
-  :::case-section-steps-item
-  ---
-  images:
-    - src: /img/boka-test-1@2x.png
-      alt: detailed view of the design elements
-    - src: /img/boka-test-2@2x.png
-      alt: icons and colors of the genres, showing how they look in different color vision deficiencies
+    
   reverse-layout: true
   split: false
   title: Test
@@ -107,11 +85,11 @@ GUI examination · Design a system that help librarians and sales people put tog
   :::images-figure
   ---
   images:
-    - src: /img/boka-final-1@2x.png
+    - src: /img/optigroup-4.png
       alt: a zoomed in view of the top-left part of the dashboard
       height: 375
       layout: intrinsic
-    - src: /img/boka-final-2@2x.png
+    - src: /img/optigroup-5.png
       alt: a zoomed in view of the top-left part of the dashboard with image covers turned on
       height: 375
       layout: intrinsic
@@ -123,7 +101,7 @@ GUI examination · Design a system that help librarians and sales people put tog
   :::images-figure
   ---
   images:
-    - src: /img/boka-final-3@2x.png
+    - src: /img/optigroup-6.png
       alt: a  modal that is showed when clicking on a book
       height: 375
       layout: intrinsic
@@ -135,29 +113,13 @@ GUI examination · Design a system that help librarians and sales people put tog
   :::images-figure
   ---
   images:
-    - src: /img/boka-final-4@2x.png
+    - src: /img/optigroup-7.png
       alt: a zoomed in view of the bottom-right part of the dashboard
-    - src: /img/boka-final-5@2x.png
-      alt: a zoomed in view of the bottom-left part of the dashboard
   class: mb-8
   figcaption: In the bottom the collection of chosen books is displayed. The color wheel to the right displays the variety of different genres in the collection.
   ---
   :::
 ::
-
-<!--
-::CaseSectionFinal{title="Final Product." :split="false"}
----
-images: [
-  {"src": "/img/boka-final-1@2x.png", "alt": "a zoomed in view of the top-left part of the dashboard"},
-  {"src": "/img/boka-final-2@2x.png", "alt": "a zoomed in view of the top-left part of the dashboard with image covers turned on"},
-  {"src": "/img/boka-final-3@2x.png", "alt": "a modal that is showed when clicking on a book"},
-  {"src": "/img/boka-final-4@2x.png", "alt": "a zoomed in view of the bottom-right part of the dashboard"},
-  {"src": "/img/boka-final-5@2x.png", "alt": "a zoomed in view of the bottom-left part of the dashboard"}
-]
----
-::
--->
 
 ::case-section-general{.mt-16 below :split="false" title="Retrospective."}
 ## Challenges.

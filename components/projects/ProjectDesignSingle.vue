@@ -103,8 +103,7 @@ export default {
 
 .dark-mode {
   & figcaption {
-    @apply bg-black;
-    --bg-opacity: 0.75;
+    @apply bg-primary-800 bg-opacity-75;
   }
 }
 .light-mode {
