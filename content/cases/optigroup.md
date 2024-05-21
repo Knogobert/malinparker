@@ -47,17 +47,17 @@ OptiGroup acquires and develops companies that provide reliable and sustainable 
   title: Context.
   ---
   The new sites consist of the same technologies, which means that the design solutions need to work for all brands across their various markets. This gives us many different stakeholders with needs that need to be taken into consideration, as changing one something on one place will effect all sites.
-  
+
   In some cases we agree that special solutions are needed, but this is a rarity. Generally, it is the different branding that sets the sites apart.
   :::
 
   :::case-section-steps-item{:split="false" title="Process."}
   We worked parallel in a large scrum team with design and development which means we had close insight and communication with the developers. It lead to us being very agile in adapting design after technical limitations and/or advantages. This made the project really fun as it was always very clear that the outcome continuously had been improved along every step at the way. Team effort makes dream results.
-  
+
   As B2B sites, there are a lot of advanced functionality that require us to really explore solutions.
-  
+
   Checkout, onboarding and purchase limits (regulating how much buyers are allowed to spend in different categories each month/quarter/year) are some things we worked closely with to name a few.
-  
+
   Because of the technical limitations we realized it was extremely valuable to discuss tasks with developers before starting the design work. By doing this we not only saved time designing, but the solutions that were approved was most often also easier to implement. Often, we were also able to take advantage of technical possibilities in a better way as well, adding small, smart and valuable features with a very small effort.
   :::
 
@@ -80,11 +80,12 @@ OptiGroup acquires and develops companies that provide reliable and sustainable 
   :::
 ::
 
-::case-section-general{.mt-16 :split="false" title="Strengths."}
+::case-section-general{.mt-16 :split="false" title="Strengths." }
 - Close collaboration which made us agile and effective.
 - Take advantage of Figma’s strengths, well structured project files making it easy for other designers to pick up the work later on.
 - Design handoff was prioritised and made in a effective and collaborative and way.
 - Continuous time for evaluation of way of working leading to a very good way of working.
+
   :::image-figure{.mb-8.bg-white}
   ---
   src: /img/optigroup-6.png

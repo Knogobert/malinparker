@@ -1,6 +1,6 @@
 <template>
   <figure class="">
-    <img :src="src" :alt="alt" :fit="fit" :height="height" :layout="layout" loading="lazy" class="image w-full" />
+    <img :src="src" :alt="alt" :fit="fit" :height="height" loading="lazy" class="image w-full" :class="class" />
     <figcaption :class="{ 'sr-only': !figcaption }" v-text="figcaption || alt" />
   </figure>
 </template>
@@ -27,7 +27,7 @@ const props = defineProps({
     type: [String, Number],
     default: '',
   },
-  layout: {
+  class: {
     type: String,
     default: '',
   },

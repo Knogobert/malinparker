@@ -24,7 +24,6 @@ GUI examination · Design a system that help librarians and sales people put tog
   alt: an application with 300 selectable books
   class: mt-8
   height: '375'
-  layout: intrinsic
   src: /img/boka-feature.png
   ---
   :::
@@ -110,11 +109,9 @@ GUI examination · Design a system that help librarians and sales people put tog
     - src: /img/boka-final-1@2x.png
       alt: a zoomed in view of the top-left part of the dashboard
       height: 375
-      layout: intrinsic
     - src: /img/boka-final-2@2x.png
       alt: a zoomed in view of the top-left part of the dashboard with image covers turned on
       height: 375
-      layout: intrinsic
   class: mb-8
   figcaption: Toggle on/off to switch between seeing detailed information about genre, target group etc and book covers.
   ---
@@ -126,7 +123,6 @@ GUI examination · Design a system that help librarians and sales people put tog
     - src: /img/boka-final-3@2x.png
       alt: a  modal that is showed when clicking on a book
       height: 375
-      layout: intrinsic
   class: mb-8
   figcaption: Detailed book view displaying all book information including genre, tags and available formats.
   ---
