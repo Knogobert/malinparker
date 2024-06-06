@@ -34,13 +34,13 @@ OptiGroup acquires and develops companies that provide reliable and sustainable 
   ---
   images:
     - src: /img/optigroup-1.png
-      alt: null
+      alt: a screenshot of the papyrus dashboard in a list view displaying nitrile gloves
       class: bg-white
     - src: /img/optigroup-2.png
-      alt: null
+      alt: a screenshot of the papyrus dashboard displaying the shopping cart with a lot of nitrite gloves
       class: bg-white
     - src: /img/optigroup-3.png
-      alt: A lot of product details that have to be visible and easy to understand on the product rows and everywhere where the product is displayed.
+      alt: a screenshot of the papyrus dashboard showing a single product page of a nitrile glove product
       class: bg-white
   larger-images: true
   split: false
@@ -65,10 +65,10 @@ OptiGroup acquires and develops companies that provide reliable and sustainable 
   ---
   images:
     - src: /img/optigroup-4.png
-      alt: Figma structure
+      alt: Figma project structure
       class: bg-white
     - src: /img/optigroup-5.png
-      alt: Figma notes
+      alt: component linked to Jira, explaining the design in Figma
       class: bg-white
   reverse-layout: true
   split: false
@@ -78,26 +78,23 @@ OptiGroup acquires and develops companies that provide reliable and sustainable 
   - Well structured files for each brand.
   - Detailed, cross linked documentation between confluence, Jira and Figma. Makes it easy for new people working with the projects to catch up and read about functionality, details about design decisions and technical limitations/opportunities.
   :::
-::
 
-::case-section-general{.mt-16 :split="false" title="Strengths." }
-- Close collaboration which made us agile and effective.
+  :::case-section-steps-item
+  ---
+  images:
+    - src: /img/optigroup-6.png
+      alt: a laptop & screen displaying the papyrus dashboard
+      class: bg-white
+    - src: /img/optigroup-7.png
+      alt: a screenshot of the papyrus dashboard startpage
+      class: bg-white
+  reverse-layout: true
+  split: false
+  title: Strengths.
+  ---
+  - Close collaboration which made us agile and effective.
 - Take advantage of Figma’s strengths, well structured project files making it easy for other designers to pick up the work later on.
 - Design handoff was prioritised and made in a effective and collaborative and way.
 - Continuous time for evaluation of way of working leading to a very good way of working.
-
-  :::image-figure{.mb-8.bg-white}
-  ---
-  src: /img/optigroup-6.png
-  alt: null
-  ---
-  :::
-
-  :::image-figure{.mb-8}
-  ---
-  src: /img/optigroup-7.png
-  alt: null
-  class: bg-white
-  ---
   :::
 ::

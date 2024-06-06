@@ -28,9 +28,9 @@
         <Skeleton-ContentPlaceholdersImg class="w-full p-4 opacity-50"
           style="height: 45vw; min-height: 320px; max-height: 550px; border-radius: 9999px 9999px 200vw 200vw;" />
       </Skeleton-ContentPlaceholders> -->
-      <NuxtPicture loading="eager" src="/img/malin-hero@2x.png" alt="Malin with crossed arms" fit="contain"
+      <NuxtPicture loading="eager" src="/img/malin-hero.png" alt="Malin with crossed arms" fit="contain"
         class="image-ph" :class="loadingImage ? '' : 'show'" @load="loadingImage = false" :placeholder="[450, 602]"
-        width="450px" height="602px" />
+        width="450px" height="667.083px" />
     </div>
   </section>
 </template>
