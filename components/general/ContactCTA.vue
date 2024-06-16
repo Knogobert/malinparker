@@ -1,6 +1,6 @@
 <template>
   <div class="cta flex flex-col sm:flex-row">
-    <div v-if="props.button" class="flex-auto mt-4 sm:mt-0">
+    <div v-if="props.button" class="flex-auto mt-4 sm:mt-0 sm:self-end">
       <a href="mailto:malin.parker@hiq.se" class="btn btn-ghost">get in touch</a>
     </div>
     <div v-else class="flex-auto mt-4 sm:mt-0">

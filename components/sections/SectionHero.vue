@@ -7,7 +7,7 @@
     <div class="intro mb-4 lg:mb-12">
       <div class="flex-1">
         <h1 class="title text-gray-600 dark:text-primary mb-1">Malin Katrine Parker.</h1>
-        <h2 class="subtitle mt-0 mb-4">UX designer who breathes and designs sustainability.</h2>
+        <h2 class="subtitle mt-0 mb-4 text-balance">UX designer with a passion for sustainability.</h2>
         <p>
           My motivation is to simplify and enhance people’s everyday life. I like it best when working in efficient yet
           thoughtful processes with a feeling that I’m contributing to something meaningful and important for others. My
@@ -28,7 +28,7 @@
         <Skeleton-ContentPlaceholdersImg class="w-full p-4 opacity-50"
           style="height: 45vw; min-height: 320px; max-height: 550px; border-radius: 9999px 9999px 200vw 200vw;" />
       </Skeleton-ContentPlaceholders> -->
-      <NuxtPicture loading="eager" src="/img/malin-hero.png" alt="Malin with crossed arms" fit="contain"
+      <NuxtPicture loading="eager" src="/img/malin-hero-nuevos.png" alt="Portrait of Malin" fit="contain"
         class="image-ph" :class="loadingImage ? '' : 'show'" @load="loadingImage = false" :placeholder="[450, 602]"
         width="450px" height="667.083px" />
     </div>
