@@ -1,7 +1,7 @@
 ---
 slug: optigroup
 title: Optigroup
-selected: true
+ready: true
 description: 'OptiGroup acquires and develops companies that provide reliable and sustainable delivery solutions to B2B customers. They needed a significant facelift in both design and functionality for their e-commerce solution, which is used by four companies within the group: Papyrus, Procurator, Velimark, and Scaldia. 
 <br/><br/>
 OptiGroup reached out to HiQ to assemble a team of consultants with the right expertise, methods, and experience to develop new concepts and design proposals for their e-commerce platform.'

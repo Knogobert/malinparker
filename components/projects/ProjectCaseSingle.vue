@@ -1,7 +1,7 @@
 <template>
   <article class="project project-case w-full">
-    <NuxtLink :to="`/cases/${project.slug}`">
-      <figure class="p-4" v-if="project.cover?.src">
+    <NuxtLink :to="`/cases/${project.slug}`" :disabled="!project.ready">
+      <figure class="p-4 md:p-8" v-if="project.cover?.src">
         <!-- <Skeleton-ContentPlaceholders v-show="loadingImage">
           <Skeleton-ContentPlaceholdersImg class="w-full p-4 rounded-xl opacity-50"
             :class="{ 'h-64': !project.cover.height }" :style="`height: ${project.cover.height}px`" />
@@ -13,7 +13,10 @@
         <h4 class="subtitle mb-2">{{ project.title }}</h4>
         <p v-html="project?.excerpt ?? project?.description" />
         <footer>
-          <button class="btn btn-ghost w-full md:w-auto" tabindex="-1">read case study</button>
+          <button class="btn btn-ghost w-full md:w-auto" :class="{
+
+          }" tabindex="-1" :disabled="!project.ready"
+            v-text="project.ready ? 'read case study' : 'case study coming soon'"></button>
         </footer>
       </div>
     </NuxtLink>
@@ -44,6 +47,11 @@ export default {
 .project-case > a {
   @apply flex flex-col justify-between rounded-3xl; /* bg-gray-800; */
   -moz-outline-radius: 1.5rem;
+
+  &[disabled='true'],
+  &:disabled  {
+    @apply pointer-events-none;
+  }
 
   & figure > img {
     @apply opacity-25 rounded-xl shadow-sm transition duration-200 ease-in-out w-full;
@@ -81,7 +89,7 @@ export default {
       }
     }
 
-    & footer .btn {
+    & footer .btn:not(:disabled) {
       @apply bg-primary text-white border-primary;
     }
   }

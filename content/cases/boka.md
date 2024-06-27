@@ -1,7 +1,7 @@
 ---
 slug: boka
 title: GUI — bokA.
-selected: true
+ready: true
 description: 'An add-on for company- or library databases with the goal to help the user putting together suggestion of books for different requests.
 <br/><br/>
 The challenge was how to fit lots of information in a small space and still keeping it easy for users to understand and use.'

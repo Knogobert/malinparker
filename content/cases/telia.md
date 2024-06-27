@@ -1,7 +1,7 @@
 ---
 slug: telia
 title: Telia – Ace2Go
-selected: true
+ready: true
 description: 'Telia ACE, being the largest customer service platform in the Nordics, caters to clients in both the public and private sectors. While Telia ACE currently offers client tools for web and desktop, it was lacking a mobile work tool.
 <br/><br/>
 To maintain Telia ACE’s position as a frontrunner in development a native mobile application was developed for iOS and Android.'
