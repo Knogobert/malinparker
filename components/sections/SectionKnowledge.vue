@@ -57,7 +57,7 @@
   .grid-container {
     grid-template-columns: 2fr 2rem 1fr;
     grid-template-rows: 2rem 1fr auto;
-    gap: 4rem 1rem;
+    gap: 6rem 1rem;
     grid-template-areas:
       "headline headline headline"
       "images   .        intro"

@@ -11,7 +11,7 @@
       </figure>
       <div class="intro">
         <h4 class="subtitle mb-2">{{ project.title }}</h4>
-        <p>{{ project?.excerpt ?? project?.description }}</p>
+        <p v-html="project?.excerpt ?? project?.description" />
         <footer>
           <button class="btn btn-ghost w-full md:w-auto" tabindex="-1">read case study</button>
         </footer>
@@ -42,7 +42,7 @@ export default {
 
 <style lang="postcss" scoped>
 .project-case > a {
-  @apply flex flex-col justify-between rounded-3xl;
+  @apply flex flex-col justify-between rounded-3xl; /* bg-gray-800; */
   -moz-outline-radius: 1.5rem;
 
   & figure > img {
@@ -91,15 +91,18 @@ export default {
     @apply flex-row;
 
     & figure {
-      flex: 1 1 60%;
-      @apply self-center;
+      flex: 1 1 70%;
+      @apply self-stretch;
+      & img {
+        @apply h-full object-cover aspect-video;
+      }
       /* & > div {
         @apply m-2;
       } */
     }
     & .intro {
-      flex: 1 1 40%;
-      @apply p-6;
+      flex: 1 1 30%;
+      @apply p-6 text-sm;
     }
      & footer {
       @apply self-end;
@@ -112,6 +115,7 @@ export default {
 
 .light-mode {
   & .project-case > a {
+    /* @apply bg-white; */
     &:active,
     &:hover,
     &:focus {

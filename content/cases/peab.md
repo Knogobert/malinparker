@@ -2,7 +2,9 @@
 slug: peab
 title: Peab
 selected: true
-description: 'The objective behind creating the Peab Diary Responsive Web was twofold: to streamline daily documentation and ensure profitable and effective project management.'
+description: 'The objective behind creating the Peab Diary Responsive Web was twofold: to streamline daily documentation and ensure profitable and effective project management.
+<br/><br/>
+By maintaining a diary, the intention was to record all work performed, serving as evidence in case of disputes and also facilitating compensation for additional tasks necessitated by changing conditions or unforeseen events.'
 cover:
   src: /img/peab-feature.png
   alt: three phone screens showing the diary software

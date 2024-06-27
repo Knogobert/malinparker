@@ -2,7 +2,9 @@
 slug: boka
 title: GUI — bokA.
 selected: true
-description: An add-on for company or library databases with the goal to help the user putting together suggestion of books for different requests. How to fit lots of information in a small space and still keep it understandable and user friendly?
+description: 'An add-on for company- or library databases with the goal to help the user putting together suggestion of books for different requests.
+<br/><br/>
+The challenge was how to fit lots of information in a small space and still keeping it easy for users to understand and use.'
 cover:
   src: /img/boka-feature.png
   alt: an application with 300 selectable books
