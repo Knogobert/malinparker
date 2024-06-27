@@ -1,6 +1,7 @@
 ---
 slug: peab
 title: Peab
+order: 20
 ready: true
 description: 'The objective behind creating the Peab Diary Responsive Web was twofold: to streamline daily documentation and ensure profitable and effective project management.
 <br/><br/>

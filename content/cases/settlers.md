@@ -1,6 +1,7 @@
 ---
 slug: settlers
 title: Settlers of Catan
+order: 60
 ready: false
 description: 'A digital take on the classic board game Settlers of Catan.
 <br/><br/>
@@ -12,3 +13,11 @@ cover:
   alt: an iPad displaying the Settlers of Catan board with an iPhone displaying the player's hand next to it
   height: 375
 ---
+
+# Work in progress
+## Work in progress
+### Work in progress
+#### Work in progress
+##### Work in progress
+###### Work in progress
+Work in progress
