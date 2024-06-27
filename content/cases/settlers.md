@@ -1,6 +1,7 @@
 ---
 slug: settlers
 title: Settlers of Catan
+order: 60
 ready: false
 description: 'A digital take on the classic board game Settlers of Catan.
 <br/><br/>
