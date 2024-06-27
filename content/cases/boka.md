@@ -6,7 +6,7 @@ description: 'An add-on for company- or library databases with the goal to help 
 <br/><br/>
 The challenge was how to fit lots of information in a small space and still keeping it easy for users to understand and use.'
 cover:
-  src: /img/boka-feature.png
+  src: /img/boka-feature-nuevo.png
   alt: an application with 300 selectable books
   height: 375
 ---
@@ -26,7 +26,7 @@ GUI examination · Design a system that help librarians and sales people put tog
   alt: an application with 300 selectable books
   class: mt-8
   height: '375'
-  src: /img/boka-feature.png
+  src: /img/boka-0.png
   ---
   :::
 ::

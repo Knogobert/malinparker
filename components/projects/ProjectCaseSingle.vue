@@ -46,7 +46,7 @@ export default {
   -moz-outline-radius: 1.5rem;
 
   & figure > img {
-    @apply opacity-25 rounded-xl shadow-sm transition duration-200 ease-in-out;
+    @apply opacity-25 rounded-xl shadow-sm transition duration-200 ease-in-out w-full;
     &.show {
       @apply opacity-100;
     }

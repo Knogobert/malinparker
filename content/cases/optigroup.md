@@ -26,7 +26,7 @@ OptiGroup acquires and develops companies that provide reliable and sustainable 
   alt: a computer displaying the papyrus dashboard
   class: mt-8
   height: '375'
-  src: /img/optigroup-feature.png
+  src: /img/optigroup-0.png
   ---
   :::
 ::

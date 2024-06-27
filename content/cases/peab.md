@@ -26,7 +26,7 @@ The objective behind creating the Peab Diary Responsive Web was twofold: to stre
   alt: three phone screens showing the diary software
   class: mt-8
   height: '375'
-  src: /img/peab-feature.png
+  src: /img/peab-0.png
   ---
   :::
 ::
