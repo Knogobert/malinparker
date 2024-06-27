@@ -1,9 +1,7 @@
 <template>
-  <div v-once>
-    <Sections-SectionHero class="mb-16" />
-    <Sections-SectionKnowledge class="mb-16" />
-    <Sections-SectionSelectedWork class="mb-16" />
-  </div>
+  <Sections-SectionHero class="mb-32" />
+  <Sections-SectionKnowledge class="mb-32" />
+  <Sections-SectionSelectedWork class="mb-32" />
 </template>
 
 <script>

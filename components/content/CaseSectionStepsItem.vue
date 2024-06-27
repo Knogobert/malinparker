@@ -1,8 +1,10 @@
 <template>
   <div class="step grid-container" :class="gridClasses">
-    <div class="images self-start space-y-8">
-      <NuxtImg v-for="image in images" :key="image.id" :src="image.src" :alt="image?.alt" loading="lazy"
-        class="image w-full" :class="image?.class" />
+    <div class="images self-start space-y-16">
+      <figure v-for="image in images" :key="image.id" class="">
+        <NuxtImg :src="image.src" :alt="image?.alt" loading="lazy" class="image w-full" :class="image?.class" />
+        <figcaption class="mt-2" :class="{ 'sr-only': !image.figcaption }" v-text="image.figcaption || alt" />
+      </figure>
     </div>
 
     <div class="intro md:place-self-start">
@@ -64,7 +66,7 @@ export default {
   .grid-container {
     /* @apply max-w-5xl mx-auto; */
 
-    :not(.images, img, picture) {
+    :not(.images, img, picture, figure, figcaption) {
       @apply max-w-4xl mx-auto;
     }
 

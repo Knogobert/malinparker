@@ -3,7 +3,7 @@
     <h1 class="title text-4xl sm:text-5xl mb-8">Oh no! 🫠</h1>
     {{ error }}
   </code>
-  <div v-else class="pb-32" v-once>
+  <div v-else class="pb-32">
     <nav class="nav-back">
       <General-RouterBack class="block" />
     </nav>
