@@ -29,8 +29,8 @@
           style="height: 45vw; min-height: 320px; max-height: 550px; border-radius: 9999px 9999px 200vw 200vw;" />
       </Skeleton-ContentPlaceholders> -->
       <NuxtPicture loading="eager" src="/img/malin-hero-nuevos.png" alt="Portrait of Malin" fit="contain"
-        class="image-ph" :class="loadingImage ? '' : 'show'" @load="loadingImage = false" :placeholder="[450, 602]"
-        width="450px" height="667.083px" />
+        class="image image-ph" :class="loadingImage ? '' : 'show'" @load="loadingImage = false"
+        :placeholder="[450, 602]" width="450px" height="667.083px" />
     </div>
   </section>
 </template>
