@@ -10,8 +10,8 @@
           <skeleton-content-placeholders-img class="w-full p-4 rounded-xl opacity-50"
             :class="{ 'h-64': !project.cover.height }" :style="`height: ${project.cover.height}px`" />
         </skeleton-content-placeholders> -->
-        <NuxtPicture :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover"
-          class="image image-ph" :class="loadingImage ? '' : 'show'" @load="loadingImage = false"
+        <NuxtPicture :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover" class="image-ph"
+          :class="loadingImage ? '' : 'show'" @load="loadingImage = false"
           :placeholder="project.cover.size === 'large' ? [1090, 820] : [525, 400]"
           :width="project.cover.size === 'large' ? '1090px' : '525px'"
           :height="project.cover.size === 'large' ? '820px' : '720px'" :img-attrs="{ class: 'rounded-xl' }" />
