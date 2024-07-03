@@ -1,8 +1,9 @@
 <template>
-  <article class="project project-design size-full" :class="{
-    'col-span-full': project.cover.size === 'large',
-    'col-span-1': project.cover.size === 'medium'
-  }">
+  <Motion tag="article" class="project project-design size-full" :in-view="{ scale: [0.9, 1] }" :press="{ scale: 0.98 }"
+    :transition="{ duration: 0.5 }" :class="{
+      'col-span-full': project.cover.size === 'large',
+      'col-span-1': project.cover.size === 'medium'
+    }">
     <NuxtLink :to="`/designs/${project.slug}`" class="size-full">
       <figure class="relative p-4 size-full" v-if="project.cover?.src">
         <!-- <skeleton-content-placeholders v-show="loadingImage">
@@ -21,7 +22,7 @@
         </figcaption>
       </figure>
     </NuxtLink>
-  </article>
+  </Motion>
 </template>
 
 <script>

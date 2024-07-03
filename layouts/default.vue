@@ -1,4 +1,4 @@
 <template>
   <slot />
-  <General-Footer />
+  <General-Footer class="order-last" />
 </template>

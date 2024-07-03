@@ -1,5 +1,6 @@
 <template>
-  <article class="project project-case w-full">
+  <Motion tag="article" class="project project-case w-full" :in-view="{ scale: [0.9, 1], staggerChildren: .5 }"
+    :press="{ scale: 0.98 }" :transition="{ duration: 0.5 }">
     <NuxtLink :to="`/cases/${project.slug}`" :disabled="!project.ready">
       <figure class="p-4 md:p-8" v-if="project.cover?.src">
         <!-- <Skeleton-ContentPlaceholders v-show="loadingImage">
@@ -14,17 +15,17 @@
         <h4 class="subtitle mb-2">{{ project.title }}</h4>
         <p v-html="project?.excerpt ?? project?.description" />
         <footer>
-          <button class="btn btn-ghost w-full md:w-auto" :class="{
-
-          }" tabindex="-1" :disabled="!project.ready"
+          <button class="btn btn-ghost w-full md:w-auto" tabindex="-1" :disabled="!project.ready"
             v-text="project.ready ? 'read case study' : 'case study coming soon'"></button>
         </footer>
       </div>
     </NuxtLink>
-  </article>
+  </Motion>
 </template>
 
 <script>
+import { Motion } from "@oku-ui/motion"
+
 export default {
   props: {
     project: {

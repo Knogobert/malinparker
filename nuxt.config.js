@@ -35,7 +35,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts', '@nuxthq/studio', '@nuxt/image'],
+  modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts', '@nuxthq/studio', '@nuxt/image', '@oku-ui/motion-nuxt' ],
   /*
    ** Build configuration
    */
@@ -68,6 +68,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
+  },
+  motion: {
+    // Motion One options
   },
   fonts: {
     priority: ['local', 'bunny', 'fontsource'],
