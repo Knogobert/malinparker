@@ -1,7 +1,12 @@
 <template>
   <section class="grid-container">
     <div class="headline self-end">
-      <h3 class="monotitle text-sm">Hi, my name is</h3>
+      <h3 class="monotitle text-sm">
+        <Motion tag="span" class="inline-block" v-for="(char, i) in hellostring.split('')"
+          :initial="{ opacity: 0, translateY: 10 }" :animate="{ opacity: 1, translateY: 0 }" :transition="{
+            delay: stagger(0.05, { easing: 'ease-in-out' })(i, hellostring.length)
+          }">{{ char }}</Motion>
+      </h3>
     </div>
 
     <div class="intro mb-4 lg:mb-12">
@@ -10,7 +15,7 @@
         <h2 class="subtitle mt-0 mb-4 text-balance">UX designer with a passion for sustainability.</h2>
         <p>
           My motivation is to simplify and enhance people’s everyday life. I like it best when working in efficient yet
-          thoughtful processes with a feeling that I’m contributing to something meaningful and important for others. My
+          thoughtful processes with a feeling that I’m contributing to something meaningful and important for others. My
           biggest strengths are that I’m an observant, questioning introvert.
         </p>
         <p>
@@ -36,15 +41,19 @@
 </template>
 
 <script>
+import { stagger } from "@oku-ui/motion"
+
 export default {
   data() {
     return {
-      loadingImage: true
+      loadingImage: true,
+      hellostring: 'Hello,\xa0my\xa0name\xa0is',
     }
   },
   mounted() {
     setTimeout(() => { this.loadingImage = false; }, 2000);
   },
+  methods: { stagger },
 }
 </script>
 

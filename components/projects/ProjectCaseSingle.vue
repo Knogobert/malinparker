@@ -1,6 +1,6 @@
 <template>
-  <Motion tag="article" class="project project-case w-full" :in-view="{ scale: [0.9, 1], staggerChildren: .5 }"
-    :press="{ scale: 0.98 }" :transition="{ duration: 0.5 }">
+  <Motion tag="article" class="project project-case w-full" :in-view="{ scale: 1 }" :initial="{ scale: 0.85 }"
+    :press="{ scale: project.ready ? 0.98 : 1 }" :transition="{ duration: 0.5 }">
     <NuxtLink :to="`/cases/${project.slug}`" :disabled="!project.ready">
       <figure class="p-4 md:p-8" v-if="project.cover?.src">
         <!-- <Skeleton-ContentPlaceholders v-show="loadingImage">
