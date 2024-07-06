@@ -2,9 +2,9 @@
   <section class="grid-container">
     <div class="headline self-end">
       <h3 class="monotitle text-sm">
-        <Motion tag="span" class="inline-block" v-for="(char, i) in hellostring.split('')"
+        <Motion tag="span" class="inline-block" v-for="(char, i) in hiString.split('')"
           :initial="{ opacity: 0, translateY: 10 }" :animate="{ opacity: 1, translateY: 0 }" :transition="{
-            delay: stagger(0.05, { easing: 'ease-in-out' })(i, hellostring.length)
+  delay: stagger(0.05, { easing: 'ease-in-out' })(i, hiString.length)
           }">{{ char }}</Motion>
       </h3>
     </div>
@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       loadingImage: true,
-      hellostring: 'Hello,\xa0my\xa0name\xa0is',
+      hiString: 'Hi,\xa0my\xa0name\xa0is',
     }
   },
   mounted() {

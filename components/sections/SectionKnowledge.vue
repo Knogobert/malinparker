@@ -14,19 +14,27 @@
       <h2 class="subtitle mb-6">Skills.</h2>
       <div class="grid grid-cols-2 md:grid-cols-1 gap-x-8 text-sm">
         <ul class="space-y-3">
-          <li>UI Design</li>
+          <Motion tag="li" v-for="(skill, i) in skillsFirst" :initial="{ opacity: 0, translateY: 10 }"
+            :in-view="{ opacity: 1, translateY: 0 }" :transition="{
+              delay: stagger(0.05, { easing: 'ease-in-out' })(i, skillsFirst.length)
+            }">{{ skill }}</Motion>
+          <!-- <li>UI Design</li>
           <li>UX Research</li>
           <li>Prototyping</li>
           <li>User&nbsp;Testing</li>
           <li>Service&nbsp;Design</li>
-          <li>Design&nbsp;Handoff</li>
+          <li>Design&nbsp;Handoff</li> -->
         </ul>
         <ul class="space-y-3 md:mt-3">
-          <li>Facilitation</li>
+          <Motion tag="li" v-for="(skill, i) in skillsSecond" :initial="{ opacity: 0, translateY: 10 }"
+            :in-view="{ opacity: 1, translateY: 0 }" :transition="{
+              delay: stagger(0.05, { easing: 'ease-in-out', start: skillsFirst.length * 0.05 })(i, skillsSecond.length)
+            }">{{ skill }}</Motion>
+          <!-- <li>Facilitation</li>
           <li>Graphic&nbsp;Design</li>
           <li>Figma</li>
           <li>Jira/Confluence</li>
-          <li>Adobe Suite</li>
+          <li>Adobe Suite</li> -->
         </ul>
       </div>
 
@@ -38,6 +46,26 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { stagger } from "@oku-ui/motion"
+
+const skillsFirst = [
+  'UI Design',
+  'UX Research',
+  'Prototyping',
+  'User\xa0Testing',
+  'Service\xa0Design',
+  'Design\xa0Handoff',
+];
+const skillsSecond = [
+  'Facilitation',
+  'Graphic\xa0Design',
+  'Figma',
+  'Jira/Confluence',
+  'Adobe\xa0Suite',
+];
+</script>
 
 <style lang="postcss" scoped>
 .underscore {
