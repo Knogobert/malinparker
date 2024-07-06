@@ -27,49 +27,27 @@
         ease-in-out;
 
       &::before,
-      &::after { /* bottom border squares */
+      &::after { /* bottom border pipes, inspired by https://codepen.io/kristen17/pen/pomgrKp */
         content: '';
-        background-color: var(--bg-secondary);
         @apply
           fixed
-          z-30
+          z-50
           h-8
           w-8
           bottom-0
           mb-4
+          bg-transparent
           transition
           duration-200
           ease-in-out;
       }
-      &::before { /* bottom left border square */
-        @apply left-0 ml-4 rounded-tr-3xl;
+      &::before { /* bottom left border pipe */
+        @apply left-0 ml-4 rounded-bl-3xl;
+        box-shadow: -0.6rem 0.6rem 0 0.3rem var(--bg-secondary);
       }
-      &::after { /* bottom right border square */
-        @apply right-0 mr-4 rounded-tl-3xl;
-      }
-
-      & > div {
-        &::before,
-        &::after { /* bottom border radiuses */
-          content: '';
-          background-color: var(--bg);
-          @apply
-            fixed
-            z-40
-            h-8
-            w-8
-            bottom-0
-            mb-4
-            transition
-            duration-200
-            ease-in-out;
-        }
-        &::before { /* bottom left border radius */
-          @apply left-0 ml-4 rounded-bl-3xl rounded-tr-3xl;
-        }
-        &::after { /* bottom right border radius */
-          @apply right-0 mr-4 rounded-br-3xl rounded-tl-3xl;
-        }
+      &::after { /* bottom right border pipe */
+        @apply right-0 mr-4 rounded-br-3xl;
+        box-shadow: 0.6rem 0.6rem 0 0.3rem var(--bg-secondary);
       }
     }
 
