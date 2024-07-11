@@ -37,24 +37,20 @@
         class="image image-ph" :class="loadingImage ? '' : 'show'" @load="loadingImage = false"
         :placeholder="[450, 602]" width="450px" height="667.083px" />
     </div>
+
+    <!-- <General-GridChars /> -->
+
   </section>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import { stagger } from "@oku-ui/motion"
 
-export default {
-  data() {
-    return {
-      loadingImage: true,
-      hiString: 'Hi,\xa0my\xa0name\xa0is',
-    }
-  },
-  mounted() {
-    setTimeout(() => { this.loadingImage = false; }, 2000);
-  },
-  methods: { stagger },
-}
+const loadingImage = ref(true);
+const hiString = 'Hi,\xa0my\xa0name\xa0is';
+
+setTimeout(() => { loadingImage.value = false; }, 2000);
 </script>
 
 <style lang="postcss" scoped>
