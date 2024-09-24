@@ -13,7 +13,7 @@
         </skeleton-content-placeholders> -->
         <NuxtPicture :src="project.cover.src" :alt="project.cover.alt || ''" loading="lazy" fit="cover" class="image-ph"
           :class="loadingImage ? '' : 'show'" @load="loadingImage = false"
-          :placeholder="project.cover.size === 'large' ? [1090, 820] : [525, 400]"
+          :placeholder="project.cover.size === 'large' ? [1090, 820, 80, 10] : [525, 400, 80, 10]"
           :width="project.cover.size === 'large' ? '1090px' : '525px'"
           :height="project.cover.size === 'large' ? '820px' : '720px'" :img-attrs="{ class: 'rounded-xl' }" />
         <figcaption
