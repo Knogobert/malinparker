@@ -74,9 +74,11 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    // debug: true,
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       routes: ['/cases/', '/designs/', '/sitemap.xml'],
+      // concurrency: 1,
     }
   },
 
