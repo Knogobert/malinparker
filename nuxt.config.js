@@ -4,14 +4,19 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 export default defineNuxtConfig({
   // extends: ["gh:user/repo", { auth: process.env.GITHUB_TOKEN, install: true }], // https://nuxt.com/docs/api/nuxt-config#themes / https://nuxt-themes.netlify.app/themes/docus
   target: 'static',
+  compatibilityDate: '2024-09-25',
+
   components: true,
   devtools: { enabled: true },
+
   dir: {
     public: 'static',
   },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -20,37 +25,45 @@ export default defineNuxtConfig({
         : 'http://localhost:3000',
     lang: SITE_INFO.sitelang || 'en-US',
   },
+
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#f3f5f4' },
+
   /*
    ** Global CSS
    */
   css: ['@/assets/css/main.pcss'],
+
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [],
+
   /*
    ** Nuxt.js modules
    */
   modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts', '@nuxthq/studio', '@nuxt/image', '@oku-ui/motion-nuxt' ],
+
   /*
    ** Build configuration
    */
   build: {},
+
   /*
    ** Custom additions configuration
    */
   studio: {
     enabled: true
   },
+
   image: {
     provider: process.env.NODE_ENV === 'production'
       ? 'netlifyImageCdn'
       : 'ipx',
   },
+
   experimental: {
     defaults: {
       nuxtLink: {
@@ -59,19 +72,23 @@ export default defineNuxtConfig({
       }
     }
   },
+
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: ['/cases/', '/designs/', '/sitemap.xml'],
     }
   },
+
   tailwindcss: {
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
+
   motion: {
     // Motion One options
   },
+
   fonts: {
     priority: ['local', 'bunny', 'fontsource'],
     providers: {
@@ -94,11 +111,13 @@ export default defineNuxtConfig({
       // 'monospace': ['Courier New'],
     },
   },
+
   content: {
     navigation: {
       fields: ['slug']
     },
   },
+
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
@@ -109,6 +128,7 @@ export default defineNuxtConfig({
       }
     }
   },
+
   pwa: {
     manifest: {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
@@ -145,5 +165,5 @@ export default defineNuxtConfig({
       ogHost: process.env.URL,
       ogImage: '/ogp-dark.png'
     }
-  }
+  },
 })

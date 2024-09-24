@@ -1,7 +1,7 @@
 <template>
   <Motion tag="article" class="project project-case w-full" :in-view="{ scale: 1 }" :initial="{ scale: 0.85 }"
     :press="{ scale: project.ready ? 0.98 : 1 }" :transition="{ duration: 0.5 }">
-    <NuxtLink :to="`/cases/${project.slug}`" :disabled="!project.ready">
+    <NuxtLink :to="`/cases/${project.slug}`" :data-disabled="!project.ready">
       <figure class="p-4 md:p-8" v-if="project.cover?.src">
         <!-- <Skeleton-ContentPlaceholders v-show="loadingImage">
           <Skeleton-ContentPlaceholdersImg class="w-full p-4 rounded-xl opacity-50"
@@ -49,9 +49,9 @@ export default {
   @apply flex flex-col justify-between rounded-3xl; /* bg-gray-800; */
   -moz-outline-radius: 1.5rem;
 
-  &[disabled='true'],
-  &:disabled  {
-    @apply pointer-events-none;
+  &[data-disabled='true'],
+  &:disabled {
+    @apply pointer-events-none cursor-not-allowed;
   }
 
   & figure > img {
